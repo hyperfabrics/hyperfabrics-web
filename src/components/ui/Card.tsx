@@ -5,9 +5,13 @@ export function Card({ className, children }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-lg",
+        "rounded-3xl p-6 shadow-lg transition-colors duration-300",
         className
       )}
+      style={{
+        borderColor: 'var(--card-border)',
+        backgroundColor: 'var(--card-bg)',
+      }}
     >
       {children}
     </div>

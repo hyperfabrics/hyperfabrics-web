@@ -4,15 +4,21 @@ import { Header, Solutions, CTA, Footer } from "@/components/sections";
 
 export default function SolutionsPage() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#07080b] text-white">
-      {/* Background */}
+    <div className="relative min-h-screen overflow-x-hidden transition-colors duration-300" style={{ background: 'var(--background)', color: 'var(--foreground)' }}>
+      {/* Background gradients - theme aware */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-600/20 via-indigo-500/5 to-transparent"
+        className="pointer-events-none absolute inset-0 opacity-60 dark:opacity-100 transition-opacity"
+        style={{
+          background: `radial-gradient(ellipse at top, var(--gradient-from), var(--gradient-to))`
+        }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 -top-40 h-[40rem] bg-gradient-to-b from-indigo-600/30 to-transparent blur-3xl"
+        className="pointer-events-none absolute inset-x-0 -top-40 h-[40rem] blur-3xl opacity-50 dark:opacity-100 transition-opacity"
+        style={{
+          background: `linear-gradient(to bottom, var(--gradient-from), transparent)`
+        }}
       />
 
       <Header />

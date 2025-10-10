@@ -1,22 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --max-width: 1280px;
   --section-spacing: 6rem;
   --section-spacing-mobile: 4rem;
 }
 
+/* Light Theme */
+:root[data-theme="light"] {
+  --background: #ffffff;
+  --background-rgb: 255, 255, 255;
+  --foreground: #171717;
+  --card-bg: #f7f9fc;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --muted: #6b7280;
+  --muted-foreground: #6b7280;
+  --accent: #6366f1;
+  --accent-foreground: #4f46e5;
+  --gradient-from: rgba(99, 102, 241, 0.15);
+  --gradient-to: rgba(99, 102, 241, 0.03);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --border: rgba(0, 0, 0, 0.08);
+  --success: #059669;
+  --error: #dc2626;
+  --warning: #d97706;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  --background: #1a1b3a;
+  --background-rgb: 26, 27, 58;
+  --foreground: #ededed;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --muted: rgba(255, 255, 255, 0.6);
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  --accent: #818cf8;
+  --accent-foreground: #a5b4fc;
+  --gradient-from: rgba(99, 102, 241, 0.3);
+  --gradient-to: rgba(99, 102, 241, 0.05);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --border: rgba(255, 255, 255, 0.08);
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+}
+
+/* Auto detect system preference if no theme set */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
+  :root:not([data-theme]) {
+    --background: #07080b;
     --foreground: #ededed;
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --muted: rgba(255, 255, 255, 0.6);
+    --muted-foreground: rgba(255, 255, 255, 0.7);
+    --accent: #818cf8;
+    --accent-foreground: #a5b4fc;
+    --gradient-from: rgba(99, 102, 241, 0.3);
+    --gradient-to: rgba(99, 102, 241, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --border: rgba(255, 255, 255, 0.1);
+    --success: #10b981;
+    --error: #ef4444;
+    --warning: #f59e0b;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --background: #ffffff;
+    --foreground: #171717;
+    --card-bg: #f8f9fa;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --muted: #6b7280;
+    --muted-foreground: #6b7280;
+    --accent: #6366f1;
+    --accent-foreground: #4f46e5;
+    --gradient-from: rgba(99, 102, 241, 0.2);
+    --gradient-to: rgba(99, 102, 241, 0.05);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --border: rgba(0, 0, 0, 0.1);
+    --success: #059669;
+    --error: #dc2626;
+    --warning: #d97706;
   }
 }
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html,
@@ -32,6 +113,7 @@ body {
     "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -149,4 +231,228 @@ header + * {
   html {
     color-scheme: dark;
   }
+}
+
+/* Light theme specific adjustments */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="light"] header {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+:root[data-theme="light"] .backdrop-blur {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Dark theme adjustments */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] header {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+  background: rgba(7, 8, 11, 0.8);
+}
+
+/* Theme-aware text utilities */
+.text-themed-primary {
+  color: var(--text-primary);
+}
+
+.text-themed-secondary {
+  color: var(--text-secondary);
+}
+
+.text-themed-muted {
+  color: var(--text-muted);
+}
+
+/* Override specific Tailwind classes for theme compatibility */
+:root[data-theme="light"] .text-white {
+  color: var(--text-primary) !important;
+}
+
+:root[data-theme="light"] .text-white\/80 {
+  color: var(--text-secondary) !important;
+}
+
+:root[data-theme="light"] .text-white\/70 {
+  color: var(--text-muted) !important;
+}
+
+:root[data-theme="light"] .text-white\/60 {
+  color: var(--muted) !important;
+}
+
+:root[data-theme="light"] .text-white\/50 {
+  color: #9ca3af !important;
+}
+
+/* Fix gradient text for light theme */
+:root[data-theme="light"] .bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+:root[data-theme="light"] .from-indigo-400 {
+  --tw-gradient-from: #6366f1;
+  --tw-gradient-to: rgb(99 102 241 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+:root[data-theme="light"] .via-purple-400 {
+  --tw-gradient-to: rgb(168 85 247 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to);
+}
+
+:root[data-theme="light"] .to-pink-400 {
+  --tw-gradient-to: #ec4899;
+}
+
+/* Fix icon colors for light theme */
+:root[data-theme="light"] .text-indigo-300,
+:root[data-theme="light"] .text-indigo-400 {
+  color: #6366f1 !important;
+}
+
+:root[data-theme="light"] .text-green-300,
+:root[data-theme="light"] .text-green-400 {
+  color: var(--success) !important;
+}
+
+:root[data-theme="light"] .text-red-300,
+:root[data-theme="light"] .text-red-400 {
+  color: var(--error) !important;
+}
+
+:root[data-theme="light"] .text-purple-300,
+:root[data-theme="light"] .text-purple-400 {
+  color: #a855f7 !important;
+}
+
+:root[data-theme="light"] .text-blue-400 {
+  color: #3b82f6 !important;
+}
+
+/* Fix card backgrounds for light theme */
+:root[data-theme="light"] .bg-white\/10,
+:root[data-theme="light"] .bg-white\/5,
+:root[data-theme="light"] .bg-white\/\[0\.02\],
+:root[data-theme="light"] .bg-white\/\[0\.03\] {
+  background-color: var(--card-bg) !important;
+}
+
+/* Fix borders for light theme */
+:root[data-theme="light"] .border-white\/5,
+:root[data-theme="light"] .border-white\/10,
+:root[data-theme="light"] .border-white\/20,
+:root[data-theme="light"] .border-white\/30 {
+  border-color: var(--border) !important;
+}
+
+:root[data-theme="light"] .ring-white\/10,
+:root[data-theme="light"] .ring-white\/20,
+:root[data-theme="light"] .ring-white\/30 {
+  --tw-ring-color: var(--border) !important;
+}
+
+/* Fix specific component colors */
+:root[data-theme="light"] .bg-red-500\/5 {
+  background-color: rgba(220, 38, 38, 0.05) !important;
+}
+
+:root[data-theme="light"] .border-red-500\/20 {
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+:root[data-theme="light"] .bg-green-500\/5 {
+  background-color: rgba(5, 150, 105, 0.05) !important;
+}
+
+:root[data-theme="light"] .border-green-500\/20 {
+  border-color: rgba(5, 150, 105, 0.2) !important;
+}
+
+:root[data-theme="light"] .bg-indigo-500\/10,
+:root[data-theme="light"] .bg-indigo-500\/20 {
+  background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+:root[data-theme="light"] .ring-indigo-500\/20 {
+  --tw-ring-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Fix button hover states for light theme */
+:root[data-theme="light"] .hover\:bg-white\/20:hover,
+:root[data-theme="light"] .hover\:bg-white\/15:hover,
+:root[data-theme="light"] .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+:root[data-theme="light"] .hover\:text-white:hover {
+  color: var(--text-primary) !important;
+}
+
+/* Fix backdrop for mobile menu */
+:root[data-theme="light"] .bg-\[\#07080b\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Nav link active state indicator */
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }

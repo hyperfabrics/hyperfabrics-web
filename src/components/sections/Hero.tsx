@@ -19,14 +19,14 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="space-y-6 sm:space-y-8"
           >
-            <h1 className="text-balance text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight px-4 sm:px-0">
+            <h1 className="text-balance text-4xl font-bold leading-[1.1] sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight px-4 sm:px-0" style={{ color: 'var(--text-primary)' }}>
               Institutional rails for{" "}
               <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 tokenized assets
               </span>
             </h1>
 
-            <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl text-white/60 leading-relaxed font-light px-4 sm:px-0">
+            <p className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl leading-relaxed font-light px-4 sm:px-0" style={{ color: 'var(--text-muted)' }}>
               Build, launch, and operate compliant blockchain systems—faster.
             </p>
           </motion.div>
@@ -50,28 +50,18 @@ export function Hero() {
           {/* Simple Stats */}
           <div className="pt-12 sm:pt-16 flex flex-wrap justify-center gap-8 sm:gap-12 text-center px-4 sm:px-0">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">
-                500+
-              </div>
-              <div className="text-xs sm:text-sm text-white/50 mt-2">APIs</div>
+              <div className="text-2xl sm:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>500+</div>
+              <div className="text-xs sm:text-sm mt-2" style={{ color: 'var(--text-muted)' }}>APIs</div>
             </div>
-            <div className="hidden sm:block h-12 w-px bg-white/10" />
+            <div className="hidden sm:block h-12 w-px" style={{ backgroundColor: 'var(--border)' }} />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">
-                100+
-              </div>
-              <div className="text-xs sm:text-sm text-white/50 mt-2">
-                Blockchains
-              </div>
+              <div className="text-2xl sm:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>100+</div>
+              <div className="text-xs sm:text-sm mt-2" style={{ color: 'var(--text-muted)' }}>Blockchains</div>
             </div>
-            <div className="hidden sm:block h-12 w-px bg-white/10" />
+            <div className="hidden sm:block h-12 w-px" style={{ backgroundColor: 'var(--border)' }} />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">
-                4-6 wks
-              </div>
-              <div className="text-xs sm:text-sm text-white/50 mt-2">
-                To PoC
-              </div>
+              <div className="text-2xl sm:text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>4-6 wks</div>
+              <div className="text-xs sm:text-sm mt-2" style={{ color: 'var(--text-muted)' }}>To PoC</div>
             </div>
           </div>
         </div>

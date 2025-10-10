@@ -3,11 +3,12 @@ import React from "react";
 import {
   Header,
   Hero,
-  Solutions,
+  ProblemSolution,
+  SolutionsJourney,
+  SocialProof,
   Industries,
   Platform,
   Compliance,
-  Developers,
   CTA,
   Footer,
 } from "@/components/sections";
@@ -16,11 +17,15 @@ import {
   fazezero — Institutional Web3 Website (Homepage)
   Framework: Next.js App Router + TailwindCSS + shadcn/ui style system
 
-  Refactored for better maintainability:
-  - Components split into separate files
-  - Data extracted to separate modules
-  - TypeScript interfaces for type safety
-  - Better organization and modularity
+  Journey-focused flow:
+  1. Hero - Capture attention with bold promise
+  2. Problem/Solution - Show pain points and transformation
+  3. Solutions Journey - Guide through 3-step path to production
+  4. Social Proof - Build trust with metrics and testimonial
+  5. Industries - Show applicability across sectors
+  6. Platform - Technical credibility
+  7. Compliance - Address key concern
+  8. CTA - Convert with urgency
 */
 
 export default function Home() {
@@ -38,11 +43,12 @@ export default function Home() {
 
       <Header />
       <Hero />
-      <Solutions />
+      <ProblemSolution />
+      <SolutionsJourney />
+      <SocialProof />
       <Industries />
       <Platform />
       <Compliance />
-      <Developers />
       <CTA />
       <Footer />
     </div>

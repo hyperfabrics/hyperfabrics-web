@@ -7,3 +7,8 @@ export { Compliance } from "./Compliance";
 export { Developers } from "./Developers";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
+
+// Journey-focused components
+export { ProblemSolution } from "./ProblemSolution";
+export { SolutionsJourney } from "./SolutionsJourney";
+export { SocialProof } from "./SocialProof";

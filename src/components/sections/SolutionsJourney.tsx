@@ -7,7 +7,8 @@ export function SolutionsJourney() {
       step: "1",
       title: "Tokenize Real-World Assets",
       problem: "Need to digitize securities, real estate, or commodities?",
-      solution: "Launch compliant security tokens in 4-6 weeks with our Studio platform",
+      solution:
+        "Launch compliant security tokens in 4-6 weeks with our Studio platform",
       benefits: [
         "Automated KYC/AML and investor accreditation",
         "Policy-aware transfer rules (jurisdiction, lockups, caps)",
@@ -70,8 +71,12 @@ export function SolutionsJourney() {
                   <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2 sm:mb-3 group-hover:text-indigo-300 transition-colors">
                     {solution.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-white/60 mb-2">{solution.problem}</p>
-                  <p className="text-base sm:text-lg text-white/90 font-medium">{solution.solution}</p>
+                  <p className="text-base sm:text-lg text-white/60 mb-2">
+                    {solution.problem}
+                  </p>
+                  <p className="text-base sm:text-lg text-white/90 font-medium">
+                    {solution.solution}
+                  </p>
                 </div>
               </div>
 
@@ -85,8 +90,8 @@ export function SolutionsJourney() {
               </div>
 
               <div className="ml-20">
-                <Button 
-                  href="/contact" 
+                <Button
+                  href="/contact"
                   className="group-hover:scale-105 transition-transform"
                 >
                   {solution.cta} <ArrowRight className="size-4 ml-2" />

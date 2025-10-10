@@ -37,8 +37,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg sm:text-xl lg:text-2xl text-white/70 text-center max-w-4xl mx-auto mb-8"
         >
-          Stop building blockchain infrastructure from scratch. Get enterprise-grade 
-          tokenization, payments, and compliance—ready to deploy today.
+          Stop building blockchain infrastructure from scratch. Get
+          enterprise-grade tokenization, payments, and compliance—ready to
+          deploy today.
         </motion.p>
 
         {/* Social Proof Points */}
@@ -69,8 +70,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
         >
-          <Button 
-            href="/contact" 
+          <Button
+            href="/contact"
             className="text-base px-8 py-4 bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/25 hover:scale-105 transition-all"
           >
             Book a Free Consultation <ArrowRight className="size-5 ml-2" />
@@ -90,7 +91,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center text-sm text-white/50"
         >
-          No credit card required • Free 30-minute consultation • Talk to a solution architect
+          No credit card required • Free 30-minute consultation • Talk to a
+          solution architect
         </motion.p>
       </div>
     </Section>

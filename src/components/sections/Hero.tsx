@@ -50,18 +50,28 @@ export function Hero() {
           {/* Simple Stats */}
           <div className="pt-12 sm:pt-16 flex flex-wrap justify-center gap-8 sm:gap-12 text-center px-4 sm:px-0">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">500+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">
+                500+
+              </div>
               <div className="text-xs sm:text-sm text-white/50 mt-2">APIs</div>
             </div>
             <div className="hidden sm:block h-12 w-px bg-white/10" />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">100+</div>
-              <div className="text-xs sm:text-sm text-white/50 mt-2">Blockchains</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">
+                100+
+              </div>
+              <div className="text-xs sm:text-sm text-white/50 mt-2">
+                Blockchains
+              </div>
             </div>
             <div className="hidden sm:block h-12 w-px bg-white/10" />
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">4-6 wks</div>
-              <div className="text-xs sm:text-sm text-white/50 mt-2">To PoC</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">
+                4-6 wks
+              </div>
+              <div className="text-xs sm:text-sm text-white/50 mt-2">
+                To PoC
+              </div>
             </div>
           </div>
         </div>

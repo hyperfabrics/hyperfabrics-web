@@ -10,7 +10,8 @@ export function SocialProof() {
             Trusted by regulated institutions
           </h2>
           <p className="text-base sm:text-lg text-white/70 px-4 sm:px-0">
-            Join central banks, financial institutions, and enterprises shipping blockchain products faster
+            Join central banks, financial institutions, and enterprises shipping
+            blockchain products faster
           </p>
         </div>
 
@@ -51,19 +52,26 @@ export function SocialProof() {
         {/* Testimonial */}
         <Card className="p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-indigo-500/5 to-transparent">
           <div className="max-w-4xl mx-auto">
-            <div className="text-3xl sm:text-4xl text-indigo-300 mb-4">&ldquo;</div>
+            <div className="text-3xl sm:text-4xl text-indigo-300 mb-4">
+              &ldquo;
+            </div>
             <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 italic">
-              fazezero helped us launch our tokenized securities platform in 6 weeks—something 
-              that would have taken us 18 months to build ourselves. Their compliance-first 
-              approach gave our board confidence to move forward.
+              fazezero helped us launch our tokenized securities platform in 6
+              weeks—something that would have taken us 18 months to build
+              ourselves. Their compliance-first approach gave our board
+              confidence to move forward.
             </p>
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-500/20 flex items-center justify-center">
                 <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-300" />
               </div>
               <div>
-                <div className="text-sm sm:text-base font-semibold">Michael Chen</div>
-                <div className="text-xs sm:text-sm text-white/60">CTO, Global Investment Bank</div>
+                <div className="text-sm sm:text-base font-semibold">
+                  Michael Chen
+                </div>
+                <div className="text-xs sm:text-sm text-white/60">
+                  CTO, Global Investment Bank
+                </div>
               </div>
             </div>
           </div>

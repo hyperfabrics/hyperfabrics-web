@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "fazezero - Enterprise Blockchain Infrastructure",
-  description: "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
+  description:
+    "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
 };
 
 export default function RootLayout({
@@ -24,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

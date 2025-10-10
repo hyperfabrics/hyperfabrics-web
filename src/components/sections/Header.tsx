@@ -1,24 +1,36 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Menu, X, ChevronDown } from "lucide-react";
-import { Button, Section } from "@/components/ui";
+import { ArrowRight, Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const megaMenus = {
+    platform: {
+      categories: [
+        {
+          title: "INFRASTRUCTURE",
+          items: [
+            { label: "Tokenization Studio", href: "/platform/studio" },
+            { label: "Compliance Engine", href: "/platform/compliance" },
+            { label: "Payment Rails", href: "/platform/payments" },
+            { label: "API Gateway", href: "/platform/api" },
+          ],
+        },
+        {
+          title: "SECURITY",
+          items: [
+            { label: "Multi-Party Computation", href: "/platform/mpc" },
+            { label: "Hardware Security", href: "/platform/hsm" },
+            { label: "Audit & Monitoring", href: "/platform/audit" },
+            { label: "Compliance Controls", href: "/platform/controls" },
+          ],
+        },
+      ],
+    },
     solutions: {
       categories: [
         {
@@ -41,24 +53,24 @@ export function Header() {
         },
       ],
     },
-    platform: {
+    developers: {
       categories: [
         {
-          title: "INFRASTRUCTURE",
-          items: [
-            { label: "Tokenization Studio", href: "/platform/studio" },
-            { label: "Compliance Engine", href: "/platform/compliance" },
-            { label: "Payment Rails", href: "/platform/payments" },
-            { label: "API Gateway", href: "/platform/api" },
-          ],
-        },
-        {
-          title: "DEVELOPER TOOLS",
+          title: "TOOLS",
           items: [
             { label: "Documentation", href: "/developers/docs" },
             { label: "API Reference", href: "/developers/api" },
             { label: "SDKs & Libraries", href: "/developers/sdks" },
             { label: "Code Examples", href: "/developers/examples" },
+          ],
+        },
+        {
+          title: "RESOURCES",
+          items: [
+            { label: "Tutorials", href: "/developers/tutorials" },
+            { label: "Integration Guides", href: "/developers/guides" },
+            { label: "Sample Projects", href: "/developers/samples" },
+            { label: "Community", href: "/developers/community" },
           ],
         },
       ],
@@ -71,16 +83,16 @@ export function Header() {
             { label: "Blog", href: "/resources/blog" },
             { label: "Case Studies", href: "/resources/case-studies" },
             { label: "Whitepapers", href: "/resources/whitepapers" },
-            { label: "Guides", href: "/resources/guides" },
+            { label: "Research", href: "/resources/research" },
           ],
         },
         {
           title: "SUPPORT",
           items: [
             { label: "Help Center", href: "/support" },
-            { label: "Community", href: "/community" },
             { label: "Contact Us", href: "/contact" },
             { label: "System Status", href: "/status" },
+            { label: "FAQ", href: "/faq" },
           ],
         },
       ],
@@ -93,129 +105,210 @@ export function Header() {
   };
 
   return (
-    <header 
-      className={`sticky top-0 z-50 w-full backdrop-blur-xl transition-all duration-300 ${
-        scrolled ? 'shadow-lg' : ''
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-xl transition-all duration-300`}
       style={{
-        borderBottomWidth: '1px',
-        borderBottomStyle: 'solid',
-        borderBottomColor: scrolled ? 'var(--border)' : 'transparent',
-        backgroundColor: scrolled ? 'var(--background)' : 'rgba(var(--background-rgb), 0.8)',
+        borderBottomWidth: "1px",
+        borderBottomStyle: "solid",
+        borderBottomColor: "var(--border)",
+        backgroundColor: "var(--header-bg)",
       }}
       onMouseLeave={() => setActiveDropdown(null)}
     >
-      <Section className="flex items-center justify-between py-4">
+      <div
+        className="w-full flex items-center justify-between"
+        style={{
+          height: "72px",
+          maxWidth: "1400px",
+          margin: "0 auto",
+          paddingLeft: "24px",
+          paddingRight: "24px",
+        }}
+      >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 z-50 group">
-          <div className="grid size-9 place-items-center rounded-xl transition-all duration-300 group-hover:scale-110" style={{ background: 'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)' }}>
-            <span className="font-black text-white">Ø</span>
+        <Link
+          href="/"
+          className="flex items-center gap-2 z-50 group flex-shrink-0"
+        >
+          <div
+            className="grid size-8 place-items-center rounded-lg transition-all duration-300 group-hover:scale-105"
+            style={{ backgroundColor: "#375bd2" }}
+          >
+            <span className="font-black text-white text-sm">Ø</span>
           </div>
-          <span className="text-xl font-bold tracking-tight transition-all duration-300" style={{ color: 'var(--text-primary)' }}>
+          <span
+            className="text-lg font-bold tracking-tight transition-all duration-300"
+            style={{ color: "var(--text-primary)" }}
+          >
             fazezero
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-2">
-          {/* Solutions Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown('solutions')}
-          >
-            <button
-              className="flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg"
-              style={{ color: activeDropdown === 'solutions' ? '#6366f1' : 'var(--text-secondary)' }}
-            >
-              Solutions
-              <ChevronDown className={`size-4 transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
-            </button>
-          </div>
-
+        <nav className="hidden lg:flex items-center gap-2 flex-1 ml-12">
           {/* Platform Dropdown */}
           <div
             className="relative"
-            onMouseEnter={() => setActiveDropdown('platform')}
+            onMouseEnter={() => setActiveDropdown("platform")}
           >
             <button
-              className="flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg"
-              style={{ color: activeDropdown === 'platform' ? '#6366f1' : 'var(--text-secondary)' }}
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              style={{
+                color:
+                  activeDropdown === "platform"
+                    ? "#375bd2"
+                    : "var(--text-primary)",
+              }}
             >
               Platform
-              <ChevronDown className={`size-4 transition-transform duration-200 ${activeDropdown === 'platform' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                className={`size-4 transition-transform duration-200 ${
+                  activeDropdown === "platform" ? "rotate-180" : ""
+                }`}
+              />
             </button>
           </div>
 
-          {/* Developers Link */}
-          <Link
-            href="/developers"
-            className="px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:text-indigo-500"
-            style={{ color: 'var(--text-secondary)' }}
+          {/* Solutions Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("solutions")}
           >
-            Developers
-          </Link>
+            <button
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              style={{
+                color:
+                  activeDropdown === "solutions"
+                    ? "#375bd2"
+                    : "var(--text-primary)",
+              }}
+            >
+              Solutions
+              <ChevronDown
+                className={`size-4 transition-transform duration-200 ${
+                  activeDropdown === "solutions" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
+
+          {/* Developers Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("developers")}
+          >
+            <button
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              style={{
+                color:
+                  activeDropdown === "developers"
+                    ? "#375bd2"
+                    : "var(--text-primary)",
+              }}
+            >
+              Developers
+              <ChevronDown
+                className={`size-4 transition-transform duration-200 ${
+                  activeDropdown === "developers" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
 
           {/* Resources Dropdown */}
           <div
             className="relative"
-            onMouseEnter={() => setActiveDropdown('resources')}
+            onMouseEnter={() => setActiveDropdown("resources")}
           >
             <button
-              className="flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg"
-              style={{ color: activeDropdown === 'resources' ? '#6366f1' : 'var(--text-secondary)' }}
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              style={{
+                color:
+                  activeDropdown === "resources"
+                    ? "#375bd2"
+                    : "var(--text-primary)",
+              }}
             >
               Resources
-              <ChevronDown className={`size-4 transition-transform duration-200 ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                className={`size-4 transition-transform duration-200 ${
+                  activeDropdown === "resources" ? "rotate-180" : ""
+                }`}
+              />
             </button>
           </div>
         </nav>
 
-        {/* Desktop CTA + Theme Toggle */}
-        <div className="hidden lg:flex items-center gap-3">
-          <ThemeToggle />
-          <Button 
-            href="/contact"
-            className="group relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-0"
+        {/* Desktop Right Side: Search Icon + CTA */}
+        <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+          <button
+            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+            aria-label="Search"
           >
-            <span className="relative z-10 flex items-center gap-2">
-              Start building
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-          </Button>
+            <Search
+              className="size-5"
+              style={{ color: "var(--text-primary)" }}
+            />
+          </button>
+
+          <ThemeToggle />
+
+          <Link
+            href="/contact"
+            className="text-sm font-medium px-5 py-2 rounded-md transition-colors border"
+            style={{
+              borderColor: "var(--text-primary)",
+              color: "var(--text-primary)",
+              backgroundColor: "transparent",
+            }}
+          >
+            Start building
+          </Link>
         </div>
 
         {/* Mobile Theme Toggle + Menu Button */}
-        <div className="lg:hidden flex items-center gap-2 z-50">
+        <div className="lg:hidden flex items-center gap-2 z-50 relative">
           <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
-            style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--border)', borderWidth: '1px' }}
+            className="p-2 rounded-lg transition-all duration-300"
+            style={{
+              backgroundColor: "var(--card-bg)",
+              borderColor: "var(--border)",
+              borderWidth: "1px",
+              color: "var(--text-primary)",
+            }}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            {isMenuOpen ? (
+              <X className="size-5" />
+            ) : (
+              <Menu className="size-5" />
+            )}
           </button>
         </div>
-      </Section>
+      </div>
 
-            {/* Mega Menu Dropdowns */}
-      {activeDropdown && (
-        <div 
+      {/* Mega Menu Dropdowns */}
+      {activeDropdown && !isMenuOpen && (
+        <div
           className="absolute left-0 right-0 top-full shadow-2xl animate-slide-down"
-          style={{ 
-            backgroundColor: 'var(--background)',
-            borderTopWidth: '1px',
-            borderTopStyle: 'solid',
-            borderTopColor: 'var(--border)',
+          style={{
+            backgroundColor: "var(--background)",
+            borderTopWidth: "1px",
+            borderTopStyle: "solid",
+            borderTopColor: "var(--border)",
           }}
         >
           <div className="max-w-6xl mx-auto px-8 py-10">
             <div className="grid grid-cols-2 gap-16">
-              {megaMenus[activeDropdown as keyof typeof megaMenus].categories.map((category, idx) => (
+              {megaMenus[
+                activeDropdown as keyof typeof megaMenus
+              ].categories.map((category, idx) => (
                 <div key={idx} className="space-y-4">
-                  <h3 
+                  <h3
                     className="text-xs font-bold tracking-wider uppercase mb-4"
-                    style={{ color: '#6366f1' }}
+                    style={{ color: "#6366f1" }}
                   >
                     {category.title}
                   </h3>
@@ -226,22 +319,24 @@ export function Header() {
                           href={item.href}
                           onClick={handleNavClick}
                           className="group flex items-center justify-between py-2 px-3 rounded-lg transition-all duration-200"
-                          style={{ 
-                            color: 'var(--text-primary)',
+                          style={{
+                            color: "var(--text-primary)",
                           }}
                           onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--card-bg)';
+                            e.currentTarget.style.backgroundColor =
+                              "var(--card-bg)";
                           }}
                           onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor = 'transparent';
+                            e.currentTarget.style.backgroundColor =
+                              "transparent";
                           }}
                         >
                           <span className="text-sm font-medium">
                             {item.label}
                           </span>
-                          <ArrowRight 
-                            className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" 
-                            style={{ color: '#6366f1' }} 
+                          <ArrowRight
+                            className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+                            style={{ color: "#6366f1" }}
                           />
                         </Link>
                       </li>
@@ -256,74 +351,143 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 top-[73px] backdrop-blur-xl z-40 animate-in fade-in duration-300"
-          style={{ backgroundColor: 'var(--background)' }}
-        >
-          <nav className="flex flex-col h-full overflow-y-auto">
-            <div className="flex flex-col gap-2 p-6">
-              <Link
-                href="/solutions"
+        <>
+          {/* Backdrop */}
+          <div
+            className="lg:hidden fixed inset-0 bg-black/20 z-40"
+            onClick={handleNavClick}
+            style={{ marginTop: "72px" }}
+          />
+
+          {/* Menu Content */}
+          <div
+            className="lg:hidden fixed z-50 animate-in slide-in-from-right duration-300 flex flex-col"
+            style={{
+              backgroundColor: "var(--background)",
+              paddingTop: "72px",
+              height: "100vh",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            }}
+          >
+            {/* Close Button */}
+            <div className="flex justify-end px-8 py-4">
+              <button
                 onClick={handleNavClick}
-                className="text-lg py-4 px-4 rounded-xl transition-all duration-300 hover:scale-105 group"
-                style={{ color: 'var(--text-secondary)' }}
+                className="p-2 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
+                style={{ color: "var(--text-primary)" }}
+                aria-label="Close menu"
               >
-                <span className="flex items-center justify-between group-hover:text-indigo-400 transition-colors">
-                  Solutions
-                  <ArrowRight className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                </span>
-              </Link>
-              
-              <Link
-                href="/platform"
-                onClick={handleNavClick}
-                className="text-lg py-4 px-4 rounded-xl transition-all duration-300 hover:scale-105 group"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                <span className="flex items-center justify-between group-hover:text-indigo-400 transition-colors">
-                  Platform
-                  <ArrowRight className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                </span>
-              </Link>
-              
-              <Link
-                href="/developers"
-                onClick={handleNavClick}
-                className="text-lg py-4 px-4 rounded-xl transition-all duration-300 hover:scale-105 group"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                <span className="flex items-center justify-between group-hover:text-indigo-400 transition-colors">
-                  Developers
-                  <ArrowRight className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                </span>
-              </Link>
-              
-              <Link
-                href="/resources"
-                onClick={handleNavClick}
-                className="text-lg py-4 px-4 rounded-xl transition-all duration-300 hover:scale-105 group"
-                style={{ color: 'var(--text-secondary)' }}
-              >
-                <span className="flex items-center justify-between group-hover:text-indigo-400 transition-colors">
-                  Resources
-                  <ArrowRight className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                </span>
-              </Link>
+                <X className="size-6" />
+              </button>
             </div>
 
-            {/* Mobile CTA */}
-            <div className="mt-auto p-6" style={{ borderTopColor: 'var(--border)', borderTopWidth: '1px' }}>
-              <Button
-                href="/contact"
-                className="w-full justify-center group bg-gradient-to-r from-indigo-600 to-purple-600 text-white border-0"
+            {/* Nav Links - scrollable */}
+            <div className="flex-1 overflow-y-auto pb-40 px-6">
+              <div className="flex flex-col py-4">
+                <Link
+                  href="/platform"
+                  onClick={handleNavClick}
+                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
+                  style={{
+                    color: "var(--text-primary)",
+                    borderBottomColor: "var(--border)",
+                  }}
+                >
+                  Platform
+                  <ChevronDown
+                    className="size-5 -rotate-90"
+                    style={{ color: "var(--text-muted)" }}
+                  />
+                </Link>
+
+                <Link
+                  href="/solutions"
+                  onClick={handleNavClick}
+                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
+                  style={{
+                    color: "var(--text-primary)",
+                    borderBottomColor: "var(--border)",
+                  }}
+                >
+                  Solutions
+                  <ChevronDown
+                    className="size-5 -rotate-90"
+                    style={{ color: "var(--text-muted)" }}
+                  />
+                </Link>
+
+                <Link
+                  href="/developers"
+                  onClick={handleNavClick}
+                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
+                  style={{
+                    color: "var(--text-primary)",
+                    borderBottomColor: "var(--border)",
+                  }}
+                >
+                  Developers
+                  <ChevronDown
+                    className="size-5 -rotate-90"
+                    style={{ color: "var(--text-muted)" }}
+                  />
+                </Link>
+
+                <Link
+                  href="/resources"
+                  onClick={handleNavClick}
+                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
+                  style={{
+                    color: "var(--text-primary)",
+                    borderBottomColor: "var(--border)",
+                  }}
+                >
+                  Resources
+                  <ChevronDown
+                    className="size-5 -rotate-90"
+                    style={{ color: "var(--text-muted)" }}
+                  />
+                </Link>
+              </div>
+            </div>
+
+            {/* Mobile CTAs */}
+            <div
+              className="flex gap-0 border-t"
+              style={{
+                backgroundColor: "var(--background)",
+                borderTopColor: "var(--border)",
+              }}
+            >
+              <Link
+                href="/experts"
                 onClick={handleNavClick}
+                className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors border-r"
+                style={{
+                  backgroundColor: "#375bd2",
+                  color: "#ffffff",
+                  borderRightColor: "var(--border)",
+                }}
+              >
+                Talk to an expert
+              </Link>
+
+              <Link
+                href="/contact"
+                onClick={handleNavClick}
+                className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors"
+                style={{
+                  color: "var(--text-primary)",
+                  backgroundColor: "var(--background)",
+                }}
               >
                 Start building
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
+              </Link>
             </div>
-          </nav>
-        </div>
+          </div>
+        </>
       )}
     </header>
   );

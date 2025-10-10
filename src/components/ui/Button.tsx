@@ -20,11 +20,14 @@ export function Button({
         className
       )}
       style={{
-        backgroundColor: className?.includes('bg-white') && !className?.includes('text-black') 
-          ? undefined 
-          : 'var(--card-bg)',
-        color: className?.includes('text-black') ? undefined : 'var(--foreground)',
-        borderColor: 'var(--border)',
+        backgroundColor:
+          className?.includes("bg-white") && !className?.includes("text-black")
+            ? undefined
+            : "var(--card-bg)",
+        color: className?.includes("text-black")
+          ? undefined
+          : "var(--foreground)",
+        borderColor: "var(--border)",
       }}
       {...props}
     >

@@ -8,24 +8,25 @@
 
 /* Light Theme */
 :root[data-theme="light"] {
-  --background: #ffffff;
-  --background-rgb: 255, 255, 255;
+  --background: #f8f9fa;
+  --background-rgb: 248, 249, 250;
   --foreground: #171717;
-  --card-bg: #f7f9fc;
-  --card-border: rgba(0, 0, 0, 0.08);
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.06);
   --muted: #6b7280;
   --muted-foreground: #6b7280;
   --accent: #6366f1;
   --accent-foreground: #4f46e5;
   --gradient-from: rgba(99, 102, 241, 0.15);
   --gradient-to: rgba(99, 102, 241, 0.03);
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-primary: #1a1b26;
+  --text-secondary: #4a5568;
   --text-muted: #64748b;
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.06);
   --success: #059669;
   --error: #dc2626;
   --warning: #d97706;
+  --header-bg: #ffffff;
 }
 
 /* Dark Theme */
@@ -48,6 +49,7 @@
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
+  --header-bg: rgba(26, 27, 58, 0.95);
 }
 
 /* Auto detect system preference if no theme set */
@@ -446,7 +448,7 @@ header + * {
 
 /* Nav link active state indicator */
 .nav-link-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;

@@ -28,7 +28,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement;
-    
+
     const applyTheme = (themeToApply: "light" | "dark") => {
       root.setAttribute("data-theme", themeToApply);
       setResolvedTheme(themeToApply);

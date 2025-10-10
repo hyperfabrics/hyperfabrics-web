@@ -9,8 +9,8 @@ export function Card({ className, children }: CardProps) {
         className
       )}
       style={{
-        borderColor: 'var(--card-border)',
-        backgroundColor: 'var(--card-bg)',
+        borderColor: "var(--card-border)",
+        backgroundColor: "var(--card-bg)",
       }}
     >
       {children}

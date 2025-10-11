@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { Header, Solutions, CTA, Footer } from "@/components/sections";
+import { Header, CTA, Footer } from "@/components/sections";
+import { SolutionsJourney } from "@/components/sections/SolutionsJourney";
 
 export default function SolutionsPage() {
   return (
@@ -25,7 +26,9 @@ export default function SolutionsPage() {
       />
 
       <Header />
-      <Solutions />
+      <main>
+        <SolutionsJourney />
+      </main>
       <CTA />
       <Footer />
     </div>

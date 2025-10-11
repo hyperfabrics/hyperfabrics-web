@@ -5,7 +5,7 @@ export const SOLUTION_TABS: SolutionTab[] = [
     key: "tokenization",
     title: "Tokenization & RWAs",
     blurb:
-      "Compliance-first rails to issue, manage, and distribute real‑world assets with audit‑grade reporting and policy‑aware transfers.",
+      "Empower your organization with compliance-first rails to issue, manage, and distribute real-world assets. Our platform provides audit-grade reporting and policy-aware transfers, enabling you to scale your digital asset operations with confidence while maintaining rigorous security standards.",
     services: [
       {
         title: "Studio (Issuer Console)",
@@ -34,7 +34,7 @@ export const SOLUTION_TABS: SolutionTab[] = [
     key: "payments",
     title: "Payments & Treasury",
     blurb:
-      "Settlement‑grade stablecoin rails that blend bank and on‑chain flows for 24/7 global payouts and automated reconciliation.",
+      "Leverage our enterprise-grade stablecoin rails that seamlessly blend traditional banking with on-chain flows. We enable 24/7 global payouts, automated reconciliation, and minimal transaction fees, supporting a diverse range of use cases from remittances to e-commerce.",
     services: [
       {
         title: "Stablecoin Payment Rail",
@@ -57,7 +57,7 @@ export const SOLUTION_TABS: SolutionTab[] = [
     key: "consulting",
     title: "Consulting & Architecture",
     blurb:
-      "From discovery to production: blueprints, PoCs, and SLAs to ship regulated blockchain systems fast.",
+      "Navigate your journey from discovery to production with our expert guidance. We provide strategic blueprints, rapid proof-of-concept development, and enterprise-grade SLAs to help you build and ship regulated blockchain systems with speed and confidence.",
     services: [
       {
         title: "Use‑Case Identification & Prioritization",
@@ -90,7 +90,7 @@ export const SOLUTION_TABS: SolutionTab[] = [
     key: "data",
     title: "Data, Identity & Security",
     blurb:
-      "Privacy‑first data and identity patterns with zero‑trust controls and verifiable audit trails.",
+      "Implement privacy-first data and identity solutions using decentralized technologies. Our platform offers zero-trust controls, verifiable audit trails, and W3C-compliant identity standards to ensure your digital interactions are secure, private, and user-centric.",
     services: [
       {
         title: "Digital Identity (DID + VC)",

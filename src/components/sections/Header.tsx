@@ -134,19 +134,18 @@ export function Header() {
       onMouseLeave={() => setActiveDropdown(null)}
     >
       <div
-        className="w-full grid lg:grid-cols-3 items-center"
+        className="w-full flex items-center justify-between"
         style={{
           height: "88px",
           maxWidth: "1440px",
           margin: "0 auto",
           paddingLeft: "48px",
           paddingRight: "48px",
-          gap: "48px",
         }}
       >
-        {/* Left Column: Logo */}
-        <div className="flex justify-start">
-          <Link href="/" className="flex items-center gap-4 z-50 flex-shrink-0">
+        {/* Left Section */}
+        <div className="flex items-center">
+          <Link href="/" className="flex items-center gap-4 z-50">
             <div className="relative size-10 transition-all duration-300 hover:scale-110">
               <Image
                 src="/images/logo.png"
@@ -165,48 +164,50 @@ export function Header() {
           </Link>
         </div>
 
-        {/* Center Column: Desktop Navigation */}
-        <nav className="hidden lg:flex items-center justify-center gap-6 h-full">
-          <div
-            className="relative h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("platform")}
-          >
-            <NavItem
-              label="Platform"
-              isActive={activeDropdown === "platform"}
-            />
-          </div>
-          <div
-            className="relative h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("solutions")}
-          >
-            <NavItem
-              label="Solutions"
-              isActive={activeDropdown === "solutions"}
-            />
-          </div>
-          <div
-            className="relative h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("developers")}
-          >
-            <NavItem
-              label="Developers"
-              isActive={activeDropdown === "developers"}
-            />
-          </div>
-          <div
-            className="relative h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter("resources")}
-          >
-            <NavItem
-              label="Resources"
-              isActive={activeDropdown === "resources"}
-            />
-          </div>
-        </nav>
+        {/* Center Section (Navigation) */}
+        <div className="flex-1 flex justify-center">
+          <nav className="hidden lg:flex items-center gap-6 h-full">
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("platform")}
+            >
+              <NavItem
+                label="Platform"
+                isActive={activeDropdown === "platform"}
+              />
+            </div>
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("solutions")}
+            >
+              <NavItem
+                label="Solutions"
+                isActive={activeDropdown === "solutions"}
+              />
+            </div>
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("developers")}
+            >
+              <NavItem
+                label="Developers"
+                isActive={activeDropdown === "developers"}
+              />
+            </div>
+            <div
+              className="relative h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("resources")}
+            >
+              <NavItem
+                label="Resources"
+                isActive={activeDropdown === "resources"}
+              />
+            </div>
+          </nav>
+        </div>
 
-        {/* Right Column: Actions & Mobile Menu */}
-        <div className="flex justify-end">
+        {/* Right Section */}
+        <div className="flex items-center">
           {/* Desktop Right Side: Search Icon + CTA */}
           <div className="hidden lg:flex items-center gap-6">
             <button

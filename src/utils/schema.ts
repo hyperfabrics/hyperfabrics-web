@@ -4,7 +4,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "fazezero",
     url: "https://fazezero.com",
-    logo: "https://fazezero.com/images/logo_blue.png",
+    logo: "https://fazezero.com/images/logo.png",
     description:
       "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
     sameAs: [

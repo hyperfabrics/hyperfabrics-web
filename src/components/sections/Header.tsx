@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -130,11 +131,14 @@ export function Header() {
           href="/"
           className="flex items-center gap-2 z-50 group flex-shrink-0"
         >
-          <div
-            className="grid size-8 place-items-center rounded-lg transition-all duration-300 group-hover:scale-105"
-            style={{ backgroundColor: "#375bd2" }}
-          >
-            <span className="font-black text-white text-sm">Ø</span>
+          <div className="relative size-8 transition-all duration-300 group-hover:scale-105">
+            <Image
+              src="/images/logo.png"
+              alt="fazezero"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
           </div>
           <span
             className="text-lg font-bold tracking-tight transition-all duration-300"

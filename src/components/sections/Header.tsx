@@ -63,7 +63,7 @@ export function Header() {
             { label: "Documentation", href: "/developers/docs" },
             { label: "API Reference", href: "/developers/api" },
             { label: "SDKs & Libraries", href: "/developers/sdks" },
-            { label: "Code Examples", href: "/developers/examples" },
+            { label: "Changelog", href: "/developers/changelog" },
           ],
         },
         {
@@ -72,7 +72,25 @@ export function Header() {
             { label: "Tutorials", href: "/developers/tutorials" },
             { label: "Integration Guides", href: "/developers/guides" },
             { label: "Sample Projects", href: "/developers/samples" },
-            { label: "Community", href: "/developers/community" },
+            { label: "Postman Collection", href: "/developers/postman" },
+          ],
+        },
+        {
+          title: "COMMUNITY",
+          items: [
+            { label: "GitHub", href: "https://github.com/fazezero" },
+            { label: "Discord", href: "/community/discord" },
+            { label: "Forum", href: "/community/forum" },
+            { label: "Events", href: "/community/events" },
+          ],
+        },
+        {
+          title: "SUPPORT",
+          items: [
+            { label: "Contact Support", href: "/support/contact" },
+            { label: "API Status", href: "https://status.fazezero.com" },
+            { label: "FAQ", href: "/developers/faq" },
+            { label: "Stack Overflow", href: "/community/stackoverflow" },
           ],
         },
       ],
@@ -89,12 +107,30 @@ export function Header() {
           ],
         },
         {
-          title: "SUPPORT",
+          title: "EVENTS",
           items: [
-            { label: "Help Center", href: "/support" },
+            { label: "Upcoming Webinars", href: "/events/webinars" },
+            { label: "Conferences", href: "/events/conferences" },
+            { label: "Meetups", href: "/events/meetups" },
+            { label: "Past Events", href: "/events/archive" },
+          ],
+        },
+        {
+          title: "COMPANY",
+          items: [
+            { label: "About Us", href: "/company/about" },
+            { label: "Careers", href: "/company/careers" },
+            { label: "Press", href: "/company/press" },
             { label: "Contact Us", href: "/contact" },
-            { label: "System Status", href: "/status" },
-            { label: "FAQ", href: "/faq" },
+          ],
+        },
+        {
+          title: "LEGAL",
+          items: [
+            { label: "Privacy Policy", href: "/legal/privacy" },
+            { label: "Terms of Service", href: "/legal/terms" },
+            { label: "Cookie Policy", href: "/legal/cookies" },
+            { label: "DPA", href: "/legal/dpa" },
           ],
         },
       ],
@@ -163,7 +199,7 @@ export function Header() {
             {/* Platform Dropdown Menu */}
             {activeDropdown === "platform" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-8 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
@@ -332,7 +368,7 @@ export function Header() {
             {/* Solutions Dropdown Menu */}
             {activeDropdown === "solutions" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-8 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
@@ -501,7 +537,7 @@ export function Header() {
             {/* Developers Dropdown Menu */}
             {activeDropdown === "developers" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-8 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
@@ -670,7 +706,7 @@ export function Header() {
             {/* Resources Dropdown Menu */}
             {activeDropdown === "resources" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-8 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",

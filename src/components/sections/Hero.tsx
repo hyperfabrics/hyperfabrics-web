@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Shield, ArrowRight } from "lucide-react";
-import { Button, Section, Pill } from "@/components/ui";
+import { ArrowRight } from "lucide-react";
+import { Button, Section } from "@/components/ui";
+// import { Shield, Pill } from "@/components/ui"; // Commented out for now
 
 export function Hero() {
   return (
@@ -8,8 +9,8 @@ export function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Content */}
         <div className="text-center space-y-10 sm:space-y-12">
-          {/* Trust Badge */}
-          <motion.div
+          {/* Trust Badge - Commented out for now */}
+          {/* <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -18,7 +19,7 @@ export function Hero() {
               <Shield className="size-3.5" />
               ISO 27001 • SOC 2 Type 2 • 99.99% uptime
             </Pill>
-          </motion.div>
+          </motion.div> */}
 
           {/* Hero Headline */}
           <motion.div
@@ -52,16 +53,10 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col sm:flex-row gap-4 justify-center pt-2"
           >
-            <Button
-              href="/solutions"
-              className="justify-center text-lg px-10 py-6 bg-white text-black hover:bg-white/90 ring-0 shadow-2xl shadow-white/10 font-semibold rounded-full"
-            >
+            <Button href="/solutions" variant="primary" size="lg">
               Explore Solutions
             </Button>
-            <Button
-              href="/developers"
-              className="justify-center text-lg px-10 py-6 bg-transparent ring-1 ring-white/30 hover:bg-white/5 rounded-full"
-            >
+            <Button href="/developers" variant="secondary" size="lg">
               For Developers
               <ArrowRight className="size-5" />
             </Button>

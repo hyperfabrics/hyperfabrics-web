@@ -1,6 +1,6 @@
 "use client";
 import { Header, CTA, Footer } from "@/components/sections";
-import { Section } from "@/components/ui";
+import { Section, Button } from "@/components/ui";
 import Icon, { IconName } from "./Icon";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -18,6 +18,19 @@ interface ContentSection {
   icon: IconName;
 }
 
+interface StrategicCTA {
+  title: string;
+  description: string;
+  primaryButton: {
+    text: string;
+    href: string;
+  };
+  secondaryButton?: {
+    text: string;
+    href: string;
+  };
+}
+
 interface ContentPageProps {
   badge: string;
   badgeIcon?: IconName;
@@ -25,6 +38,7 @@ interface ContentPageProps {
   description: string;
   quickLinks?: QuickLink[];
   sections?: ContentSection[];
+  strategicCTA?: StrategicCTA;
   children?: ReactNode;
 }
 
@@ -35,6 +49,7 @@ export function ContentPage({
   description,
   quickLinks,
   sections,
+  strategicCTA,
   children,
 }: ContentPageProps) {
   return (
@@ -177,6 +192,46 @@ export function ContentPage({
           {children && (
             <div className="mt-12 prose prose-invert prose-lg max-w-none animate-fade-in-up animation-delay-700">
               {children}
+            </div>
+          )}
+
+          {/* Strategic CTA Section - Request Demo / Contact Sales */}
+          {strategicCTA && (
+            <div className="mt-20 sm:mt-24 lg:mt-32">
+              <div className="relative p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10 ring-1 ring-white/10 backdrop-blur-xl overflow-hidden">
+                {/* Background glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5 blur-3xl" />
+
+                {/* Content */}
+                <div className="relative text-center max-w-3xl mx-auto space-y-6">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
+                    {strategicCTA.title}
+                  </h2>
+                  <p className="text-lg sm:text-xl text-white/70 leading-relaxed">
+                    {strategicCTA.description}
+                  </p>
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <Button
+                      href={strategicCTA.primaryButton.href}
+                      variant="primary"
+                      size="lg"
+                    >
+                      {strategicCTA.primaryButton.text}
+                    </Button>
+                    {strategicCTA.secondaryButton && (
+                      <Button
+                        href={strategicCTA.secondaryButton.href}
+                        variant="secondary"
+                        size="lg"
+                      >
+                        {strategicCTA.secondaryButton.text}
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>

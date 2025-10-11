@@ -25,6 +25,11 @@ export interface ButtonProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
   as?: "button" | "a";
   href?: string;
+  // visual variants and sizes
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  // disabled styles/behavior (for anchors, used as aria-disabled + pointer-events)
+  disabled?: boolean;
 }
 
 export interface SectionProps {
@@ -40,6 +45,7 @@ export interface CardProps {
 
 export interface PillProps {
   children: ReactNode;
+  className?: string;
 }
 
 export interface MetricProps {

@@ -3,8 +3,8 @@
 # This script checks for broken links by fetching the sitemap and testing each URL.
 
 # --- Configuration ---
-# The base URL of your local development server
-BASE_URL="http://localhost:3000"
+# The base URL of your local development server (can be overridden with environment variable)
+BASE_URL="${BASE_URL:-http://localhost:3000}"
 SITEMAP_URL="${BASE_URL}/sitemap.xml"
 SUCCESS_COLOR='\033[0;32m'
 ERROR_COLOR='\033[0;31m'
@@ -32,10 +32,10 @@ for url in $URLS; do
   total_links=$((total_links + 1))
   # Replace the production domain with localhost for local testing
   local_url=$(echo "$url" | sed "s|https://fazezero.com|${BASE_URL}|")
-  
+
   # Get the HTTP status code
   status_code=$(curl -o /dev/null -s -w "%{http_code}" "$local_url")
-  
+
   if [ "$status_code" -ge 200 ] && [ "$status_code" -lt 300 ]; then
     echo -e "[${SUCCESS_COLOR}  OK  ${NC}] ${status_code} - ${local_url}"
   elif [ "$status_code" -ge 300 ] && [ "$status_code" -lt 400 ]; then

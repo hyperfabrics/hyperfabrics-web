@@ -25,6 +25,7 @@ import {
   Info,
   Briefcase,
   Newspaper,
+  Wallet,
   LucideProps,
   LucideIcon,
 } from "lucide-react";
@@ -55,7 +56,8 @@ export type IconName =
   | "Youtube"
   | "Info"
   | "Briefcase"
-  | "Newspaper";
+  | "Newspaper"
+  | "Wallet";
 
 const icons: { [key in IconName]: LucideIcon } = {
   Box,
@@ -84,6 +86,7 @@ const icons: { [key in IconName]: LucideIcon } = {
   Info,
   Briefcase,
   Newspaper,
+  Wallet,
 };
 
 interface IconProps extends LucideProps {

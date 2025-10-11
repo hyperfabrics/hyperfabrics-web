@@ -11,17 +11,17 @@ export const megaMenus: MegaMenuData = {
           title: "CORE INFRASTRUCTURE",
           items: [
             {
+              label: "Digital Assets Platform",
+              href: "/platform/digital-assets",
+              description: "Enterprise custody and trading infrastructure.",
+              icon: "Wallet",
+              isNew: true,
+            },
+            {
               label: "Tokenization Studio",
               href: "/platform/studio",
               description: "Design, launch, and manage tokenized assets.",
               icon: "Box",
-              isNew: true,
-            },
-            {
-              label: "Compliance Engine",
-              href: "/platform/compliance",
-              description: "Automate regulatory and compliance workflows.",
-              icon: "ShieldCheck",
             },
           ],
         },
@@ -29,8 +29,8 @@ export const megaMenus: MegaMenuData = {
           title: "PAYMENTS",
           items: [
             {
-              label: "Payment Rails",
-              href: "/platform/payments",
+              label: "Payment Platform",
+              href: "/platform/payment-platform",
               description:
                 "Integrate with global payment and settlement networks.",
               icon: "ArrowRightLeft",

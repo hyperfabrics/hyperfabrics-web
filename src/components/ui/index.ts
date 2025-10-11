@@ -6,3 +6,4 @@ export { Metric } from "./Metric";
 export { Feature } from "./Feature";
 export { LI } from "./LI";
 export { ThemedText } from "./ThemedText";
+export { ContentPage } from "./ContentPage";

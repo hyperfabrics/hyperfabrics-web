@@ -1,32 +1,29 @@
 "use client";
-import React from "react";
-import { Header, CTA, Footer } from "@/components/sections";
+import { ContentPage } from "@/components/ui";
+import { pageContent } from "./metadata";
 
 export default function ContactPage() {
   return (
-    <div
-      className="relative min-h-screen overflow-x-hidden transition-colors duration-300"
-      style={{ background: "var(--background)", color: "var(--foreground)" }}
+    <ContentPage
+      badge={pageContent.badge}
+      badgeIcon={pageContent.badgeIcon}
+      title={pageContent.title}
+      description={pageContent.description}
+      sections={pageContent.sections}
     >
-      {/* Background gradients - theme aware */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-60 dark:opacity-100 transition-opacity"
-        style={{
-          background: `radial-gradient(ellipse at top, var(--gradient-from), var(--gradient-to))`,
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 -top-40 h-[40rem] blur-3xl opacity-50 dark:opacity-100 transition-opacity"
-        style={{
-          background: `linear-gradient(to bottom, var(--gradient-from), transparent)`,
-        }}
-      />
-
-      <Header />
-      <CTA />
-      <Footer />
-    </div>
+      <h2>Schedule a Demo</h2>
+      <p>
+        Ready to see fazeZERO in action? Book a personalized demo with our team
+        to learn how our platform can transform your digital asset operations.
+      </p>
+      <div className="not-prose my-8">
+        <a
+          href="mailto:sales@fazezero.com"
+          className="inline-flex items-center px-6 py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-medium transition-colors"
+        >
+          Request a Demo →
+        </a>
+      </div>
+    </ContentPage>
   );
 }

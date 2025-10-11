@@ -4,35 +4,58 @@ export const solutionsMegaMenu: MegaMenuColumn[] = [
   {
     sections: [
       {
-        title: "Tokenization & RWAs",
+        title: "FINANCIAL SERVICES",
         items: [
           {
-            label: "Studio (Issuer Console)",
-            href: "/solutions#tokenization",
+            label: "Central Banks",
+            href: "/solutions/central-banks",
             description:
-              "Onboard SPVs/assets, design classes, e-sign docs, and go live.",
-            icon: "LayoutGrid",
+              "CBDC infrastructure for 100+ countries with policy enforcement.",
+            icon: "Briefcase",
           },
           {
-            label: "Rail (Transfer Rules Engine)",
-            href: "/solutions#tokenization",
+            label: "Financial Services",
+            href: "/solutions/financial-services",
             description:
-              "Jurisdiction + investor-class aware token with automated distributions.",
-            icon: "GitBranch",
+              "Enterprise blockchain for banks with asset tokenization.",
+            icon: "BarChart",
           },
           {
-            label: "Verify (KYC/AML & Accreditation)",
-            href: "/solutions#tokenization",
+            label: "Insurance",
+            href: "/solutions/insurance",
             description:
-              "Wallet binding, sanctions screening, and eligibility checks at the API layer.",
+              "Automated claims, fraud detection, smart contract payouts.",
             icon: "ShieldCheck",
           },
+        ],
+      },
+    ],
+  },
+  {
+    sections: [
+      {
+        title: "TECHNOLOGY & INNOVATION",
+        items: [
           {
-            label: "Digital Assets Platform",
-            href: "/solutions#tokenization",
+            label: "Gaming",
+            href: "/solutions/gaming",
             description:
-              "MPC + SGX custody with policy controls and connectivity to 100+ chains.",
-            icon: "Building",
+              "Web3 gaming with NFTs, player ownership, decentralized marketplaces.",
+            icon: "PlaySquare",
+          },
+          {
+            label: "Media & Entertainment",
+            href: "/solutions/media",
+            description:
+              "NFT marketplaces, smart royalties, creator economy.",
+            icon: "Youtube",
+          },
+          {
+            label: "Supply Chain",
+            href: "/solutions/supply-chain",
+            description:
+              "End-to-end traceability, multi-party collaboration, IoT integration.",
+            icon: "Package",
           },
         ],
       },
@@ -41,58 +64,28 @@ export const solutionsMegaMenu: MegaMenuColumn[] = [
   {
     sections: [
       {
-        title: "Payments & Treasury",
+        title: "PUBLIC SECTOR & IMPACT",
         items: [
           {
-            label: "Stablecoin Payment Rail",
-            href: "/solutions#payments",
+            label: "Government",
+            href: "/solutions/government",
             description:
-              "Fast, low-cost settlement across chains for global payouts.",
-            icon: "ArrowRightLeft",
+              "Digital identity, voting, transparent public funding.",
+            icon: "FileText",
           },
           {
-            label: "Treasury (Policy-Driven Ops)",
-            href: "/solutions#payments",
+            label: "Healthcare",
+            href: "/solutions/healthcare",
             description:
-              "Signer policies, spend limits, and complete audit trails for digital assets.",
-            icon: "Landmark",
+              "Interoperable health records, claims processing, HIPAA-ready.",
+            icon: "Activity",
           },
           {
-            label: "API & Microservices Modernization",
-            href: "/solutions#payments",
+            label: "ESG & Sustainability",
+            href: "/solutions/esg",
             description:
-              "Re-platform legacy payment stacks to cloud-native microservices.",
-            icon: "Code",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    sections: [
-      {
-        title: "Consulting & Data",
-        items: [
-          {
-            label: "Consulting & Architecture",
-            href: "/solutions#consulting",
-            description:
-              "Blueprints, PoCs, and SLAs to ship regulated blockchain systems fast.",
-            icon: "DraftingCompass",
-          },
-          {
-            label: "Data, Identity & Security",
-            href: "/solutions#data",
-            description:
-              "Privacy-first data and identity patterns with zero-trust controls.",
-            icon: "Fingerprint",
-          },
-          {
-            label: "PoC Development",
-            href: "/solutions#consulting",
-            description:
-              "4-6 week multi-chain prototypes using 500+ APIs and templates.",
-            icon: "FlaskConical",
+              "ESG tracking aligned with TCFD standards, carbon footprint monitoring.",
+            icon: "Server",
           },
         ],
       },

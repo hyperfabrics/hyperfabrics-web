@@ -144,7 +144,7 @@ export function Header() {
         }}
       >
         {/* Left Section */}
-        <div className="flex items-center">
+        <div className="flex items-center flex-1 justify-start">
           <Link href="/" className="flex items-center gap-4 z-50">
             <div className="relative size-10 transition-all duration-300 hover:scale-110">
               <Image
@@ -168,7 +168,7 @@ export function Header() {
         <div className="flex-1 flex justify-center">
           <nav className="hidden lg:flex items-center gap-6 h-full">
             <div
-              className="relative h-full flex items-center"
+              className="relative flex items-center h-full px-4"
               onMouseEnter={() => handleMouseEnter("platform")}
             >
               <NavItem
@@ -177,7 +177,7 @@ export function Header() {
               />
             </div>
             <div
-              className="relative h-full flex items-center"
+              className="relative flex items-center h-full px-4"
               onMouseEnter={() => handleMouseEnter("solutions")}
             >
               <NavItem
@@ -186,7 +186,7 @@ export function Header() {
               />
             </div>
             <div
-              className="relative h-full flex items-center"
+              className="relative flex items-center h-full px-4"
               onMouseEnter={() => handleMouseEnter("developers")}
             >
               <NavItem
@@ -195,7 +195,7 @@ export function Header() {
               />
             </div>
             <div
-              className="relative h-full flex items-center"
+              className="relative flex items-center h-full px-4"
               onMouseEnter={() => handleMouseEnter("resources")}
             >
               <NavItem
@@ -207,7 +207,7 @@ export function Header() {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center">
+        <div className="flex items-center flex-1 justify-end">
           {/* Desktop Right Side: Search Icon + CTA */}
           <div className="hidden lg:flex items-center gap-6">
             <button

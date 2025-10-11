@@ -22,70 +22,73 @@ export function Header() {
     setActiveDropdown(null);
   };
 
-  const renderPlatformMenu = () => (
-    <div className="grid grid-cols-3 gap-x-12 animate-fade-in">
-      {(megaMenus as MegaMenuData).platform.map((col, colIdx) => (
-        <div
-          key={colIdx}
-          className={`
-            ${
-              colIdx < (megaMenus as MegaMenuData).platform.length - 1
-                ? "border-r border-white/10 pr-8"
-                : ""
-            }
-            ${colIdx > 0 ? "pl-4" : ""}
-          `}
-        >
-          {col.sections.map((section, sectionIdx) => (
-            <div key={sectionIdx} className={sectionIdx > 0 ? "mt-12" : ""}>
-              <h3
-                className="text-sm font-semibold tracking-widest uppercase mb-6"
-                style={{ color: "var(--accent)" }}
-              >
-                {section.title}
-              </h3>
-              <ul className="flex flex-col">
-                {section.items.map((item, itemIdx) => (
-                  <li key={itemIdx} style={{ marginBottom: "24px" }}>
-                    <Link
-                      href={item.href}
-                      className="flex items-start gap-4 p-3 rounded-lg transition-colors duration-200 hover:bg-white/5"
-                    >
-                      <Icon
-                        name={item.icon as IconName}
-                        className="size-5 mt-1 flex-shrink-0"
-                        style={{ color: "var(--accent)" }}
-                      />
-                      <div className="flex flex-col">
-                        <span className="font-semibold flex items-center gap-2">
-                          {item.label}
-                          {item.isNew && (
-                            <span className="text-xs font-bold text-white bg-[#375bd2] px-2 py-0.5 rounded-full">
-                              NEW
-                            </span>
-                          )}
-                        </span>
-                        <span
-                          className="text-sm"
-                          style={{ color: "var(--text-secondary)" }}
-                        >
-                          {item.description}
-                        </span>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
+  const renderDetailedMegaMenu = (menuKey: "platform" | "solutions") => {
+    const menuData = (megaMenus as MegaMenuData)[menuKey];
+    if (!menuData || !Array.isArray(menuData)) return null;
 
-  const renderDefaultMenu = (
-    menuKey: "solutions" | "developers" | "resources"
-  ) => {
+    return (
+      <div className="grid grid-cols-3 gap-x-12 animate-fade-in">
+        {menuData.map((col, colIdx) => (
+          <div
+            key={colIdx}
+            className={`
+              ${
+                colIdx < menuData.length - 1
+                  ? "border-r border-white/10 pr-8"
+                  : ""
+              }
+              ${colIdx > 0 ? "pl-4" : ""}
+            `}
+          >
+            {col.sections.map((section, sectionIdx) => (
+              <div key={sectionIdx} className={sectionIdx > 0 ? "mt-12" : ""}>
+                <h3
+                  className="text-sm font-semibold tracking-widest uppercase mb-6"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {section.title}
+                </h3>
+                <ul className="flex flex-col">
+                  {section.items.map((item, itemIdx) => (
+                    <li key={itemIdx} style={{ marginBottom: "24px" }}>
+                      <Link
+                        href={item.href}
+                        className="flex items-start gap-4 p-3 rounded-lg transition-colors duration-200 hover:bg-white/5"
+                      >
+                        <Icon
+                          name={item.icon as IconName}
+                          className="size-5 mt-1 flex-shrink-0"
+                          style={{ color: "var(--accent)" }}
+                        />
+                        <div className="flex flex-col">
+                          <span className="font-semibold flex items-center gap-2">
+                            {item.label}
+                            {item.isNew && (
+                              <span className="text-xs font-bold text-white bg-[#375bd2] px-2 py-0.5 rounded-full">
+                                NEW
+                              </span>
+                            )}
+                          </span>
+                          <span
+                            className="text-sm"
+                            style={{ color: "var(--text-secondary)" }}
+                          >
+                            {item.description}
+                          </span>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const renderDefaultMenu = (menuKey: "developers" | "resources") => {
     const menu = (megaMenus as MegaMenuData)[menuKey];
     if (!menu || !("categories" in menu)) return null;
 
@@ -287,8 +290,10 @@ export function Header() {
               paddingBottom: "32px",
             }}
           >
-            {activeDropdown === "platform" && renderPlatformMenu()}
-            {activeDropdown === "solutions" && renderDefaultMenu("solutions")}
+            {activeDropdown === "platform" &&
+              renderDetailedMegaMenu("platform")}
+            {activeDropdown === "solutions" &&
+              renderDetailedMegaMenu("solutions")}
             {activeDropdown === "developers" && renderDefaultMenu("developers")}
             {activeDropdown === "resources" && renderDefaultMenu("resources")}
           </div>

@@ -1,7 +1,9 @@
-export const megaMenus = {
+import { MegaMenuData } from "@/types/navigation";
+import { solutionsMegaMenu } from "./solutions-mega-menu";
+
+export const megaMenus: MegaMenuData = {
   platform: [
     {
-      column: "1",
       sections: [
         {
           title: "CORE INFRASTRUCTURE",
@@ -36,7 +38,6 @@ export const megaMenus = {
       ],
     },
     {
-      column: "2",
       sections: [
         {
           title: "DATA & INTEGRATION",
@@ -64,7 +65,6 @@ export const megaMenus = {
       ],
     },
     {
-      column: "3",
       sections: [
         {
           title: "SECURITY",
@@ -103,49 +103,7 @@ export const megaMenus = {
       ],
     },
   ],
-  solutions: {
-    categories: [
-      {
-        title: "USE CASES",
-        items: [
-          { label: "Tokenized Assets", href: "/solutions/tokenization" },
-          { label: "Stablecoins", href: "/solutions/stablecoins" },
-          { label: "Payments & Settlement", href: "/solutions/payments" },
-          { label: "Banking & Capital Markets", href: "/solutions/banking" },
-        ],
-      },
-      {
-        title: "BY INDUSTRY",
-        items: [
-          { label: "Financial Services", href: "/industries/financial" },
-          { label: "Real Estate", href: "/industries/real-estate" },
-          { label: "Supply Chain", href: "/industries/supply-chain" },
-          { label: "Gaming & Entertainment", href: "/industries/gaming" },
-        ],
-      },
-      {
-        title: "BENEFITS",
-        items: [
-          { label: "Cost Reduction", href: "/solutions/cost-reduction" },
-          { label: "Operational Efficiency", href: "/solutions/efficiency" },
-          { label: "Global Scalability", href: "/solutions/scalability" },
-          { label: "Enhanced Security", href: "/solutions/security" },
-        ],
-      },
-      {
-        title: "RESOURCES",
-        items: [
-          { label: "Success Stories", href: "/solutions/case-studies" },
-          { label: "ROI Calculator", href: "/solutions/roi-calculator" },
-          {
-            label: "Implementation Guide",
-            href: "/solutions/implementation",
-          },
-          { label: "Free Consultation", href: "/solutions/consultation" },
-        ],
-      },
-    ],
-  },
+  solutions: solutionsMegaMenu,
   developers: {
     categories: [
       {

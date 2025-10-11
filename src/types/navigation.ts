@@ -1,6 +1,6 @@
 import { IconName } from "@/components/ui/Icon";
 
-export interface NavItem {
+export interface MegaMenuItem {
   label: string;
   href: string;
   description: string;
@@ -8,35 +8,32 @@ export interface NavItem {
   isNew?: boolean;
 }
 
-export interface NavSection {
+export interface MegaMenuSection {
   title: string;
-  items: NavItem[];
+  items: MegaMenuItem[];
 }
 
-export interface NavColumn {
-  column: string;
-  sections: NavSection[];
+export interface MegaMenuColumn {
+  sections: MegaMenuSection[];
 }
 
-export interface PlatformMenu extends Array<NavColumn> {}
-
-export interface LegacyNavItem {
+export interface DefaultMenuItem {
   label: string;
   href: string;
 }
 
-export interface LegacyNavCategory {
+export interface DefaultMenuCategory {
   title: string;
-  items: LegacyNavItem[];
+  items: DefaultMenuItem[];
 }
 
-export interface LegacyMenu {
-  categories: LegacyNavCategory[];
+export interface DefaultMenu {
+  categories: DefaultMenuCategory[];
 }
 
 export interface MegaMenuData {
-  platform: PlatformMenu;
-  solutions: LegacyMenu;
-  developers: LegacyMenu;
-  resources: LegacyMenu;
+  platform: MegaMenuColumn[];
+  solutions: MegaMenuColumn[];
+  developers: DefaultMenu;
+  resources: DefaultMenu;
 }

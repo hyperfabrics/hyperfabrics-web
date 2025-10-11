@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Menu, X, ChevronDown, Search } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Header() {
@@ -121,8 +121,8 @@ export function Header() {
           height: "72px",
           maxWidth: "1400px",
           margin: "0 auto",
-          paddingLeft: "24px",
-          paddingRight: "24px",
+          paddingLeft: "32px",
+          paddingRight: "32px",
         }}
       >
         {/* Logo */}
@@ -150,9 +150,10 @@ export function Header() {
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("platform")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
               style={{
                 color:
                   activeDropdown === "platform"
@@ -167,15 +168,55 @@ export function Header() {
                 }`}
               />
             </button>
+            
+            {/* Platform Dropdown Menu */}
+            {activeDropdown === "platform" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
+                style={{
+                  backgroundColor: 'var(--background)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                }}
+              >
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-6">
+                    {megaMenus.platform.categories.map((category, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                          {category.title}
+                        </h3>
+                        <ul className="space-y-1">
+                          {category.items.map((item, itemIdx) => (
+                            <li key={itemIdx}>
+                              <Link
+                                href={item.href}
+                                onClick={handleNavClick}
+                                className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                                style={{ color: 'var(--text-primary)' }}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Solutions Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("solutions")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
               style={{
                 color:
                   activeDropdown === "solutions"
@@ -190,15 +231,55 @@ export function Header() {
                 }`}
               />
             </button>
+            
+            {/* Solutions Dropdown Menu */}
+            {activeDropdown === "solutions" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
+                style={{
+                  backgroundColor: 'var(--background)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                }}
+              >
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-6">
+                    {megaMenus.solutions.categories.map((category, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                          {category.title}
+                        </h3>
+                        <ul className="space-y-1">
+                          {category.items.map((item, itemIdx) => (
+                            <li key={itemIdx}>
+                              <Link
+                                href={item.href}
+                                onClick={handleNavClick}
+                                className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                                style={{ color: 'var(--text-primary)' }}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Developers Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("developers")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
               style={{
                 color:
                   activeDropdown === "developers"
@@ -213,15 +294,55 @@ export function Header() {
                 }`}
               />
             </button>
+            
+            {/* Developers Dropdown Menu */}
+            {activeDropdown === "developers" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
+                style={{
+                  backgroundColor: 'var(--background)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                }}
+              >
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-6">
+                    {megaMenus.developers.categories.map((category, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                          {category.title}
+                        </h3>
+                        <ul className="space-y-1">
+                          {category.items.map((item, itemIdx) => (
+                            <li key={itemIdx}>
+                              <Link
+                                href={item.href}
+                                onClick={handleNavClick}
+                                className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                                style={{ color: 'var(--text-primary)' }}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Resources Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("resources")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
+              className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-white/5"
               style={{
                 color:
                   activeDropdown === "resources"
@@ -236,7 +357,47 @@ export function Header() {
                 }`}
               />
             </button>
+            
+            {/* Resources Dropdown Menu */}
+            {activeDropdown === "resources" && (
+              <div
+                className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
+                style={{
+                  backgroundColor: 'var(--background)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '8px',
+                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                }}
+              >
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-6">
+                    {megaMenus.resources.categories.map((category, idx) => (
+                      <div key={idx}>
+                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                          {category.title}
+                        </h3>
+                        <ul className="space-y-1">
+                          {category.items.map((item, itemIdx) => (
+                            <li key={itemIdx}>
+                              <Link
+                                href={item.href}
+                                onClick={handleNavClick}
+                                className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                                style={{ color: 'var(--text-primary)' }}
+                              >
+                                {item.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
+
         </nav>
 
         {/* Desktop Right Side: Search Icon + CTA */}
@@ -288,66 +449,6 @@ export function Header() {
           </button>
         </div>
       </div>
-
-      {/* Mega Menu Dropdowns */}
-      {activeDropdown && !isMenuOpen && (
-        <div
-          className="absolute left-0 right-0 top-full shadow-2xl animate-slide-down"
-          style={{
-            backgroundColor: "var(--background)",
-            borderTopWidth: "1px",
-            borderTopStyle: "solid",
-            borderTopColor: "var(--border)",
-          }}
-        >
-          <div className="max-w-6xl mx-auto px-8 py-10">
-            <div className="grid grid-cols-2 gap-16">
-              {megaMenus[
-                activeDropdown as keyof typeof megaMenus
-              ].categories.map((category, idx) => (
-                <div key={idx} className="space-y-4">
-                  <h3
-                    className="text-xs font-bold tracking-wider uppercase mb-4"
-                    style={{ color: "#6366f1" }}
-                  >
-                    {category.title}
-                  </h3>
-                  <ul className="space-y-1">
-                    {category.items.map((item, itemIdx) => (
-                      <li key={itemIdx}>
-                        <Link
-                          href={item.href}
-                          onClick={handleNavClick}
-                          className="group flex items-center justify-between py-2 px-3 rounded-lg transition-all duration-200"
-                          style={{
-                            color: "var(--text-primary)",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.backgroundColor =
-                              "var(--card-bg)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.backgroundColor =
-                              "transparent";
-                          }}
-                        >
-                          <span className="text-sm font-medium">
-                            {item.label}
-                          </span>
-                          <ArrowRight
-                            className="size-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
-                            style={{ color: "#6366f1" }}
-                          />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Mobile Menu */}
       {isMenuOpen && (

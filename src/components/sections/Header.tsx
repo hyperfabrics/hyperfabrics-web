@@ -8,6 +8,7 @@ import Icon, { IconName } from "@/components/ui/Icon";
 import { Menu, X, Search } from "lucide-react";
 import { megaMenus } from "@/data/navigation";
 import { MegaMenuData } from "@/types/navigation";
+import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -90,332 +91,186 @@ export function Header() {
     );
   };
 
-  const renderDefaultMenu = (menuKey: "resources") => {
-    const menu = (megaMenus as MegaMenuData)[menuKey];
-    if (!menu || !("categories" in menu)) return null;
-
-    return (
-      <div className="grid grid-cols-4 gap-16 animate-fade-in">
-        {menu.categories.map((category, idx) => (
-          <div key={idx} className="space-y-6">
-            <h3
-              className="text-sm font-bold tracking-widest uppercase mb-8"
-              style={{
-                color: "var(--accent)",
-                letterSpacing: "0.15em",
-              }}
-            >
-              {category.title}
-            </h3>
-            <ul className="space-y-4">
-              {category.items.map((item, itemIdx) => (
-                <li key={itemIdx}>
-                  <Link
-                    href={item.href}
-                    className="block font-medium transition-colors duration-200 hover:text-[#375bd2]"
-                    style={{ color: "var(--text-primary)" }}
-                    onClick={handleNavClick}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    );
-  };
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-xl transition-all duration-300`}
-      style={{
-        borderBottomWidth: "1px",
-        borderBottomStyle: "solid",
-        borderBottomColor: "var(--border)",
-        backgroundColor: "var(--header-bg)",
-      }}
-      onMouseLeave={() => setActiveDropdown(null)}
-    >
-      <div
-        className="w-full flex items-center justify-between"
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-xl transition-all duration-300`}
         style={{
-          height: "88px",
-          maxWidth: "1440px",
-          margin: "0 auto",
-          paddingLeft: "48px",
-          paddingRight: "48px",
-        }}
-      >
-        {/* Left Section */}
-        <div className="flex items-center flex-1 justify-start">
-          <Link href="/" className="flex items-center gap-4 z-50">
-            <div className="relative size-10 transition-all duration-300 hover:scale-110">
-              <Image
-                src="/images/logo.png"
-                alt="fazezero"
-                width={32}
-                height={32}
-                className="object-contain"
-              />
-            </div>
-            <span
-              className="text-xl font-bold tracking-tight transition-all duration-300 hover:text-[#375bd2]"
-              style={{ color: "var(--text-primary)" }}
-            >
-              fazeZERO
-            </span>
-          </Link>
-        </div>
-
-        {/* Center Section (Navigation) */}
-        <div className="flex-1 flex justify-center">
-          <nav className="hidden lg:flex items-center gap-6 h-full">
-            <div
-              className="relative flex items-center h-full px-4"
-              onMouseEnter={() => handleMouseEnter("platform")}
-            >
-              <NavItem
-                label="Platform"
-                isActive={activeDropdown === "platform"}
-              />
-            </div>
-            <div
-              className="relative flex items-center h-full px-4"
-              onMouseEnter={() => handleMouseEnter("solutions")}
-            >
-              <NavItem
-                label="Solutions"
-                isActive={activeDropdown === "solutions"}
-              />
-            </div>
-            <div
-              className="relative flex items-center h-full px-4"
-              onMouseEnter={() => handleMouseEnter("developers")}
-            >
-              <NavItem
-                label="Developers"
-                isActive={activeDropdown === "developers"}
-              />
-            </div>
-            <div
-              className="relative flex items-center h-full px-4"
-              onMouseEnter={() => handleMouseEnter("resources")}
-            >
-              <NavItem
-                label="Resources"
-                isActive={activeDropdown === "resources"}
-              />
-            </div>
-          </nav>
-        </div>
-
-        {/* Right Section */}
-        <div className="flex items-center flex-1 justify-end">
-          {/* Desktop Right Side: Search Icon + CTA */}
-          <div className="hidden lg:flex items-center gap-6">
-            <button
-              className="p-2.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
-              aria-label="Search"
-            >
-              <Search
-                className="size-5"
-                style={{ color: "var(--text-primary)" }}
-              />
-            </button>
-            <ThemeToggle />
-            <Link
-              href="/contact"
-              className="text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-200 border-2 hover:scale-105"
-              style={{
-                borderColor: "#375bd2",
-                color: "#375bd2",
-                backgroundColor: "transparent",
-              }}
-            >
-              Start building
-            </Link>
-          </div>
-
-          {/* Mobile Theme Toggle + Menu Button */}
-          <div className="lg:hidden flex items-center gap-2 z-50">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg transition-all duration-300"
-              style={{
-                backgroundColor: "var(--card-bg)",
-                borderColor: "var(--border)",
-                borderWidth: "1px",
-                color: "var(--text-primary)",
-              }}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="size-5" />
-              ) : (
-                <Menu className="size-5" />
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mega Menu Dropdown Container */}
-      <div
-        className={`absolute top-full left-0 w-full transition-opacity duration-300 ${
-          activeDropdown ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
-        style={{
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          borderBottomWidth: "1px",
+          borderBottomStyle: "solid",
+          borderBottomColor: "var(--border)",
+          backgroundColor: "var(--header-bg)",
         }}
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <div
-          className="w-full"
+          className="w-full flex items-center justify-between"
           style={{
-            backgroundColor: "var(--background-translucent)",
-            backdropFilter: "blur(16px) saturate(180%)",
-            WebkitBackdropFilter: "blur(16px) saturate(180%)",
-            borderTop: "1px solid var(--border)",
-            borderBottom: "1px solid var(--border)",
-            boxShadow: "0 12px 48px rgba(0, 0, 0, 0.2)",
+            height: "88px",
+            maxWidth: "1440px",
+            margin: "0 auto",
+            paddingLeft: "48px",
+            paddingRight: "48px",
           }}
         >
-          <div
-            className="max-w-[1440px] mx-auto px-12 py-16"
-            style={{
-              paddingLeft: "48px",
-              paddingRight: "48px",
-              paddingTop: "32px",
-              paddingBottom: "32px",
-            }}
-          >
-            {activeDropdown === "platform" &&
-              renderDetailedMegaMenu("platform")}
-            {activeDropdown === "solutions" &&
-              renderDetailedMegaMenu("solutions")}
-            {activeDropdown === "developers" &&
-              renderDetailedMegaMenu("developers")}
-            {activeDropdown === "resources" &&
-              renderDetailedMegaMenu("resources")}
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <>
-          <div
-            className="lg:hidden fixed inset-0 bg-black/20 z-40"
-            onClick={handleNavClick}
-            style={{ marginTop: "72px" }}
-          />
-          <div
-            className="lg:hidden fixed z-50 animate-in slide-in-from-right duration-300 flex flex-col"
-            style={{
-              backgroundColor: "var(--background)",
-              paddingTop: "72px",
-              height: "100vh",
-              top: 0,
-              right: 0,
-              bottom: 0,
-              left: 0,
-            }}
-          >
-            <div className="flex justify-end px-8 py-4">
-              <button
-                onClick={handleNavClick}
-                className="p-2 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-white/5"
-                style={{ color: "var(--text-primary)" }}
-                aria-label="Close menu"
-              >
-                <X className="size-6" />
-              </button>
-            </div>
-            <div className="flex-1 overflow-y-auto pb-40 px-6">
-              <div className="flex flex-col py-4">
-                <Link
-                  href="/platform"
-                  onClick={handleNavClick}
-                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
-                  style={{
-                    color: "var(--text-primary)",
-                    borderBottomColor: "var(--border)",
-                  }}
-                >
-                  Platform
-                </Link>
-                <Link
-                  href="/solutions"
-                  onClick={handleNavClick}
-                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
-                  style={{
-                    color: "var(--text-primary)",
-                    borderBottomColor: "var(--border)",
-                  }}
-                >
-                  Solutions
-                </Link>
-                <Link
-                  href="/developers"
-                  onClick={handleNavClick}
-                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
-                  style={{
-                    color: "var(--text-primary)",
-                    borderBottomColor: "var(--border)",
-                  }}
-                >
-                  Developers
-                </Link>
-                <Link
-                  href="/resources"
-                  onClick={handleNavClick}
-                  className="flex items-center justify-between py-6 px-4 text-base font-medium transition-colors border-b"
-                  style={{
-                    color: "var(--text-primary)",
-                    borderBottomColor: "var(--border)",
-                  }}
-                >
-                  Resources
-                </Link>
+          {/* Left Section */}
+          <div className="flex items-center flex-1 justify-start">
+            <Link href="/" className="flex items-center gap-4 z-50">
+              <div className="relative size-10 transition-all duration-300 hover:scale-110">
+                <Image
+                  src="/images/logo.png"
+                  alt="fazezero"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
               </div>
-            </div>
-            <div
-              className="flex gap-0 border-t"
-              style={{
-                backgroundColor: "var(--background)",
-                borderTopColor: "var(--border)",
-              }}
-            >
-              <Link
-                href="/experts"
-                onClick={handleNavClick}
-                className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors border-r"
-                style={{
-                  backgroundColor: "#375bd2",
-                  color: "#ffffff",
-                  borderRightColor: "var(--border)",
-                }}
+              <span
+                className="text-xl font-bold tracking-tight transition-all duration-300 hover:text-[#375bd2] nav-break:hidden"
+                style={{ color: "var(--text-primary)" }}
               >
-                Talk to an expert
-              </Link>
+                fazeZERO
+              </span>
+            </Link>
+          </div>
+
+          {/* Center Section (Navigation) */}
+          <div className="flex-1 flex justify-center">
+            <nav className="hidden lg:flex items-center gap-6 h-full">
+              <div
+                className="relative flex items-center h-full px-4"
+                onMouseEnter={() => handleMouseEnter("platform")}
+              >
+                <NavItem
+                  label="Platform"
+                  isActive={activeDropdown === "platform"}
+                />
+              </div>
+              <div
+                className="relative flex items-center h-full px-4"
+                onMouseEnter={() => handleMouseEnter("solutions")}
+              >
+                <NavItem
+                  label="Solutions"
+                  isActive={activeDropdown === "solutions"}
+                />
+              </div>
+              <div
+                className="relative flex items-center h-full px-4"
+                onMouseEnter={() => handleMouseEnter("developers")}
+              >
+                <NavItem
+                  label="Developers"
+                  isActive={activeDropdown === "developers"}
+                />
+              </div>
+              <div
+                className="relative flex items-center h-full px-4"
+                onMouseEnter={() => handleMouseEnter("resources")}
+              >
+                <NavItem
+                  label="Resources"
+                  isActive={activeDropdown === "resources"}
+                />
+              </div>
+            </nav>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center flex-1 justify-end">
+            {/* Desktop Right Side: Search Icon + CTA */}
+            <div className="hidden lg:flex items-center gap-6">
+              <button
+                className="p-2.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                aria-label="Search"
+              >
+                <Search
+                  className="size-5"
+                  style={{ color: "var(--text-primary)" }}
+                />
+              </button>
+              <ThemeToggle />
               <Link
                 href="/contact"
-                onClick={handleNavClick}
-                className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors"
+                className="text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-200 border-2 hover:scale-105"
                 style={{
-                  color: "var(--text-primary)",
-                  backgroundColor: "var(--background)",
+                  borderColor: "#375bd2",
+                  color: "#375bd2",
+                  backgroundColor: "transparent",
                 }}
               >
                 Start building
               </Link>
             </div>
+
+            {/* Mobile Theme Toggle + Menu Button */}
+            <div className="lg:hidden flex items-center gap-2 z-50">
+              <ThemeToggle />
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-lg transition-all duration-300"
+                style={{
+                  backgroundColor: "var(--card-bg)",
+                  borderColor: "var(--border)",
+                  borderWidth: "1px",
+                  color: "var(--text-primary)",
+                }}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? (
+                  <X className="size-5" />
+                ) : (
+                  <Menu className="size-5" />
+                )}
+              </button>
+            </div>
           </div>
-        </>
-      )}
-    </header>
+        </div>
+
+        {/* Mega Menu Dropdown Container */}
+        <div
+          className={`absolute top-full left-0 w-full transition-opacity duration-300 ${
+            activeDropdown ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          }}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <div
+            className="w-full"
+            style={{
+              backgroundColor: "var(--background-translucent)",
+              backdropFilter: "blur(16px) saturate(180%)",
+              WebkitBackdropFilter: "blur(16px) saturate(180%)",
+              borderTop: "1px solid var(--border)",
+              borderBottom: "1px solid var(--border)",
+              boxShadow: "0 12px 48px rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            <div
+              className="max-w-[1440px] mx-auto px-12 py-16"
+              style={{
+                paddingLeft: "48px",
+                paddingRight: "48px",
+                paddingTop: "32px",
+                paddingBottom: "32px",
+              }}
+            >
+              {activeDropdown === "platform" &&
+                renderDetailedMegaMenu("platform")}
+              {activeDropdown === "solutions" &&
+                renderDetailedMegaMenu("solutions")}
+              {activeDropdown === "developers" &&
+                renderDetailedMegaMenu("developers")}
+              {activeDropdown === "resources" &&
+                renderDetailedMegaMenu("resources")}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <MobileMenu isMenuOpen={isMenuOpen} handleNavClick={handleNavClick} />
+    </>
   );
 }

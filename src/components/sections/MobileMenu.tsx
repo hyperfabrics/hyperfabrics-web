@@ -26,7 +26,7 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
     <>
       {/* Overlay */}
       <div
-        className="lg:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+        className="lg:hidden fixed inset-0 bg-black/30 backdrop-blur-sm z-40 cursor-pointer"
         onClick={handleNavClick}
         aria-hidden="true"
       />
@@ -40,14 +40,13 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
           top: 0,
           right: 0,
           width: "100%",
-          maxWidth: "400px",
-          borderLeft: "1px solid var(--border)",
         }}
       >
-        {/* This empty div is a spacer to push content below the fixed header */}
-        <div style={{ height: "88px" }} />
+        {/* Header Spacer */}
+        <div style={{ height: "88px", flexShrink: 0 }} />
 
-        <div className="flex-1 overflow-y-auto pb-40">
+        {/* Scrollable Content Area */}
+        <div className="flex-1 overflow-y-auto">
           <div className="flex flex-col">
             {(Object.keys(megaMenus) as Array<keyof typeof megaMenus>).map(
               (menuKey) => {
@@ -62,7 +61,7 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
                   >
                     <button
                       onClick={() => handleMobileMenuToggle(menuKey)}
-                      className="flex items-center justify-between w-full py-6 px-8 text-lg font-semibold"
+                      className="flex items-center justify-between w-full py-8 px-8 text-lg font-semibold transition-colors hover:bg-white/5 cursor-pointer"
                       style={{ color: "var(--text-primary)" }}
                     >
                       <span className="capitalize">{menuKey}</span>
@@ -73,24 +72,24 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
                       />
                     </button>
                     {isOpen && (
-                      <div className="pb-4 pl-8 pr-4 bg-black/10 dark:bg-white/5">
+                      <div className="pb-8 px-8 bg-black/10 dark:bg-white/5">
                         {Array.isArray(menuData) &&
                           menuData.map((col) =>
                             col.sections.map((section) => (
-                              <div key={section.title} className="pt-6">
+                              <div key={section.title} className="pt-6 pb-4">
                                 <h4
-                                  className="text-xs font-semibold tracking-widest uppercase mb-4 px-2"
+                                  className="text-xs font-semibold tracking-widest uppercase mb-4 px-4"
                                   style={{ color: "var(--accent)" }}
                                 >
                                   {section.title}
                                 </h4>
-                                <ul className="flex flex-col gap-1">
+                                <ul className="flex flex-col gap-2">
                                   {section.items.map((item) => (
                                     <li key={item.label}>
                                       <Link
                                         href={item.href}
                                         onClick={handleNavClick}
-                                        className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/10"
+                                        className="flex items-start gap-4 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
                                       >
                                         <Icon
                                           name={item.icon as IconName}
@@ -101,7 +100,7 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
                                           <span className="font-medium text-base flex items-center gap-2">
                                             {item.label}
                                             {item.isNew && (
-                                              <span className="text-xs font-bold text-white bg-[#375bd2] px-2 py-0.5 rounded-full">
+                                              <span className="text-xs font-bold text-white bg-[#375bd2] px-3 py-1 rounded-full">
                                                 NEW
                                               </span>
                                             )}
@@ -130,36 +129,40 @@ export function MobileMenu({ isMenuOpen, handleNavClick }: MobileMenuProps) {
             )}
           </div>
         </div>
+
+        {/* Sticky Bottom Buttons Container */}
         <div
-          className="flex gap-0 border-t"
+          className="mobile-menu-footer border-t"
           style={{
-            backgroundColor: "var(--background)",
             borderTopColor: "var(--border)",
+            flexShrink: 0,
+            backgroundColor: "var(--background)",
           }}
         >
-          <Link
-            href="/experts"
-            onClick={handleNavClick}
-            className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors"
-            style={{
-              backgroundColor: "#375bd2",
-              color: "#ffffff",
-            }}
-          >
-            Talk to an expert
-          </Link>
-          <Link
-            href="/contact"
-            onClick={handleNavClick}
-            className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors border-l"
-            style={{
-              color: "var(--text-primary)",
-              backgroundColor: "var(--background)",
-              borderLeftColor: "var(--border)",
-            }}
-          >
-            Start building
-          </Link>
+          <div className="flex gap-0">
+            <Link
+              href="/experts"
+              onClick={handleNavClick}
+              className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors hover:opacity-90 cursor-pointer"
+              style={{
+                backgroundColor: "#375bd2",
+                color: "#ffffff",
+              }}
+            >
+              Talk to an expert
+            </Link>
+            <Link
+              href="/contact"
+              onClick={handleNavClick}
+              className="flex-1 flex items-center justify-center text-base font-semibold py-5 transition-colors border-l hover:bg-white/10 cursor-pointer"
+              style={{
+                color: "var(--text-primary)",
+                borderLeftColor: "var(--border)",
+              }}
+            >
+              Start building
+            </Link>
+          </div>
         </div>
       </div>
     </>

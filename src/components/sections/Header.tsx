@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { NavItem } from "@/components/ui/NavItem";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -150,26 +151,14 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-6 flex-1">
           {/* Platform Dropdown */}
           <div
-            className="relative"
+            className="relative h-full"
             onMouseEnter={() => setActiveDropdown("platform")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              className="flex items-center gap-2 px-5 py-3.5 text-sm font-semibold transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
-              style={{
-                color:
-                  activeDropdown === "platform"
-                    ? "#375bd2"
-                    : "var(--text-primary)",
-              }}
-            >
-              Platform
-              <ChevronDown
-                className={`size-4 transition-transform duration-200 ${
-                  activeDropdown === "platform" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+            <NavItem
+              label="Platform"
+              isActive={activeDropdown === "platform"}
+            />
 
             {/* Platform Dropdown Menu */}
             {activeDropdown === "platform" && (
@@ -331,26 +320,14 @@ export function Header() {
 
           {/* Solutions Dropdown */}
           <div
-            className="relative"
+            className="relative h-full"
             onMouseEnter={() => setActiveDropdown("solutions")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              className="flex items-center gap-2 px-5 py-3.5 text-sm font-semibold transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
-              style={{
-                color:
-                  activeDropdown === "solutions"
-                    ? "#375bd2"
-                    : "var(--text-primary)",
-              }}
-            >
-              Solutions
-              <ChevronDown
-                className={`size-4 transition-transform duration-200 ${
-                  activeDropdown === "solutions" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+            <NavItem
+              label="Solutions"
+              isActive={activeDropdown === "solutions"}
+            />
 
             {/* Solutions Dropdown Menu */}
             {activeDropdown === "solutions" && (
@@ -512,26 +489,14 @@ export function Header() {
 
           {/* Developers Dropdown */}
           <div
-            className="relative"
+            className="relative h-full"
             onMouseEnter={() => setActiveDropdown("developers")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              className="flex items-center gap-2 px-5 py-3.5 text-sm font-semibold transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
-              style={{
-                color:
-                  activeDropdown === "developers"
-                    ? "#375bd2"
-                    : "var(--text-primary)",
-              }}
-            >
-              Developers
-              <ChevronDown
-                className={`size-4 transition-transform duration-200 ${
-                  activeDropdown === "developers" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+            <NavItem
+              label="Developers"
+              isActive={activeDropdown === "developers"}
+            />
 
             {/* Developers Dropdown Menu */}
             {activeDropdown === "developers" && (
@@ -693,26 +658,14 @@ export function Header() {
 
           {/* Resources Dropdown */}
           <div
-            className="relative"
+            className="relative h-full"
             onMouseEnter={() => setActiveDropdown("resources")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button
-              className="flex items-center gap-2 px-5 py-3.5 text-sm font-semibold transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
-              style={{
-                color:
-                  activeDropdown === "resources"
-                    ? "#375bd2"
-                    : "var(--text-primary)",
-              }}
-            >
-              Resources
-              <ChevronDown
-                className={`size-4 transition-transform duration-200 ${
-                  activeDropdown === "resources" ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+            <NavItem
+              label="Resources"
+              isActive={activeDropdown === "resources"}
+            />
 
             {/* Resources Dropdown Menu */}
             {activeDropdown === "resources" && (

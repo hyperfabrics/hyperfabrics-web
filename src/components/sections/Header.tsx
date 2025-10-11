@@ -188,7 +188,10 @@ export function Header() {
                       <div key={idx}>
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
-                          style={{ color: "var(--accent)", letterSpacing: "0.15em" }}
+                          style={{
+                            color: "var(--accent)",
+                            letterSpacing: "0.15em",
+                          }}
                         >
                           {category.title}
                         </h3>
@@ -254,7 +257,10 @@ export function Header() {
                       <div key={idx}>
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
-                          style={{ color: "var(--accent)", letterSpacing: "0.15em" }}
+                          style={{
+                            color: "var(--accent)",
+                            letterSpacing: "0.15em",
+                          }}
                         >
                           {category.title}
                         </h3>
@@ -320,7 +326,10 @@ export function Header() {
                       <div key={idx}>
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
-                          style={{ color: "var(--accent)", letterSpacing: "0.15em" }}
+                          style={{
+                            color: "var(--accent)",
+                            letterSpacing: "0.15em",
+                          }}
                         >
                           {category.title}
                         </h3>
@@ -386,7 +395,10 @@ export function Header() {
                       <div key={idx}>
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
-                          style={{ color: "var(--accent)", letterSpacing: "0.15em" }}
+                          style={{
+                            color: "var(--accent)",
+                            letterSpacing: "0.15em",
+                          }}
                         >
                           {category.title}
                         </h3>

@@ -35,6 +35,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/solutions/media",
     "/solutions/supply-chain",
 
+    // Professional Services pages
+    "/services",
+    "/services/consulting",
+    "/services/implementation",
+    "/services/migration",
+    "/services/poc",
+    "/services/scalability",
+    "/services/security",
+
     // Developer pages
     "/developers/docs",
     "/developers/api",

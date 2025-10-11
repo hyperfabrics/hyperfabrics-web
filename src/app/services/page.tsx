@@ -1,7 +1,7 @@
 import { ContentPage } from "@/components/ui/ContentPage";
 import { pageContent } from "./metadata";
 
-export default function IndustriesPage() {
+export default function ServicesPage() {
   return <ContentPage {...pageContent} />;
 }
 

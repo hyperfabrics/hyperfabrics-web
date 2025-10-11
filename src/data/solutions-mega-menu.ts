@@ -46,8 +46,7 @@ export const solutionsMegaMenu: MegaMenuColumn[] = [
           {
             label: "Media & Entertainment",
             href: "/solutions/media",
-            description:
-              "NFT marketplaces, smart royalties, creator economy.",
+            description: "NFT marketplaces, smart royalties, creator economy.",
             icon: "Youtube",
           },
           {

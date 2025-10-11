@@ -7,3 +7,4 @@ export { Feature } from "./Feature";
 export { LI } from "./LI";
 export { ThemedText } from "./ThemedText";
 export { ContentPage } from "./ContentPage";
+export { TimelineContentPage } from "./TimelineContentPage";

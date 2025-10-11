@@ -192,7 +192,7 @@ export function Header() {
               <ThemeToggle />
               <Link
                 href="/contact"
-                className="text-sm font-semibold px-6 py-3 rounded-lg transition-all duration-200 border-2 hover:scale-105"
+                className="text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 border-2 hover:scale-105 shadow-lg hover:shadow-xl"
                 style={{
                   borderColor: "#375bd2",
                   color: "#375bd2",

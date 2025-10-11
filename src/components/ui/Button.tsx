@@ -14,8 +14,8 @@ export function Button({
     <Comp
       href={href}
       className={cn(
-        "inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold shadow-sm transition-all duration-200",
-        "ring-1 backdrop-blur",
+        "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]",
+        "ring-1 backdrop-blur-sm",
         // Default button styles (theme-aware via CSS variables)
         className
       )}

@@ -34,6 +34,6 @@ export interface DefaultMenu {
 export interface MegaMenuData {
   platform: MegaMenuColumn[];
   solutions: MegaMenuColumn[];
-  developers: DefaultMenu;
-  resources: DefaultMenu;
+  developers: MegaMenuColumn[];
+  resources: MegaMenuColumn[];
 }

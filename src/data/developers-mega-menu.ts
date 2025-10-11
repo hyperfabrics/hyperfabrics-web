@@ -28,7 +28,8 @@ export const developersMegaMenu: MegaMenuColumn[] = [
           {
             label: "Tutorials & Guides",
             href: "/developers/tutorials",
-            description: "Follow step-by-step tutorials to build with fazeZERO.",
+            description:
+              "Follow step-by-step tutorials to build with fazeZERO.",
             icon: "PlaySquare",
           },
         ],
@@ -43,7 +44,8 @@ export const developersMegaMenu: MegaMenuColumn[] = [
           {
             label: "Community Forum",
             href: "/developers/forum",
-            description: "Ask questions and share knowledge with the community.",
+            description:
+              "Ask questions and share knowledge with the community.",
             icon: "MessagesSquare",
           },
           {

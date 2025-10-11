@@ -22,7 +22,9 @@ export function Header() {
     setActiveDropdown(null);
   };
 
-  const renderDetailedMegaMenu = (menuKey: "platform" | "solutions") => {
+  const renderDetailedMegaMenu = (
+    menuKey: "platform" | "solutions" | "developers" | "resources"
+  ) => {
     const menuData = (megaMenus as MegaMenuData)[menuKey];
     if (!menuData || !Array.isArray(menuData)) return null;
 
@@ -88,7 +90,7 @@ export function Header() {
     );
   };
 
-  const renderDefaultMenu = (menuKey: "developers" | "resources") => {
+  const renderDefaultMenu = (menuKey: "resources") => {
     const menu = (megaMenus as MegaMenuData)[menuKey];
     if (!menu || !("categories" in menu)) return null;
 
@@ -294,8 +296,10 @@ export function Header() {
               renderDetailedMegaMenu("platform")}
             {activeDropdown === "solutions" &&
               renderDetailedMegaMenu("solutions")}
-            {activeDropdown === "developers" && renderDefaultMenu("developers")}
-            {activeDropdown === "resources" && renderDefaultMenu("resources")}
+            {activeDropdown === "developers" &&
+              renderDetailedMegaMenu("developers")}
+            {activeDropdown === "resources" &&
+              renderDetailedMegaMenu("resources")}
           </div>
         </div>
       </div>

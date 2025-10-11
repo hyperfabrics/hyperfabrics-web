@@ -1,5 +1,7 @@
 import { MegaMenuData } from "@/types/navigation";
 import { solutionsMegaMenu } from "./solutions-mega-menu";
+import { developersMegaMenu } from "./developers-mega-menu";
+import { resourcesMegaMenu } from "./resources-mega-menu";
 
 export const megaMenus: MegaMenuData = {
   platform: [
@@ -104,84 +106,6 @@ export const megaMenus: MegaMenuData = {
     },
   ],
   solutions: solutionsMegaMenu,
-  developers: {
-    categories: [
-      {
-        title: "TOOLS",
-        items: [
-          { label: "Documentation", href: "/developers/docs" },
-          { label: "API Reference", href: "/developers/api" },
-          { label: "SDKs & Libraries", href: "/developers/sdks" },
-          { label: "Changelog", href: "/developers/changelog" },
-        ],
-      },
-      {
-        title: "RESOURCES",
-        items: [
-          { label: "Tutorials", href: "/developers/tutorials" },
-          { label: "Integration Guides", href: "/developers/guides" },
-          { label: "Sample Projects", href: "/developers/samples" },
-          { label: "Postman Collection", href: "/developers/postman" },
-        ],
-      },
-      {
-        title: "COMMUNITY",
-        items: [
-          { label: "GitHub", href: "https://github.com/fazezero" },
-          { label: "Discord", href: "/community/discord" },
-          { label: "Forum", href: "/community/forum" },
-          { label: "Events", href: "/community/events" },
-        ],
-      },
-      {
-        title: "SUPPORT",
-        items: [
-          { label: "Contact Support", href: "/support/contact" },
-          { label: "API Status", href: "https://status.fazezero.com" },
-          { label: "FAQ", href: "/developers/faq" },
-          { label: "Stack Overflow", href: "/community/stackoverflow" },
-        ],
-      },
-    ],
-  },
-  resources: {
-    categories: [
-      {
-        title: "LEARN",
-        items: [
-          { label: "Blog", href: "/resources/blog" },
-          { label: "Case Studies", href: "/resources/case-studies" },
-          { label: "Whitepapers", href: "/resources/whitepapers" },
-          { label: "Research", href: "/resources/research" },
-        ],
-      },
-      {
-        title: "EVENTS",
-        items: [
-          { label: "Upcoming Webinars", href: "/events/webinars" },
-          { label: "Conferences", href: "/events/conferences" },
-          { label: "Meetups", href: "/events/meetups" },
-          { label: "Past Events", href: "/events/archive" },
-        ],
-      },
-      {
-        title: "COMPANY",
-        items: [
-          { label: "About Us", href: "/company/about" },
-          { label: "Careers", href: "/company/careers" },
-          { label: "Press", href: "/company/press" },
-          { label: "Contact Us", href: "/contact" },
-        ],
-      },
-      {
-        title: "LEGAL",
-        items: [
-          { label: "Privacy Policy", href: "/legal/privacy" },
-          { label: "Terms of Service", href: "/legal/terms" },
-          { label: "Cookie Policy", href: "/legal/cookies" },
-          { label: "DPA", href: "/legal/dpa" },
-        ],
-      },
-    ],
-  },
+  developers: developersMegaMenu,
+  resources: resourcesMegaMenu,
 };

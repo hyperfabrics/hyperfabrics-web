@@ -9,6 +9,22 @@ import {
   Activity,
   Beaker,
   Phone,
+  BookOpen,
+  Code,
+  Package,
+  PlaySquare,
+  MessagesSquare,
+  MessageCircle,
+  Calendar,
+  Rss,
+  LifeBuoy,
+  Server,
+  FileText,
+  File,
+  Youtube,
+  Info,
+  Briefcase,
+  Newspaper,
   LucideProps,
   LucideIcon,
 } from "lucide-react";
@@ -23,7 +39,23 @@ export type IconName =
   | "Users"
   | "Activity"
   | "Beaker"
-  | "Phone";
+  | "Phone"
+  | "BookOpen"
+  | "Code"
+  | "Package"
+  | "PlaySquare"
+  | "MessagesSquare"
+  | "MessageCircle"
+  | "Calendar"
+  | "Rss"
+  | "LifeBuoy"
+  | "Server"
+  | "FileText"
+  | "File"
+  | "Youtube"
+  | "Info"
+  | "Briefcase"
+  | "Newspaper";
 
 const icons: { [key in IconName]: LucideIcon } = {
   Box,
@@ -36,6 +68,22 @@ const icons: { [key in IconName]: LucideIcon } = {
   Activity,
   Beaker,
   Phone,
+  BookOpen,
+  Code,
+  Package,
+  PlaySquare,
+  MessagesSquare,
+  MessageCircle,
+  Calendar,
+  Rss,
+  LifeBuoy,
+  Server,
+  FileText,
+  File,
+  Youtube,
+  Info,
+  Briefcase,
+  Newspaper,
 };
 
 interface IconProps extends LucideProps {

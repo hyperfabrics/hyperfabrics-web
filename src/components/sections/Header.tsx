@@ -174,18 +174,20 @@ export function Header() {
             {/* Platform Dropdown Menu */}
             {activeDropdown === "platform" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[900px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
+                  borderRadius: "16px",
+                  boxShadow: "0 12px 48px rgba(15, 23, 42, 0.15)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
                 }}
               >
-                <div className="p-12">
-                  <div className="grid grid-cols-2 gap-24">
+                <div className="p-16">
+                  <div className="grid grid-cols-4 gap-16">
                     {megaMenus.platform.categories.map((category, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="space-y-6">
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
                           style={{
@@ -195,7 +197,7 @@ export function Header() {
                         >
                           {category.title}
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx}>
                               <Link
@@ -211,6 +213,116 @@ export function Header() {
                         </ul>
                       </div>
                     ))}
+
+                    {/* Additional Platform Features Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        FEATURES
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/platform/analytics"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Real-time Analytics
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/platform/webhooks"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Webhooks & Events
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/platform/dashboard"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Management Dashboard
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/platform/integrations"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Third-party Integrations
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Getting Started Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        GET STARTED
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/platform/quickstart"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Quick Start Guide
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/platform/demo"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Live Demo
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/platform/sandbox"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Developer Sandbox
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/contact"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Contact Sales
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -243,18 +355,20 @@ export function Header() {
             {/* Solutions Dropdown Menu */}
             {activeDropdown === "solutions" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[900px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
+                  borderRadius: "16px",
+                  boxShadow: "0 12px 48px rgba(15, 23, 42, 0.15)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
                 }}
               >
-                <div className="p-12">
-                  <div className="grid grid-cols-2 gap-24">
+                <div className="p-16">
+                  <div className="grid grid-cols-4 gap-16">
                     {megaMenus.solutions.categories.map((category, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="space-y-6">
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
                           style={{
@@ -264,7 +378,7 @@ export function Header() {
                         >
                           {category.title}
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx}>
                               <Link
@@ -280,6 +394,116 @@ export function Header() {
                         </ul>
                       </div>
                     ))}
+
+                    {/* Benefits Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        BENEFITS
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/solutions/cost-reduction"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Cost Reduction
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/efficiency"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Operational Efficiency
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/scalability"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Global Scalability
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/security"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Enhanced Security
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Resources Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        RESOURCES
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/solutions/case-studies"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Success Stories
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/roi-calculator"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            ROI Calculator
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/implementation"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Implementation Guide
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/solutions/consultation"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Free Consultation
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -312,18 +536,20 @@ export function Header() {
             {/* Developers Dropdown Menu */}
             {activeDropdown === "developers" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[900px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
+                  borderRadius: "16px",
+                  boxShadow: "0 12px 48px rgba(15, 23, 42, 0.15)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
                 }}
               >
-                <div className="p-12">
-                  <div className="grid grid-cols-2 gap-24">
+                <div className="p-16">
+                  <div className="grid grid-cols-4 gap-16">
                     {megaMenus.developers.categories.map((category, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="space-y-6">
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
                           style={{
@@ -333,7 +559,7 @@ export function Header() {
                         >
                           {category.title}
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx}>
                               <Link
@@ -349,6 +575,116 @@ export function Header() {
                         </ul>
                       </div>
                     ))}
+
+                    {/* Languages & SDKs Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        LANGUAGES
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/developers/javascript"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            JavaScript SDK
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/python"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Python SDK
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/java"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Java SDK
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/go"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Go SDK
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Support Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        SUPPORT
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/developers/slack"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Developer Slack
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/github"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            GitHub Repository
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/stackoverflow"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Stack Overflow
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/developers/office-hours"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Office Hours
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -381,18 +717,20 @@ export function Header() {
             {/* Resources Dropdown Menu */}
             {activeDropdown === "resources" && (
               <div
-                className="absolute top-full left-0 mt-2 w-[900px] animate-slide-down z-50"
+                className="absolute top-full left-0 mt-2 w-[95vw] max-w-[1400px] animate-slide-down z-50"
                 style={{
                   backgroundColor: "var(--background)",
                   border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
+                  borderRadius: "16px",
+                  boxShadow: "0 12px 48px rgba(15, 23, 42, 0.15)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
                 }}
               >
-                <div className="p-12">
-                  <div className="grid grid-cols-2 gap-24">
+                <div className="p-16">
+                  <div className="grid grid-cols-4 gap-16">
                     {megaMenus.resources.categories.map((category, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="space-y-6">
                         <h3
                           className="text-sm font-bold tracking-widest uppercase mb-8"
                           style={{
@@ -402,7 +740,7 @@ export function Header() {
                         >
                           {category.title}
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx}>
                               <Link
@@ -418,6 +756,116 @@ export function Header() {
                         </ul>
                       </div>
                     ))}
+
+                    {/* Events & Training Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        EVENTS
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/resources/webinars"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Upcoming Webinars
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/resources/conferences"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Industry Conferences
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/resources/training"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Training Programs
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/resources/certification"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Certification Courses
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Company Column */}
+                    <div className="space-y-6">
+                      <h3
+                        className="text-sm font-bold tracking-widest uppercase mb-8"
+                        style={{
+                          color: "var(--accent)",
+                          letterSpacing: "0.15em",
+                        }}
+                      >
+                        COMPANY
+                      </h3>
+                      <ul className="space-y-4">
+                        <li>
+                          <Link
+                            href="/about"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            About Us
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/careers"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Careers
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/press"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Press & Media
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/partners"
+                            onClick={handleNavClick}
+                            className="block py-3 px-4 text-base rounded-lg transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
+                            style={{ color: "var(--text-primary)" }}
+                          >
+                            Partner Program
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

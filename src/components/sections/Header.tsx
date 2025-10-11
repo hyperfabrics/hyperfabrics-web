@@ -168,23 +168,26 @@ export function Header() {
                 }`}
               />
             </button>
-            
+
             {/* Platform Dropdown Menu */}
             {activeDropdown === "platform" && (
               <div
                 className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
                 style={{
-                  backgroundColor: 'var(--background)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
-                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                  backgroundColor: "var(--background)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "8px",
+                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
                 }}
               >
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-6">
                     {megaMenus.platform.categories.map((category, idx) => (
                       <div key={idx}>
-                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                        <h3
+                          className="text-xs font-semibold tracking-wider uppercase mb-3"
+                          style={{ color: "var(--accent)" }}
+                        >
                           {category.title}
                         </h3>
                         <ul className="space-y-1">
@@ -194,7 +197,7 @@ export function Header() {
                                 href={item.href}
                                 onClick={handleNavClick}
                                 className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
-                                style={{ color: 'var(--text-primary)' }}
+                                style={{ color: "var(--text-primary)" }}
                               >
                                 {item.label}
                               </Link>
@@ -231,23 +234,26 @@ export function Header() {
                 }`}
               />
             </button>
-            
+
             {/* Solutions Dropdown Menu */}
             {activeDropdown === "solutions" && (
               <div
                 className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
                 style={{
-                  backgroundColor: 'var(--background)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
-                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                  backgroundColor: "var(--background)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "8px",
+                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
                 }}
               >
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-6">
                     {megaMenus.solutions.categories.map((category, idx) => (
                       <div key={idx}>
-                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                        <h3
+                          className="text-xs font-semibold tracking-wider uppercase mb-3"
+                          style={{ color: "var(--accent)" }}
+                        >
                           {category.title}
                         </h3>
                         <ul className="space-y-1">
@@ -257,7 +263,7 @@ export function Header() {
                                 href={item.href}
                                 onClick={handleNavClick}
                                 className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
-                                style={{ color: 'var(--text-primary)' }}
+                                style={{ color: "var(--text-primary)" }}
                               >
                                 {item.label}
                               </Link>
@@ -294,23 +300,26 @@ export function Header() {
                 }`}
               />
             </button>
-            
+
             {/* Developers Dropdown Menu */}
             {activeDropdown === "developers" && (
               <div
                 className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
                 style={{
-                  backgroundColor: 'var(--background)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
-                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                  backgroundColor: "var(--background)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "8px",
+                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
                 }}
               >
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-6">
                     {megaMenus.developers.categories.map((category, idx) => (
                       <div key={idx}>
-                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                        <h3
+                          className="text-xs font-semibold tracking-wider uppercase mb-3"
+                          style={{ color: "var(--accent)" }}
+                        >
                           {category.title}
                         </h3>
                         <ul className="space-y-1">
@@ -320,7 +329,7 @@ export function Header() {
                                 href={item.href}
                                 onClick={handleNavClick}
                                 className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
-                                style={{ color: 'var(--text-primary)' }}
+                                style={{ color: "var(--text-primary)" }}
                               >
                                 {item.label}
                               </Link>
@@ -357,23 +366,26 @@ export function Header() {
                 }`}
               />
             </button>
-            
+
             {/* Resources Dropdown Menu */}
             {activeDropdown === "resources" && (
               <div
                 className="absolute top-full left-0 mt-1 w-96 animate-slide-down z-50"
                 style={{
-                  backgroundColor: 'var(--background)',
-                  border: '1px solid var(--border)',
-                  borderRadius: '8px',
-                  boxShadow: '0 8px 24px rgba(15, 23, 42, 0.12)'
+                  backgroundColor: "var(--background)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "8px",
+                  boxShadow: "0 8px 24px rgba(15, 23, 42, 0.12)",
                 }}
               >
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-6">
                     {megaMenus.resources.categories.map((category, idx) => (
                       <div key={idx}>
-                        <h3 className="text-xs font-semibold tracking-wider uppercase mb-3" style={{ color: 'var(--accent)' }}>
+                        <h3
+                          className="text-xs font-semibold tracking-wider uppercase mb-3"
+                          style={{ color: "var(--accent)" }}
+                        >
                           {category.title}
                         </h3>
                         <ul className="space-y-1">
@@ -383,7 +395,7 @@ export function Header() {
                                 href={item.href}
                                 onClick={handleNavClick}
                                 className="block py-2 px-3 text-sm rounded-md transition-colors hover:bg-gray-50 dark:hover:bg-white/5"
-                                style={{ color: 'var(--text-primary)' }}
+                                style={{ color: "var(--text-primary)" }}
                               >
                                 {item.label}
                               </Link>
@@ -397,7 +409,6 @@ export function Header() {
               </div>
             )}
           </div>
-
         </nav>
 
         {/* Desktop Right Side: Search Icon + CTA */}

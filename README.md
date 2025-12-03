@@ -1,6 +1,8 @@
 # fazezero Website
 
-Enterprise blockchain infrastructure website built with Next.js 15, React 19, and TailwindCSS.
+Enterprise blockchain infrastructure website for fazeZERO - providing secure, scalable, and compliant blockchain infrastructure for financial institutions, governments, and enterprises worldwide.
+
+Built with Next.js 15, React 19, TailwindCSS 4, and deployed to AWS S3 + CloudFront.
 
 ## 🚀 Quick Start
 
@@ -46,9 +48,6 @@ This website includes comprehensive SEO enhancements:
 ### SEO Documentation
 
 - 📖 [SEO.md](./SEO.md) - Complete SEO documentation
-- ✅ [SEO-CHECKLIST.md](./SEO-CHECKLIST.md) - Implementation checklist
-- 📋 [SEO-SUMMARY.md](./SEO-SUMMARY.md) - Quick overview
-- 🎯 [SEO-QUICK-REF.md](./SEO-QUICK-REF.md) - Quick reference guide
 
 ### Verify SEO Setup
 
@@ -100,6 +99,7 @@ fazezero-website/
 
 ## 🌐 Pages
 
+### Main Pages
 | Route         | Description                                     |
 | ------------- | ----------------------------------------------- |
 | `/`           | Homepage with hero, solutions, and social proof |
@@ -109,6 +109,33 @@ fazezero-website/
 | `/developers` | Developer resources and documentation           |
 | `/compliance` | Compliance and regulatory information           |
 | `/contact`    | Contact form and information                    |
+
+### Company Pages
+| Route                | Description                          |
+| -------------------- | ------------------------------------ |
+| `/company/about`     | About fazeZERO and company mission   |
+| `/company/careers`   | Career opportunities                 |
+| `/company/press`     | Press releases and media resources   |
+| `/company/privacy`   | Privacy Policy (GDPR/CCPA compliant) |
+
+### Platform Pages
+- `/platform/digital-assets` - Digital asset management
+- `/platform/mpc` - Multi-Party Computation
+- `/platform/payment-platform` - Payment infrastructure
+- `/platform/api` - API documentation
+- `/platform/dashboard` - Platform dashboard
+- `/platform/analytics` - Analytics and reporting
+- `/platform/audit` - Audit capabilities
+- `/platform/sandbox` - Sandbox environment
+- `/platform/studio` - Development studio
+
+### Developer Resources
+- `/developers/docs` - Documentation
+- `/developers/api` - API reference
+- `/developers/sdks` - SDKs and libraries
+- `/developers/tutorials` - Tutorials and guides
+- `/developers/status` - Service status
+- `/developers/support` - Support resources
 
 ## ⚙️ Environment Variables
 
@@ -183,25 +210,61 @@ npm run verify-seo
 
 ## 🚀 Deployment
 
-This project is optimized for [Vercel](https://vercel.com):
+This project is deployed to **AWS S3 + CloudFront** for static hosting.
+
+### Automated Deployment (GitHub Actions)
+
+The project includes automated CI/CD via GitHub Actions:
+
+- **Automatic deployment** on push to `main` branch
+- **Testing workflow** on pull requests
+- **CloudFront cache invalidation** after deployment
+- **Optional Cloudflare cache purge**
+
+See [`.github/workflows/README.md`](.github/workflows/README.md) for setup instructions.
+
+### Manual Deployment
 
 ```bash
-# Install Vercel CLI
-npm i -g vercel
+# Set environment variables
+export AWS_S3_BUCKET=fazezero.com
+export AWS_CLOUDFRONT_DIST_ID=E3SE8P2WZP6BAD
+export AWS_REGION=us-east-1
+export NEXT_PUBLIC_SITE_URL=https://fazezero.com
 
 # Deploy
-vercel --prod
+npm run deploy
 ```
+
+Or use the script directly:
+```bash
+./scripts/deploy-aws-s3-static.sh
+```
+
+### Deployment Features
+
+- ✅ Static export build optimization
+- ✅ Automatic S3 upload with proper cache headers
+- ✅ CloudFront cache invalidation
+- ✅ Cloudflare cache purge (optional)
+- ✅ Sitemap and robots.txt generation
+- ✅ Public bucket policy configuration
+
+For detailed deployment information, see [AWS-DEPLOYMENT.md](./AWS-DEPLOYMENT.md).
 
 ### Post-Deployment Checklist
 
-1. ✅ Submit sitemap to [Google Search Console](https://search.google.com/search-console)
-2. ✅ Submit sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
-3. ✅ Test OpenGraph with [OG Preview](https://www.opengraph.xyz/)
-4. ✅ Test Twitter Cards with [Card Validator](https://cards-dev.twitter.com/validator)
-5. ✅ Validate structured data with [Rich Results Test](https://search.google.com/test/rich-results)
-6. ✅ Set up Google Analytics
-7. ✅ Monitor performance with [PageSpeed Insights](https://pagespeed.web.dev/)
+1. ✅ Verify site is accessible at https://fazezero.com
+2. ✅ Test all pages load correctly
+3. ✅ Check sitemap.xml is accessible: https://fazezero.com/sitemap.xml
+4. ✅ Verify robots.txt: https://fazezero.com/robots.txt
+5. ✅ Submit sitemap to [Google Search Console](https://search.google.com/search-console)
+6. ✅ Submit sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
+7. ✅ Test OpenGraph with [OG Preview](https://www.opengraph.xyz/)
+8. ✅ Test Twitter Cards with [Card Validator](https://cards-dev.twitter.com/validator)
+9. ✅ Validate structured data with [Rich Results Test](https://search.google.com/test/rich-results)
+10. ✅ Monitor CloudFront invalidation status
+11. ✅ Set up monitoring and alerts
 
 ## 📊 Tech Stack
 
@@ -215,13 +278,14 @@ vercel --prod
 
 ## 📝 Scripts
 
-| Script               | Description              |
-| -------------------- | ------------------------ |
-| `npm run dev`        | Start development server |
-| `npm run build`      | Build for production     |
-| `npm run start`      | Start production server  |
-| `npm run lint`       | Run ESLint               |
-| `npm run verify-seo` | Verify SEO setup         |
+| Script               | Description                              |
+| -------------------- | ---------------------------------------- |
+| `npm run dev`        | Start development server with Turbopack  |
+| `npm run build`      | Build for production with Turbopack     |
+| `npm run start`      | Start production server                  |
+| `npm run lint`       | Run ESLint                               |
+| `npm run verify-seo` | Verify SEO setup (requires dev server)  |
+| `npm run deploy`     | Deploy to AWS S3 + CloudFront           |
 
 ## 🤝 Contributing
 
@@ -234,13 +298,68 @@ vercel --prod
 
 See [LICENSE](./LICENSE) file for details.
 
+## 🔒 Privacy & Compliance
+
+- **Privacy Policy**: Comprehensive GDPR/CCPA compliant privacy policy at `/company/privacy`
+- **Certifications**: ISO 27001 and SOC 2 Type 2 certified infrastructure
+- **Data Protection**: Enterprise-grade security with MPC and Intel SGX technology
+- **Compliance**: Built-in KYC/AML compliance frameworks
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 20+ 
+- npm or yarn
+- AWS CLI (for deployment)
+- Git
+
+### Local Development
+
+```bash
+# Clone repository
+git clone https://github.com/fazezero/fazezero-website.git
+cd fazezero-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
+
+### Code Quality
+
+- **TypeScript** for type safety
+- **ESLint** for code linting
+- **Next.js** built-in optimizations
+- **Turbopack** for fast builds
+
 ## 📚 Additional Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
 - [Framer Motion Documentation](https://www.framer.com/motion/)
 - [SEO Best Practices](./SEO.md)
+- [AWS Deployment Guide](./AWS-DEPLOYMENT.md)
+- [GitHub Actions Workflows](.github/workflows/README.md)
+
+## 🤝 Contributing
+
+1. Create a feature branch from `main`
+2. Make your changes
+3. Test thoroughly (`npm run build`, `npm run lint`)
+4. Submit a pull request
+5. GitHub Actions will automatically test your changes
+
+## 📄 License
+
+See [LICENSE](./LICENSE) file for details.
 
 ---
 
 **Built with ❤️ by fazezero**
+
+Enterprise blockchain infrastructure for the future of digital assets.

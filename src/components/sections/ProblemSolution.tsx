@@ -10,28 +10,24 @@ const metrics = [
     label: "Time to Production",
     without: "12-18 months",
     with: "4-6 weeks",
-    highlight: true,
   },
   {
     icon: DollarSign,
     label: "Development Cost",
     without: "$2M+",
     with: "90% less",
-    highlight: true,
   },
   {
     icon: Users,
     label: "Team Required",
     without: "Specialized engineers",
     with: "Your existing team",
-    highlight: true,
   },
   {
     icon: Shield,
     label: "Compliance",
     without: "Navigate alone",
     with: "Built-in",
-    highlight: true,
   },
 ];
 
@@ -64,10 +60,11 @@ export function ProblemSolution() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative p-10 rounded-3xl bg-white/[0.01] backdrop-blur-sm ring-1 ring-red-500/10"
+            className="relative isolate p-10 rounded-3xl bg-white/[0.01] backdrop-blur-sm border border-red-500/10"
+            style={{ boxShadow: "0 0 0 1px rgba(239, 68, 68, 0.1)" }}
           >
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
                 <X className="w-7 h-7 text-red-400" />
               </div>
               <h3 className="text-2xl font-semibold text-red-300">Without fazezero</h3>
@@ -89,10 +86,10 @@ export function ProblemSolution() {
                       <Icon className="w-6 h-6 text-red-400/60" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2">
+                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2 font-medium">
                         {metric.label}
                       </div>
-                      <div className="text-2xl font-bold text-white/50">
+                      <div className="text-2xl font-bold text-white/50 leading-tight">
                         {metric.without}
                       </div>
                     </div>
@@ -108,10 +105,14 @@ export function ProblemSolution() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative p-10 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-green-500/10 backdrop-blur-sm ring-1 ring-green-500/20"
+            className="relative isolate p-10 rounded-3xl border border-green-500/20"
+            style={{
+              background: "linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(34, 197, 94, 0.1) 100%)",
+              boxShadow: "0 0 0 1px rgba(34, 197, 94, 0.2)",
+            }}
           >
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
                 <Check className="w-7 h-7 text-green-400" />
               </div>
               <h3 className="text-2xl font-semibold text-green-300">With fazezero</h3>
@@ -133,10 +134,10 @@ export function ProblemSolution() {
                       <Icon className="w-6 h-6 text-green-400" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2">
+                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2 font-medium">
                         {metric.label}
                       </div>
-                      <div className="text-2xl font-bold text-white">
+                      <div className="text-2xl font-bold text-white leading-tight">
                         {metric.with}
                       </div>
                     </div>

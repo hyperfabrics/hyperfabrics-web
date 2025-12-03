@@ -8,13 +8,13 @@ export function Footer() {
           © {new Date().getFullYear()} fazezero. All rights reserved.
         </span>
         <div className="flex items-center gap-4 text-sm text-white/60">
-          <a href="#" className="hover:text-white">
+          <a href="/compliance" className="hover:text-white transition-colors">
             Security
           </a>
-          <a href="#" className="hover:text-white">
+          <a href="/company/privacy" className="hover:text-white transition-colors">
             Privacy
           </a>
-          <a href="#" className="hover:text-white">
+          <a href="/developers/status" className="hover:text-white transition-colors">
             Status
           </a>
         </div>

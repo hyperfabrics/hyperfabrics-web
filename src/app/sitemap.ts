@@ -69,6 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/company/about",
     "/company/careers",
     "/company/press",
+    "/company/privacy",
   ];
 
   return routes.map((route) => ({

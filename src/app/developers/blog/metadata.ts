@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Developer Blog | fazeZERO",
@@ -13,15 +14,16 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Developer Blog",
-  badgeIcon: "Rss",
+  badgeIcon: "Rss" as IconName,
   title: "Developer Blog",
   description:
     "Technical articles, tutorials, and platform updates from the fazeZERO engineering team.",
   sections: [
     {
       title: "Latest from Our Team",
-      content:
+      description:
         "Read in-depth technical articles, learn about new features and updates, and discover best practices from the engineers building fazeZERO.",
+      icon: "Rss" as IconName,
     },
   ],
 };

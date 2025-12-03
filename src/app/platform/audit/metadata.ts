@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Audit & Compliance - Immutable Audit Trails | fazezero",
@@ -37,33 +38,33 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Compliance",
-  badgeIcon: "ClipboardCheck",
+  badgeIcon: "ClipboardCheck" as IconName,
   title: "Transparent, Tamper-Proof Records",
   description:
     "fazezero's Audit Platform provides comprehensive, immutable audit trails for every transaction, system action, and configuration change. Built on blockchain's inherent transparency, our solution ensures complete accountability with automated compliance reporting, real-time monitoring, and customizable dashboards designed for internal auditors, external examiners, and regulatory bodies.",
   quickLinks: [
     {
-      icon: "FileText",
+      icon: "FileText" as IconName,
       title: "Immutable Records",
       description:
         "Blockchain-timestamped logs that cannot be altered or deleted",
       href: "#records",
     },
     {
-      icon: "Eye",
+      icon: "Eye" as IconName,
       title: "Real-Time Monitoring",
       description:
         "Live transaction monitoring and suspicious activity detection",
       href: "#monitoring",
     },
     {
-      icon: "FileCheck",
+      icon: "FileCheck" as IconName,
       title: "Regulatory Reports",
       description: "Automated generation of compliance and regulatory filings",
       href: "#reports",
     },
     {
-      icon: "Search",
+      icon: "Search" as IconName,
       title: "Forensic Analysis",
       description: "Advanced search and investigation tools for audit teams",
       href: "#forensics",
@@ -74,37 +75,37 @@ export const pageContent = {
       title: "Immutable Blockchain Records",
       description:
         "Every transaction, approval, configuration change, and system event is recorded on an immutable blockchain ledger with cryptographic timestamps. These records cannot be altered, deleted, or backdated — providing auditors with tamper-proof evidence of all platform activity. Each entry includes user identity, IP address, timestamp, and full transaction details, creating a complete chain of custody for digital assets.",
-      icon: "Lock",
+      icon: "Lock" as IconName,
     },
     {
       title: "Real-Time Transaction Monitoring",
       description:
         "Continuous monitoring of all blockchain activity with automated alerts for suspicious patterns, policy violations, and compliance triggers. Rule-based detection identifies large transfers, unusual transaction patterns, sanctioned addresses, and potential fraud. Integration with Chainalysis, Elliptic, and TRM Labs enhances monitoring with threat intelligence and risk scoring across all supported blockchains.",
-      icon: "Radar",
+      icon: "Radar" as IconName,
     },
     {
       title: "Automated Regulatory Reporting",
       description:
         "Pre-built report templates for FINRA, SEC, FCA, MAS, and other regulatory frameworks worldwide. Automated generation and filing of SARs (Suspicious Activity Reports), CTRs (Currency Transaction Reports), and periodic compliance filings. Customizable templates support jurisdiction-specific requirements while maintaining consistent data quality and formatting standards.",
-      icon: "FileOutput",
+      icon: "FileOutput" as IconName,
     },
     {
       title: "Compliance Dashboard",
       description:
         "Centralized view of compliance status across all operations. Monitor KYC/AML verification rates, transaction screening results, policy exceptions, and regulatory filing deadlines. Role-based dashboards provide relevant metrics to compliance officers, risk managers, and executive leadership. Real-time alerts notify teams of items requiring attention before they become violations.",
-      icon: "LayoutDashboard",
+      icon: "LayoutDashboard" as IconName,
     },
     {
       title: "Forensic Investigation Tools",
       description:
         "Advanced search and analysis capabilities for internal investigations and audit inquiries. Query transactions by address, user, amount, time range, or custom criteria. Visualize fund flows, address relationships, and transaction patterns. Export capabilities support evidence collection for legal proceedings, regulatory examinations, and internal investigations with chain-of-custody documentation.",
-      icon: "SearchCode",
+      icon: "SearchCode" as IconName,
     },
     {
       title: "Access Control & Audit Trail",
       description:
         "Comprehensive logging of all system access, permission changes, and administrative actions. Track who accessed what data, when, and from where. Role-based access control (RBAC) with separation of duties ensures no single individual can both execute and approve high-risk actions. Biometric authentication and session recording provide additional accountability layers for sensitive operations.",
-      icon: "UserCheck",
+      icon: "UserCheck" as IconName,
     },
   ],
 };

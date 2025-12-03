@@ -1,7 +1,6 @@
 "use client";
 import { ContentPage } from "@/components/ui";
 import { pageContent } from "./metadata";
-import { Check } from "lucide-react";
 
 export default function SDKsPage() {
   return (
@@ -52,16 +51,7 @@ export default function SDKsPage() {
       {pageContent.sections?.map((section) => (
         <div key={section.title}>
           <h2>{section.title}</h2>
-          {section.items && (
-            <ul>
-              {section.items.map((item) => (
-                <li key={item.label}>
-                  <Check className="inline w-4 h-4 text-green-400 mr-2" />
-                  <strong>{item.label}:</strong> {item.description}
-                </li>
-              ))}
-            </ul>
-          )}
+          <p>{section.description}</p>
         </div>
       ))}
 

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Events & Hackathons | fazeZERO",
@@ -13,36 +14,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Events & Hackathons",
-  badgeIcon: "Calendar",
+  badgeIcon: "Calendar" as IconName,
   title: "Events & Hackathons",
   description:
     "Join us at conferences, workshops, and hackathons. Connect with the fazeZERO team and other developers building the future of digital assets.",
   sections: [
     {
       title: "Upcoming Events",
-      content:
+      description:
         "Stay tuned for announcements about upcoming conferences, workshops, and hackathons where you can meet the fazeZERO team and learn about our latest developments.",
+      icon: "Calendar" as IconName,
     },
     {
       title: "Event Types",
-      items: [
-        {
-          label: "Conferences",
-          description: "Meet us at major blockchain and fintech conferences",
-        },
-        {
-          label: "Workshops",
-          description: "Hands-on sessions to learn fazeZERO development",
-        },
-        {
-          label: "Hackathons",
-          description: "Build projects and compete for prizes",
-        },
-        {
-          label: "Webinars",
-          description: "Virtual sessions on technical topics",
-        },
-      ],
+      description:
+        "Conferences: Meet us at major blockchain and fintech conferences. Workshops: Hands-on sessions to learn fazeZERO development. Hackathons: Build projects and compete for prizes. Webinars: Virtual sessions on technical topics.",
+      icon: "Calendar" as IconName,
     },
   ],
 };

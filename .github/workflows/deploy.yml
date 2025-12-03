@@ -1,0 +1,247 @@
+name: Build and Deploy to AWS S3
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+    inputs:
+      skip_cloudfront:
+        description: 'Skip CloudFront invalidation'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: fazezero.com
+  CLOUDFRONT_DISTRIBUTION_ID: E3SE8P2WZP6BAD
+  NODE_VERSION: '20'
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure Next.js for static export
+        run: |
+          # Backup original config
+          cp next.config.ts next.config.ts.backup
+
+          # Create static export config
+          cat > next.config.ts << 'EOF'
+          import type { NextConfig } from "next";
+
+          const nextConfig: NextConfig = {
+            output: 'export',
+            trailingSlash: true,
+            poweredByHeader: false,
+            images: {
+              unoptimized: true,
+            },
+            async headers() {
+              return [
+                {
+                  source: "/:path*",
+                  headers: [
+                    {
+                      key: "X-DNS-Prefetch-Control",
+                      value: "on",
+                    },
+                    {
+                      key: "X-Frame-Options",
+                      value: "SAMEORIGIN",
+                    },
+                    {
+                      key: "X-Content-Type-Options",
+                      value: "nosniff",
+                    },
+                    {
+                      key: "Referrer-Policy",
+                      value: "origin-when-cross-origin",
+                    },
+                  ],
+                },
+              ];
+            },
+          };
+
+          export default nextConfig;
+          EOF
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://fazezero.com' }}
+        run: npm run build
+
+      - name: Generate sitemap and robots.txt
+        if: success()
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://fazezero.com' }}
+        run: |
+          # Generate sitemap if not exists
+          if [ ! -f "out/sitemap.xml" ]; then
+            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+            cat > out/sitemap.xml << SITEMAP
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          SITEMAP
+
+            find out -name "index.html" -type f | while read file; do
+              path=$(echo "$file" | sed 's|out/||' | sed 's|/index.html||' | sed 's|^|/|')
+              if [ "$path" = "/" ]; then
+                path=""
+              fi
+              echo "  <url>" >> out/sitemap.xml
+              echo "    <loc>${BASE_URL}${path}</loc>" >> out/sitemap.xml
+              echo "    <changefreq>weekly</changefreq>" >> out/sitemap.xml
+              echo "    <priority>0.8</priority>" >> out/sitemap.xml
+              echo "  </url>" >> out/sitemap.xml
+            done
+
+            echo "</urlset>" >> out/sitemap.xml
+          fi
+
+          # Generate robots.txt if not exists
+          if [ ! -f "out/robots.txt" ]; then
+            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+            cat > out/robots.txt << ROBOTS
+          User-agent: *
+          Allow: /
+
+          Sitemap: ${BASE_URL}/sitemap.xml
+          ROBOTS
+          fi
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Upload static files to S3
+        run: |
+          # Upload non-HTML files with long cache
+          aws s3 sync out/ "s3://${{ env.S3_BUCKET }}" \
+            --delete \
+            --exclude "*.html" \
+            --exclude "*.xml" \
+            --exclude "*.txt" \
+            --exclude "*.json" \
+            --cache-control "public, max-age=31536000, immutable"
+
+          # Upload HTML files with shorter cache
+          aws s3 sync out/ "s3://${{ env.S3_BUCKET }}" \
+            --delete \
+            --include "*.html" \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+          # Upload XML files (sitemap)
+          aws s3 sync out/ "s3://${{ env.S3_BUCKET }}" \
+            --delete \
+            --include "*.xml" \
+            --cache-control "public, max-age=3600" \
+            --content-type "application/xml; charset=utf-8"
+
+          # Upload robots.txt and other text files
+          aws s3 sync out/ "s3://${{ env.S3_BUCKET }}" \
+            --delete \
+            --include "robots.txt" \
+            --include "*.txt" \
+            --cache-control "public, max-age=3600" \
+            --content-type "text/plain; charset=utf-8"
+
+          # Upload JSON files
+          aws s3 sync out/ "s3://${{ env.S3_BUCKET }}" \
+            --delete \
+            --include "*.json" \
+            --cache-control "public, max-age=3600" \
+            --content-type "application/json; charset=utf-8"
+
+      - name: Set S3 bucket policy
+        run: |
+          cat > /tmp/bucket-policy.json << POLICY
+          {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::${{ env.S3_BUCKET }}/*"
+              }
+            ]
+          }
+          POLICY
+
+          aws s3api put-bucket-policy \
+            --bucket "${{ env.S3_BUCKET }}" \
+            --policy file:///tmp/bucket-policy.json || echo "Bucket policy may already be set"
+
+      - name: Invalidate CloudFront cache
+        if: success() && github.event.inputs.skip_cloudfront != 'true'
+        run: |
+          INVALIDATION_ID=$(aws cloudfront create-invalidation \
+            --distribution-id "${{ env.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --paths "/*" \
+            --query 'Invalidation.Id' \
+            --output text)
+          echo "CloudFront invalidation ID: ${INVALIDATION_ID}"
+          echo "Invalidation status: InProgress"
+          echo "This may take 1-5 minutes to complete."
+
+      - name: Purge Cloudflare cache
+        if: success() && secrets.CLOUDFLARE_ZONE_ID != '' && secrets.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          RESPONSE=$(curl -s -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+
+          SUCCESS=$(echo "$RESPONSE" | grep -o '"success":[^,]*' | cut -d: -f2)
+          if [ "$SUCCESS" = "true" ]; then
+            echo "✓ Cloudflare cache purged successfully"
+          else
+            ERRORS=$(echo "$RESPONSE" | grep -o '"errors":\[.*\]' || echo "Unknown error")
+            echo "⚠ Cloudflare cache purge failed: ${ERRORS}"
+            exit 1
+          fi
+
+      - name: Restore original config
+        if: always()
+        run: |
+          if [ -f "next.config.ts.backup" ]; then
+            mv next.config.ts.backup next.config.ts
+          fi
+
+      - name: Deployment summary
+        if: success()
+        run: |
+          echo "## ✅ Deployment Complete!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **S3 Bucket**: s3://${{ env.S3_BUCKET }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **CloudFront Distribution**: ${{ env.CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Website URL**: https://fazezero.com" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Verify deployment at https://fazezero.com" >> $GITHUB_STEP_SUMMARY
+          echo "2. Check sitemap: https://fazezero.com/sitemap.xml" >> $GITHUB_STEP_SUMMARY
+          echo "3. Submit sitemap to Google Search Console" >> $GITHUB_STEP_SUMMARY

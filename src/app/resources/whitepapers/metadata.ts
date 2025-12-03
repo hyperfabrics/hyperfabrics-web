@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Whitepapers | fazeZERO",
@@ -14,36 +15,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Whitepapers",
-  badgeIcon: "File",
+  badgeIcon: "File" as IconName,
   title: "Whitepapers & Research",
   description:
     "Download comprehensive whitepapers and research reports on blockchain technology, digital asset infrastructure, and industry trends.",
   sections: [
     {
       title: "Latest Research",
-      content:
+      description:
         "Access in-depth analysis and technical documentation covering topics like CBDC architecture, tokenization frameworks, compliance models, and enterprise blockchain adoption.",
+      icon: "File" as IconName,
     },
     {
       title: "Topics",
-      items: [
-        {
-          label: "CBDC Infrastructure",
-          description: "Design patterns for central bank digital currencies",
-        },
-        {
-          label: "Asset Tokenization",
-          description: "Technical and regulatory frameworks for RWAs",
-        },
-        {
-          label: "Enterprise Security",
-          description: "MPC, SGX, and custody best practices",
-        },
-        {
-          label: "Regulatory Compliance",
-          description: "KYC/AML and data privacy in blockchain",
-        },
-      ],
+      description:
+        "CBDC Infrastructure: Design patterns for central bank digital currencies. Asset Tokenization: Technical and regulatory frameworks for RWAs. Enterprise Security: MPC, SGX, and custody best practices. Regulatory Compliance: KYC/AML and data privacy in blockchain.",
+      icon: "FileText" as IconName,
     },
   ],
 };

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Contact Us - Get Started with Enterprise Blockchain",
@@ -35,34 +36,34 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Contact Us",
-  badgeIcon: "Mail",
+  badgeIcon: "Mail" as IconName,
   title: "Get Started with Enterprise Blockchain",
   description:
     "Ready to transform your institution with blockchain technology? Our team is here to help you navigate digital asset custody, tokenization, and Web3 integration. Whether you're a financial institution, enterprise, or developer, we'll guide you through every step.",
   quickLinks: [
     {
-      icon: "Calendar",
+      icon: "Calendar" as IconName,
       title: "Schedule a Demo",
       description:
         "See fazezero in action with a personalized demo tailored to your needs",
       href: "#demo",
     },
     {
-      icon: "MessageSquare",
+      icon: "MessageSquare" as IconName,
       title: "Sales Inquiry",
       description:
         "Speak with our sales team about enterprise solutions and pricing",
       href: "#sales",
     },
     {
-      icon: "Headphones",
+      icon: "Headphones" as IconName,
       title: "Technical Support",
       description:
         "Get help with implementation, integration, and technical questions",
       href: "#support",
     },
     {
-      icon: "Users",
+      icon: "Users" as IconName,
       title: "Partner With Us",
       description:
         "Explore partnership opportunities and collaborative solutions",
@@ -74,25 +75,25 @@ export const pageContent = {
       title: "Enterprise & Institutional",
       description:
         "Connect with our enterprise team to discuss custom solutions, regulatory requirements, and integration support for financial institutions and large organizations.",
-      icon: "Building2",
+      icon: "Building2" as IconName,
     },
     {
       title: "Developer Relations",
       description:
         "Join our developer community, get technical documentation, SDK support, and access to our engineering team. Discord, forums, and GitHub are available 24/7.",
-      icon: "Code",
+      icon: "Code" as IconName,
     },
     {
       title: "Media & Press",
       description:
         "For press inquiries, partnership announcements, or media kits, reach out to our communications team. We're always happy to share our story and insights.",
-      icon: "Newspaper",
+      icon: "Newspaper" as IconName,
     },
     {
       title: "Global Offices",
       description:
         "We operate in key financial and technology hubs worldwide. Contact us to find your nearest office or schedule an in-person meeting with our regional teams.",
-      icon: "Globe",
+      icon: "Globe" as IconName,
     },
   ],
 };

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Case Studies | fazeZERO",
@@ -13,36 +14,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Case Studies",
-  badgeIcon: "FileText",
+  badgeIcon: "FileText" as IconName,
   title: "Customer Success Stories",
   description:
     "See how leading organizations across industries are leveraging fazeZERO to transform their digital asset strategies and operations.",
   sections: [
     {
       title: "Featured Case Studies",
-      content:
+      description:
         "Explore detailed case studies showcasing how banks, fintechs, governments, and enterprises use fazeZERO to issue digital currencies, tokenize assets, and modernize payment infrastructure.",
+      icon: "FileText" as IconName,
     },
     {
       title: "Industries",
-      items: [
-        {
-          label: "Financial Services",
-          description: "Banks and fintechs scaling digital asset operations",
-        },
-        {
-          label: "Central Banking",
-          description: "CBDC pilots and production deployments",
-        },
-        {
-          label: "Government",
-          description: "Public sector transparency and efficiency",
-        },
-        {
-          label: "Enterprise",
-          description: "Supply chain and tokenization use cases",
-        },
-      ],
+      description:
+        "Financial Services: Banks and fintechs scaling digital asset operations. Central Banking: CBDC pilots and production deployments. Government: Public sector transparency and efficiency. Enterprise: Supply chain and tokenization use cases.",
+      icon: "Briefcase" as IconName,
     },
   ],
 };

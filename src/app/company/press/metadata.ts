@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Press & Media | fazeZERO",
@@ -13,32 +14,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Press & Media",
-  badgeIcon: "Newspaper",
+  badgeIcon: "Newspaper" as IconName,
   title: "Press & Media",
   description:
     "The latest news, announcements, and media resources from fazeZERO. For press inquiries, contact our media relations team.",
   sections: [
     {
       title: "Recent News",
-      content:
+      description:
         "Stay updated on fazeZERO's latest partnerships, product launches, customer successes, and company milestones.",
+      icon: "Rss" as IconName,
     },
     {
       title: "Media Resources",
-      items: [
-        {
-          label: "Press Kit",
-          description: "Download logos, brand assets, and company information",
-        },
-        {
-          label: "Executive Bios",
-          description: "Leadership team backgrounds and photos",
-        },
-        {
-          label: "Product Images",
-          description: "Screenshots and platform visuals",
-        },
-      ],
+      description:
+        "Press Kit: Download logos, brand assets, and company information. Executive Bios: Leadership team backgrounds and photos. Product Images: Screenshots and platform visuals.",
+      icon: "FileText" as IconName,
     },
   ],
 };

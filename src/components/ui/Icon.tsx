@@ -26,6 +26,32 @@ import {
   Briefcase,
   Newspaper,
   Wallet,
+  Mail,
+  Coins,
+  ClipboardCheck,
+  TestTube,
+  Layers,
+  BarChart3,
+  Gamepad2,
+  Building,
+  Building2,
+  Leaf,
+  Landmark,
+  Globe,
+  Shield,
+  Lightbulb,
+  Film,
+  AlertCircle,
+  Cloud,
+  MessageSquare,
+  Headphones,
+  FileCheck,
+  Lock,
+  Scale,
+  Eye,
+  UserCheck,
+  Globe2,
+  Zap,
   LucideProps,
   LucideIcon,
 } from "lucide-react";
@@ -57,7 +83,33 @@ export type IconName =
   | "Info"
   | "Briefcase"
   | "Newspaper"
-  | "Wallet";
+  | "Wallet"
+  | "Mail"
+  | "Coins"
+  | "ClipboardCheck"
+  | "TestTube"
+  | "Layers"
+  | "BarChart3"
+  | "Gamepad2"
+  | "Building"
+  | "Building2"
+  | "Leaf"
+  | "Landmark"
+  | "Globe"
+  | "Shield"
+  | "Lightbulb"
+  | "Film"
+  | "AlertCircle"
+  | "Cloud"
+  | "MessageSquare"
+  | "Headphones"
+  | "FileCheck"
+  | "Lock"
+  | "Scale"
+  | "Eye"
+  | "UserCheck"
+  | "Globe2"
+  | "Zap";
 
 const icons: { [key in IconName]: LucideIcon } = {
   Box,
@@ -87,6 +139,32 @@ const icons: { [key in IconName]: LucideIcon } = {
   Briefcase,
   Newspaper,
   Wallet,
+  Mail,
+  Coins,
+  ClipboardCheck,
+  TestTube,
+  Layers,
+  BarChart3,
+  Gamepad2,
+  Building,
+  Building2,
+  Leaf,
+  Landmark,
+  Globe,
+  Shield,
+  Lightbulb,
+  Film,
+  AlertCircle,
+  Cloud,
+  MessageSquare,
+  Headphones,
+  FileCheck,
+  Lock,
+  Scale,
+  Eye,
+  UserCheck,
+  Globe2,
+  Zap,
 };
 
 interface IconProps extends LucideProps {

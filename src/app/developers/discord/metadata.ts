@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Discord Community | fazeZERO",
@@ -13,31 +14,16 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Discord Community",
-  badgeIcon: "MessageCircle",
+  badgeIcon: "MessageCircle" as IconName,
   title: "Join Us on Discord",
   description:
     "Connect with the fazeZERO team and developer community in real-time. Get instant answers, share ideas, and stay updated.",
   sections: [
     {
       title: "Why Join Our Discord?",
-      items: [
-        {
-          label: "Real-time Support",
-          description: "Get quick answers from our team and community",
-        },
-        {
-          label: "Direct Access",
-          description: "Chat with fazeZERO engineers and product managers",
-        },
-        {
-          label: "Early Access",
-          description: "Be the first to know about new features and updates",
-        },
-        {
-          label: "Networking",
-          description: "Connect with other developers building on fazeZERO",
-        },
-      ],
+      description:
+        "Real-time Support: Get quick answers from our team and community. Direct Access: Chat with fazeZERO engineers and product managers. Early Access: Be the first to know about new features and updates. Networking: Connect with other developers building on fazeZERO.",
+      icon: "MessageCircle" as IconName,
     },
   ],
 };

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "500+ APIs - Comprehensive Blockchain API Suite | fazezero",
@@ -38,32 +39,32 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Developer Platform",
-  badgeIcon: "Code",
+  badgeIcon: "Code" as IconName,
   title: "Build Faster with 500+ Ready-to-Use APIs",
   description:
     "fazezero provides a comprehensive API suite that gives developers programmatic access to enterprise-grade blockchain infrastructure. From smart contract deployment to digital asset custody, payments, and identity management — our APIs abstract away complexity while maintaining full control and security.",
   quickLinks: [
     {
-      icon: "Layers",
+      icon: "Layers" as IconName,
       title: "Multi-Chain Support",
       description:
         "Ethereum, Hyperledger, Corda, Polygon, Solana, and 100+ chains",
       href: "#multichain",
     },
     {
-      icon: "FileCode",
+      icon: "FileCode" as IconName,
       title: "Smart Contracts",
       description: "Deploy, test, and manage contracts across protocols",
       href: "#contracts",
     },
     {
-      icon: "Wallet",
+      icon: "Wallet" as IconName,
       title: "Custody APIs",
       description: "Wallet management, keys, signatures, and governance",
       href: "#custody",
     },
     {
-      icon: "Zap",
+      icon: "Zap" as IconName,
       title: "Event Streaming",
       description: "Real-time blockchain events and webhooks",
       href: "#events",
@@ -74,37 +75,37 @@ export const pageContent = {
       title: "Unified Multi-Chain Access",
       description:
         "Single API interface for deploying and managing applications across Ethereum, Hyperledger Fabric, Corda, Polygon, Solana, Binance Smart Chain, and 100+ additional blockchains. Developers write code once and deploy anywhere — eliminating protocol-specific learning curves and reducing time-to-market. Cross-chain capabilities enable liquidity aggregation, data synchronization, and unified custody across heterogeneous networks.",
-      icon: "Globe",
+      icon: "Globe" as IconName,
     },
     {
       title: "Smart Contract Lifecycle",
       description:
         "Complete toolkit for smart contract development including compilation, deployment, testing, upgrading, and monitoring. Support for Solidity, Vyper, DAML, and Chaincode with built-in static analysis, automated testing pipelines, and gas optimization tools. Template libraries accelerate development for common patterns like ERC-20, ERC-721, and governance contracts. Seamless integration with Hardhat, Truffle, and Remix.",
-      icon: "FileCode",
+      icon: "FileCode" as IconName,
     },
     {
       title: "Digital Asset Custody",
       description:
         "Programmatic wallet creation, key management, transaction signing, and asset transfers secured by MPC and SGX technology. APIs support hot, warm, and cold wallet configurations with customizable governance policies, multi-signature workflows, and spending limits. Real-time balance queries, transaction history, and portfolio analytics across all supported chains and tokens.",
-      icon: "Lock",
+      icon: "Lock" as IconName,
     },
     {
       title: "Identity & Access Management",
       description:
         "W3C-compliant Decentralized Identifier (DID) APIs and Verifiable Credential issuance for building self-sovereign identity solutions. Support for zero-knowledge proofs, biometric authentication, and OAuth 2.0 integration. Role-based access control (RBAC) APIs enable fine-grained permissions for organizational accounts, developer teams, and end-users with comprehensive audit logging.",
-      icon: "UserCheck",
+      icon: "UserCheck" as IconName,
     },
     {
       title: "Payment & Settlement APIs",
       description:
         "Initiate stablecoin and digital asset payments with instant settlement finality. APIs for merchant payment processing, invoice generation, recurring billing, and batch payouts. Integration with on/off-ramp providers enables fiat conversion. Support for atomic swaps, liquidity routing, and cross-border settlement with real-time exchange rates and fee estimation.",
-      icon: "CreditCard",
+      icon: "CreditCard" as IconName,
     },
     {
       title: "Real-Time Event Streams",
       description:
         "Subscribe to blockchain events, smart contract emissions, and transaction confirmations via WebSocket and webhook integrations. Filter and route events based on custom logic. Real-time monitoring for security alerts, compliance triggers, and operational anomalies. Event replay capabilities for debugging and analytics with guaranteed delivery and ordering semantics.",
-      icon: "Activity",
+      icon: "Activity" as IconName,
     },
   ],
 };

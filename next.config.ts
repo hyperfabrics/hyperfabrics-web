@@ -1,22 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Static export configuration
+  output: 'export',
+  trailingSlash: true,
 
   // Optimize for production
-  poweredByHeader: false, // Remove X-Powered-By header for security
+  poweredByHeader: false,
 
-  // Compression
-  compress: true,
-
-  // Image optimization
+  // Image optimization (disabled for static export)
   images: {
-    formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true,
   },
 
-  // Headers for SEO and security
+  // Headers for SEO and security (will be set via CloudFront)
   async headers() {
     return [
       {

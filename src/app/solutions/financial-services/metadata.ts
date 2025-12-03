@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title:
@@ -38,32 +39,32 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Financial Services",
-  badgeIcon: "Building2",
+  badgeIcon: "Building2" as IconName,
   title: "Modernize Financial Operations",
   description:
     "BaaS for Financial Services is fazezero's enterprise blockchain platform built specifically for the banking and finance industry. It addresses the sector's need for secure, compliant, and scalable infrastructure to support modernization, digital transformation, and operational efficiency while navigating regulatory complexity.",
   quickLinks: [
     {
-      icon: "Coins",
+      icon: "Coins" as IconName,
       title: "Asset Tokenization",
       description:
         "Digitize securities, commodities, and financial instruments",
       href: "#tokenization",
     },
     {
-      icon: "Zap",
+      icon: "Zap" as IconName,
       title: "Real-Time Settlement",
       description: "Accelerate transactions from days to seconds",
       href: "#settlement",
     },
     {
-      icon: "ShieldCheck",
+      icon: "ShieldCheck" as IconName,
       title: "ISO 27001 Certified",
       description: "Enterprise security with regulatory compliance built-in",
       href: "#compliance",
     },
     {
-      icon: "Network",
+      icon: "Network" as IconName,
       title: "Multi-Protocol",
       description: "Deploy on Ethereum, Hyperledger, Corda, and more",
       href: "#protocols",
@@ -74,37 +75,37 @@ export const pageContent = {
       title: "Balancing Innovation & Regulation",
       description:
         "The banking and finance sector faces unique pressures—balancing security, regulatory compliance, and operational efficiency while navigating digital transformation. fazezero provides solutions that address these challenges with enterprise-grade infrastructure designed for mission-critical financial environments operating under strict regulatory oversight.",
-      icon: "Scale",
+      icon: "Scale" as IconName,
     },
     {
       title: "Asset Tokenization & Digital Securities",
       description:
         "Transform traditional financial instruments into programmable digital assets. Tokenize equities, bonds, derivatives, real estate, and alternative investments to unlock 24/7 trading, fractional ownership, and automated compliance. Smart contracts enforce transfer restrictions, accreditation requirements, and corporate actions — reducing operational overhead while expanding market access.",
-      icon: "FileText",
+      icon: "FileText" as IconName,
     },
     {
       title: "Interbank & Cross-Border Payments",
       description:
         "Modernize payment infrastructure with blockchain-based settlement that reduces costs, accelerates finality, and improves transparency. Real-time gross settlement (RTGS) across correspondent banking networks eliminates delays and reduces counterparty risk. Support for multiple currencies and instant foreign exchange enables efficient cross-border transactions.",
-      icon: "ArrowLeftRight",
+      icon: "ArrowLeftRight" as IconName,
     },
     {
       title: "Trade Finance & Supply Chain",
       description:
         "Digitize letters of credit, bills of lading, and trade documentation to reduce fraud and accelerate transactions. Multi-party workflows connect importers, exporters, banks, and logistics providers on shared infrastructure. Smart contracts automatically trigger payments upon shipment verification or delivery confirmation — improving working capital efficiency.",
-      icon: "Package",
+      icon: "Package" as IconName,
     },
     {
       title: "Regulatory Compliance & Reporting",
       description:
         "Built-in compliance frameworks support KYC/AML requirements, transaction monitoring, and regulatory reporting. ISO 27001 and SOC 2 Type 2 certifications meet institutional security standards. Immutable audit trails provide regulators with complete transaction history for examinations. Integration with existing compliance systems maintains consistency across operations.",
-      icon: "ClipboardCheck",
+      icon: "ClipboardCheck" as IconName,
     },
     {
       title: "Seamless System Integration",
       description:
         "Connect blockchain networks to core banking systems, payment processors, and market data providers through pre-built connectors and APIs. Maintain existing workflows while adding blockchain capabilities incrementally. Support for hybrid architectures enables gradual migration without disrupting critical operations. Whether upgrading interbank processes or launching digital asset platforms, fazezero provides the tools to move quickly and securely.",
-      icon: "Plug",
+      icon: "Plug" as IconName,
     },
   ],
 };

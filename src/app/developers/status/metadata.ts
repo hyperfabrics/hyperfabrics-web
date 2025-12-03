@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Service Status | fazeZERO",
@@ -13,30 +14,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Service Status",
-  badgeIcon: "Server",
+  badgeIcon: "Server" as IconName,
   title: "Service Status",
   description:
     "Monitor the real-time status of all fazeZERO services and infrastructure. View uptime metrics and incident history.",
   sections: [
     {
       title: "Current Status",
-      content:
+      description:
         "All systems operational. fazeZERO maintains 99.99% uptime with enterprise-grade reliability and redundancy.",
+      icon: "Server" as IconName,
     },
     {
       title: "Services",
-      items: [
-        { label: "API Gateway", description: "All endpoints operational" },
-        {
-          label: "Wallet Services",
-          description: "All custody services operational",
-        },
-        {
-          label: "Payment Rails",
-          description: "All payment networks operational",
-        },
-        { label: "Analytics", description: "All data services operational" },
-      ],
+      description:
+        "API Gateway: All endpoints operational. Wallet Services: All custody services operational. Payment Rails: All payment networks operational. Analytics: All data services operational.",
+      icon: "Activity" as IconName,
     },
   ],
 };

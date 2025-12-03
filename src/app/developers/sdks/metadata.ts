@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "SDKs & Libraries | fazeZERO",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "SDKs & Libraries",
-  badgeIcon: "Package",
+  badgeIcon: "Package" as IconName,
   title: "SDKs & Libraries",
   description:
     "Official SDKs and libraries to integrate fazeZERO into your applications in your favorite programming language.",
@@ -32,28 +33,9 @@ export const pageContent = {
   sections: [
     {
       title: "Features",
-      items: [
-        {
-          label: "Type-safe interfaces",
-          description: "Full IDE support and autocompletion",
-        },
-        {
-          label: "Automatic retry logic",
-          description: "Built-in error handling and resilience",
-        },
-        {
-          label: "Authentication",
-          description: "Integrated key management and OAuth 2.0",
-        },
-        {
-          label: "Test coverage",
-          description: "Comprehensive test suites for reliability",
-        },
-        {
-          label: "Regular updates",
-          description: "Security patches and new features",
-        },
-      ],
+      description:
+        "Type-safe interfaces: Full IDE support and autocompletion. Automatic retry logic: Built-in error handling and resilience. Authentication: Integrated key management and OAuth 2.0. Test coverage: Comprehensive test suites for reliability. Regular updates: Security patches and new features.",
+      icon: "Package" as IconName,
     },
   ],
 };

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Digital Asset Dashboard - Unified Custody Management | fazezero",
@@ -37,33 +38,33 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Management",
-  badgeIcon: "LayoutDashboard",
+  badgeIcon: "LayoutDashboard" as IconName,
   title: "Complete Visibility and Control",
   description:
     "fazezero's Digital Asset Dashboard provides institutions with a unified interface for managing custody operations across 100+ blockchains. Monitor wallets, approve transactions, configure governance policies, and access real-time portfolio analytics — all from a single, secure command center built for enterprises, exchanges, and financial institutions.",
   quickLinks: [
     {
-      icon: "Wallet",
+      icon: "Wallet" as IconName,
       title: "Multi-Wallet Management",
       description:
         "Hot, warm, and cold wallet configurations across all chains",
       href: "#wallets",
     },
     {
-      icon: "CheckCircle",
+      icon: "CheckCircle" as IconName,
       title: "Transaction Approval",
       description:
         "Multi-signature workflows and customizable approval policies",
       href: "#approvals",
     },
     {
-      icon: "PieChart",
+      icon: "PieChart" as IconName,
       title: "Portfolio Analytics",
       description: "Real-time valuation, performance tracking, and reporting",
       href: "#analytics",
     },
     {
-      icon: "Settings",
+      icon: "Settings" as IconName,
       title: "Governance Policies",
       description: "Configure spending limits, whitelists, and access controls",
       href: "#governance",
@@ -74,37 +75,37 @@ export const pageContent = {
       title: "Unified Wallet Management",
       description:
         "Manage hot, warm, and cold wallets from a single interface. Support for direct custody across Ethereum, Bitcoin, Hyperledger, Corda, Polygon, Solana, and 100+ additional blockchains. Create new wallets, import existing keys, configure multi-signature schemes, and organize assets by business unit, strategy, or client. Seamless switching between custody models based on security requirements and operational needs.",
-      icon: "Folder",
+      icon: "Folder" as IconName,
     },
     {
       title: "Transaction Workflow & Approvals",
       description:
         "Define multi-signature approval workflows that align with your organization's risk management framework. Set role-based permissions for transaction initiation, approval, and execution. Configure sequential or parallel approval chains with customizable thresholds. Real-time notifications alert approvers via email, SMS, or API webhooks. Complete audit trail captures every action, from request to settlement.",
-      icon: "GitPullRequest",
+      icon: "GitPullRequest" as IconName,
     },
     {
       title: "Real-Time Portfolio Visibility",
       description:
         "Consolidated view of all digital asset holdings with real-time pricing from multiple oracle sources. Portfolio analytics include asset allocation, performance attribution, unrealized gains/losses, and risk metrics. Historical charts track value over time. Support for custom groupings by entity, fund, strategy, or counterparty. Export capabilities for accounting and regulatory reporting.",
-      icon: "TrendingUp",
+      icon: "TrendingUp" as IconName,
     },
     {
       title: "Governance & Compliance Controls",
       description:
         "Enforce organizational policies at the platform level. Configure spending limits, transaction velocity checks, and destination address whitelists. Implement time-based controls like weekend freezes or market-hour restrictions. Role-based access control (RBAC) ensures separation of duties. Two-factor authentication (2FA), biometric verification, and IP whitelisting add additional security layers.",
-      icon: "Shield",
+      icon: "Shield" as IconName,
     },
     {
       title: "Exchange & DeFi Integration",
       description:
         "Connect to 1,800+ exchanges, OTC desks, and liquidity providers for seamless trading and settlement. Monitor exchange balances, execute trades, and withdraw funds without leaving the dashboard. Access DeFi protocols for staking, lending, and liquidity provision. Real-time risk monitoring tracks exposure, concentration limits, and counterparty risk across all connected venues.",
-      icon: "Repeat",
+      icon: "Repeat" as IconName,
     },
     {
       title: "Audit Trail & Reporting",
       description:
         "Immutable audit logs capture every system action, transaction, and configuration change with timestamp, user identity, and IP address. Generate compliance reports for internal audits, regulatory examinations, and tax filings. Customizable report templates support GAAP, IFRS, and jurisdiction-specific accounting standards. Schedule automated report generation and distribution to stakeholders.",
-      icon: "FileText",
+      icon: "FileText" as IconName,
     },
   ],
 };

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title: "Careers | fazeZERO",
@@ -13,39 +14,22 @@ export const metadata: Metadata = {
 
 export const pageContent = {
   badge: "Careers",
-  badgeIcon: "Briefcase",
+  badgeIcon: "Briefcase" as IconName,
   title: "Join Our Team",
   description:
     "Help us build the enterprise infrastructure powering the future of digital assets. We're looking for talented individuals passionate about blockchain, security, and innovation.",
   sections: [
     {
       title: "Why fazeZERO?",
-      items: [
-        {
-          label: "Impact",
-          description:
-            "Work on infrastructure used by leading global organizations",
-        },
-        {
-          label: "Innovation",
-          description:
-            "Solve challenging problems at the forefront of blockchain",
-        },
-        {
-          label: "Growth",
-          description:
-            "Continuous learning and career development opportunities",
-        },
-        {
-          label: "Culture",
-          description: "Collaborative, mission-driven team environment",
-        },
-      ],
+      description:
+        "Impact: Work on infrastructure used by leading global organizations. Innovation: Solve challenging problems at the forefront of blockchain. Growth: Continuous learning and career development opportunities. Culture: Collaborative, mission-driven team environment.",
+      icon: "Users" as IconName,
     },
     {
       title: "Open Positions",
-      content:
+      description:
         "We're growing our team across engineering, product, sales, marketing, and operations. Check back soon for open positions or reach out to learn about upcoming opportunities.",
+      icon: "Briefcase" as IconName,
     },
   ],
 };

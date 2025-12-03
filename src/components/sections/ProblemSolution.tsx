@@ -59,16 +59,16 @@ export function ProblemSolution() {
         {/* Modern Comparison Table */}
         <div className="relative">
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="grid grid-cols-3 gap-6 mb-6">
             <div className="text-sm font-medium text-white/40 uppercase tracking-wider"></div>
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/20">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-500/10 border border-red-500/20">
                 <X className="w-4 h-4 text-red-400" />
                 <span className="text-sm font-semibold text-red-300">Without fazezero</span>
               </div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-500/20 border border-green-500/30">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-green-500/20 border border-green-500/30">
                 <Check className="w-4 h-4 text-green-400" />
                 <span className="text-sm font-semibold text-green-300">With fazezero</span>
               </div>
@@ -76,7 +76,7 @@ export function ProblemSolution() {
           </div>
 
           {/* Comparison Rows */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               return (
@@ -86,12 +86,12 @@ export function ProblemSolution() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="grid grid-cols-3 gap-4 items-center p-6 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group"
+                  className="grid grid-cols-3 gap-6 items-center p-8 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group"
                 >
                   {/* Label */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
-                      <Icon className="w-5 h-5 text-indigo-400" />
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors flex-shrink-0">
+                      <Icon className="w-6 h-6 text-indigo-400" />
                     </div>
                     <div className="text-sm font-medium text-white/60 uppercase tracking-wider">
                       {metric.label}
@@ -107,11 +107,11 @@ export function ProblemSolution() {
 
                   {/* With */}
                   <div className="text-center relative">
-                    <div className="text-2xl font-bold text-white mb-1">
+                    <div className="text-2xl font-bold text-white mb-2">
                       {metric.with}
                     </div>
-                    <div className="inline-flex items-center gap-1 text-xs text-green-400 font-medium">
-                      <TrendingDown className="w-3 h-3" />
+                    <div className="inline-flex items-center gap-1.5 text-xs text-green-400 font-medium">
+                      <TrendingDown className="w-3.5 h-3.5" />
                       {metric.improvement}
                     </div>
                   </div>

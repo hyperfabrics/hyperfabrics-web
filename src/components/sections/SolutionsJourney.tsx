@@ -59,7 +59,7 @@ export function SolutionsJourney() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="relative p-6 rounded-2xl bg-white/[0.02] backdrop-blur-sm ring-1 ring-white/5 hover:ring-indigo-500/30 hover:bg-white/[0.04] transition-all group"
+                className="relative p-6 sm:p-8 rounded-2xl bg-white/[0.02] backdrop-blur-sm ring-1 ring-white/5 hover:ring-indigo-500/30 hover:bg-white/[0.04] transition-all group overflow-visible"
               >
                 {/* Step number */}
                 <div className="absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-xl font-bold text-white shadow-lg shadow-indigo-500/50">
@@ -74,10 +74,10 @@ export function SolutionsJourney() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-indigo-300 transition-colors">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-indigo-300 transition-colors break-words">
                   {step.title}
                 </h3>
-                <p className="text-sm text-white/70 mb-4 leading-relaxed">
+                <p className="text-sm text-white/70 mb-4 leading-relaxed break-words">
                   {step.solution}
                 </p>
 

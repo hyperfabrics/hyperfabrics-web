@@ -93,7 +93,7 @@ export function ProblemSolution() {
                     <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors flex-shrink-0">
                       <Icon className="w-6 h-6 text-indigo-400" />
                     </div>
-                    <div className="text-sm font-medium text-white/60 uppercase tracking-wider">
+                    <div className="text-sm font-medium text-white/60 uppercase tracking-wider break-words min-w-0">
                       {metric.label}
                     </div>
                   </div>

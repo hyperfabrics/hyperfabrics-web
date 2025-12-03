@@ -61,9 +61,9 @@ export function ContactForm() {
       const mailtoLink = `mailto:sales@fazezero.com?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
       )}`;
-      
+
       window.location.href = mailtoLink;
-      
+
       // Simulate success after a delay
       setTimeout(() => {
         setSubmitStatus("success");
@@ -258,4 +258,3 @@ export function ContactForm() {
     </div>
   );
 }
-

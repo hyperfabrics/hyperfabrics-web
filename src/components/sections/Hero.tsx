@@ -28,7 +28,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6 sm:space-y-8"
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight px-4">
               <span style={{ color: "var(--text-primary)" }}>
                 Institutional rails for
               </span>
@@ -51,7 +51,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-2"
+            className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
           >
             <Button href="/solutions" variant="primary" size="lg">
               Explore Solutions
@@ -67,7 +67,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="pt-16 sm:pt-20"
+            className="pt-20 sm:pt-24 lg:pt-28"
           >
             <div className="flex items-center justify-center gap-12 sm:gap-16 lg:gap-20 text-center">
               <div className="flex-shrink-0">

@@ -47,32 +47,31 @@ export function Platform() {
 
   return (
     <Section id="platform" className="py-12 sm:py-16 lg:py-20">
-      <div className="text-center mb-10">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
           Platform Capabilities
         </h2>
-        <p className="mt-3 text-sm sm:text-base lg:text-lg text-white/70 max-w-3xl mx-auto">
-          Enterprise-grade infrastructure with developer-first tools, multi-chain support, 
-          and compliance built-in from day one
+        <p className="text-xl sm:text-2xl text-white/60 max-w-2xl mx-auto">
+          Enterprise infrastructure, developer tools, multi-chain support
         </p>
       </div>
 
-      <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+      <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 mb-8">
         {capabilities.map((capability, i) => {
           const Icon = capability.icon;
           return (
             <Card
               key={i}
-              className="group p-5 hover:bg-white/[0.05] transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+              className="group p-6 hover:bg-white/[0.04] transition-all duration-300 cursor-pointer hover:scale-[1.02] hover:ring-indigo-500/30"
             >
-              <div className="flex flex-col items-start">
-                <div className="w-10 h-10 rounded-lg bg-indigo-500/10 ring-1 ring-indigo-500/20 flex items-center justify-center group-hover:bg-indigo-500/20 group-hover:scale-110 transition-all duration-300 mb-3">
-                  <Icon className="w-5 h-5 text-indigo-300" />
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 group-hover:scale-110 transition-all duration-300 mb-4">
+                  <Icon className="w-6 h-6 text-indigo-400" />
                 </div>
                 <h4 className="text-sm font-semibold group-hover:text-indigo-300 transition-colors mb-2">
                   {capability.title}
                 </h4>
-                <p className="text-xs text-white/70 leading-relaxed">
+                <p className="text-xs text-white/60 leading-relaxed">
                   {capability.desc}
                 </p>
               </div>

@@ -8,7 +8,7 @@ export function CTA() {
         {/* Animated background elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.1),transparent_50%)]" />
-        
+
         {/* Content */}
         <div className="relative flex flex-col items-center text-center px-4 sm:px-8 py-10 sm:py-14">
           {/* Icon */}

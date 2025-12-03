@@ -8,3 +8,5 @@ export { LI } from "./LI";
 export { ThemedText } from "./ThemedText";
 export { ContentPage } from "./ContentPage";
 export { TimelineContentPage } from "./TimelineContentPage";
+export { ContactForm } from "./ContactForm";
+export { Breadcrumbs } from "./Breadcrumbs";

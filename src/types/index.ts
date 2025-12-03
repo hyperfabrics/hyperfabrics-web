@@ -20,11 +20,12 @@ export interface Industry {
 }
 
 // Component props types
-export interface ButtonProps extends HTMLAttributes<HTMLElement> {
+export interface ButtonProps extends Omit<HTMLAttributes<HTMLElement>, "type"> {
   className?: string;
   children: ReactNode;
   as?: "button" | "a";
   href?: string;
+  type?: "button" | "submit" | "reset";
   // visual variants and sizes
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";

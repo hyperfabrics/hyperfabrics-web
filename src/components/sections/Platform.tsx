@@ -97,9 +97,11 @@ export function Platform() {
               </Button>
               <Button
                 href="/contact"
-                className="justify-center sm:justify-start bg-transparent ring-1 ring-white/25 hover:bg-white/10"
+                variant="secondary"
+                size="lg"
+                className="justify-center sm:justify-start"
               >
-                Request a Demo
+                Get Started
               </Button>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function NotFound() {
       style={{ background: "var(--background)", color: "var(--foreground)" }}
     >
       <Header />
-      
+
       <Section className="py-32 sm:py-40">
         <div className="max-w-2xl mx-auto text-center px-4">
           <div className="mb-8">
@@ -30,9 +30,9 @@ export default function NotFound() {
               <Home className="size-5 group-hover:scale-110 transition-transform" />
               Go Home
             </Button>
-            <Button 
-              href="javascript:history.back()" 
-              variant="secondary" 
+            <Button
+              href="javascript:history.back()"
+              variant="secondary"
               size="lg"
               className="group"
             >
@@ -65,4 +65,3 @@ export default function NotFound() {
     </div>
   );
 }
-

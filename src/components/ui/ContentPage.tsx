@@ -1,6 +1,6 @@
 "use client";
 import { Header, CTA, Footer } from "@/components/sections";
-import { Section, Button } from "@/components/ui";
+import { Section, Button, Breadcrumbs } from "@/components/ui";
 import Icon, { IconName } from "./Icon";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -39,6 +39,7 @@ interface ContentPageProps {
   quickLinks?: QuickLink[];
   sections?: ContentSection[];
   strategicCTA?: StrategicCTA;
+  breadcrumbs?: Array<{ label: string; href?: string }>;
   children?: ReactNode;
 }
 
@@ -50,6 +51,7 @@ export function ContentPage({
   quickLinks,
   sections,
   strategicCTA,
+  breadcrumbs,
   children,
 }: ContentPageProps) {
   return (
@@ -77,6 +79,11 @@ export function ContentPage({
 
       <Section className="py-16 sm:py-20 lg:py-24">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumbs */}
+          {breadcrumbs && breadcrumbs.length > 0 && (
+            <Breadcrumbs items={breadcrumbs} />
+          )}
+
           {/* Hero Section with Badge */}
           <div className="mb-12 sm:mb-16 text-center max-w-4xl mx-auto">
             {/* Animated Badge */}

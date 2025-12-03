@@ -57,9 +57,9 @@ export function ProblemSolution() {
         </motion.div>
 
         {/* Modern Comparison Table */}
-        <div className="relative">
+        <div className="relative overflow-x-auto">
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-6 min-w-[600px] sm:min-w-0">
             <div className="text-sm font-medium text-white/40 uppercase tracking-wider"></div>
             <div className="text-center">
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-500/10 border border-red-500/20">
@@ -86,7 +86,7 @@ export function ProblemSolution() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="grid grid-cols-3 gap-6 items-center p-8 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group"
+                  className="grid grid-cols-3 gap-4 sm:gap-6 items-center p-6 sm:p-8 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group min-w-[600px] sm:min-w-0"
                 >
                   {/* Label */}
                   <div className="flex items-center gap-4">
@@ -129,15 +129,15 @@ export function ProblemSolution() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <Button
-            href="/contact"
-            variant="primary"
-            size="lg"
-            className="group text-lg px-8 py-6"
-          >
-            See how we can help
-            <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+            <Button
+              href="/contact"
+              variant="primary"
+              size="lg"
+              className="group"
+            >
+              Get Started
+              <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
         </motion.div>
       </div>
     </Section>

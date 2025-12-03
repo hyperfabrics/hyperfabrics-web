@@ -1,5 +1,6 @@
 "use client";
 import { ContentPage } from "@/components/ui";
+import { ContactForm } from "@/components/ui/ContactForm";
 import { pageContent } from "./metadata";
 
 export default function ContactPage() {
@@ -10,19 +11,10 @@ export default function ContactPage() {
       title={pageContent.title}
       description={pageContent.description}
       sections={pageContent.sections}
+      breadcrumbs={[{ label: "Contact" }]}
     >
-      <h2>Schedule a Demo</h2>
-      <p>
-        Ready to see fazeZERO in action? Book a personalized demo with our team
-        to learn how our platform can transform your digital asset operations.
-      </p>
-      <div className="not-prose my-8">
-        <a
-          href="mailto:sales@fazezero.com"
-          className="inline-flex items-center px-6 py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white font-medium transition-colors"
-        >
-          Request a Demo →
-        </a>
+      <div className="mt-12">
+        <ContactForm />
       </div>
     </ContentPage>
   );

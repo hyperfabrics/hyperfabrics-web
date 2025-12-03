@@ -116,8 +116,8 @@ export function SolutionsJourney() {
         >
           <h3 className="text-2xl font-semibold mb-2">Not sure where to start?</h3>
           <p className="text-white/60 mb-6">Talk to a solution architect</p>
-          <Button href="/contact" variant="primary">
-            Schedule Free Consultation
+          <Button href="/contact" variant="primary" size="lg">
+            Get Started
             <ArrowRight className="size-5" />
           </Button>
         </motion.div>

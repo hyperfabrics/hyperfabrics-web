@@ -104,13 +104,11 @@ export function Header() {
         onMouseLeave={() => setActiveDropdown(null)}
       >
         <div
-          className="w-full flex items-center justify-between"
+          className="w-full flex items-center justify-between px-4 sm:px-6 lg:px-12"
           style={{
-            height: "88px",
+            height: "64px",
             maxWidth: "1440px",
             margin: "0 auto",
-            paddingLeft: "48px",
-            paddingRight: "48px",
           }}
         >
           {/* Left Section */}
@@ -194,14 +192,9 @@ export function Header() {
               <ThemeToggle />
               <Link
                 href="/contact"
-                className="text-lg font-semibold px-10 py-2.5 rounded-l-md transition-all duration-300 border-1 hover:scale-105 shadow-lg hover:shadow-xl"
-                style={{
-                  borderColor: "#375bd2",
-                  color: "#375bd2",
-                  backgroundColor: "transparent",
-                }}
+                className="text-base font-semibold px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white transition-all duration-300 hover:scale-105 shadow-lg shadow-indigo-500/50 focus-visible:outline-2 focus-visible:outline-indigo-500 focus-visible:outline-offset-2"
               >
-                Start building
+                Get Started
               </Link>
             </div>
 

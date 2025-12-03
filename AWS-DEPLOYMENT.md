@@ -1,47 +1,31 @@
 # AWS Deployment Guide
 
-This guide covers different AWS deployment options for the fazezero website.
+This guide covers AWS deployment for the fazezero website.
 
-## 🚀 Deployment Options
+## 🚀 Deployment
 
-### 1. AWS Amplify (Recommended for Next.js SSR)
-
-**Best for**: Full Next.js features including SSR, API routes, and dynamic routes
-
-```bash
-npm run deploy:aws:amplify
-```
-
-**Prerequisites:**
-- AWS CLI configured (`aws configure`)
-- AWS Amplify CLI installed (`npm install -g @aws-amplify/cli`)
-
-**Features:**
-- Automatic SSR support
-- Built-in CI/CD
-- Preview deployments
-- Custom domains
-- SSL certificates
-
----
-
-### 2. S3 + CloudFront (Static Export)
+### S3 + CloudFront (Static Export)
 
 **Best for**: Static websites with pre-generated content
 
 ```bash
-npm run deploy:aws:s3:static
+npm run deploy
+```
+
+Or directly:
+```bash
+./scripts/deploy-aws-s3-static.sh
 ```
 
 **Prerequisites:**
 - AWS CLI configured
 - S3 bucket created (or will be created automatically)
-- CloudFront distribution (optional, for CDN)
+- CloudFront distribution configured
 
 **Environment Variables:**
 ```bash
-export AWS_S3_BUCKET=fazezero-website
-export AWS_CLOUDFRONT_DIST_ID=E1234567890ABC
+export AWS_S3_BUCKET=fazezero.com
+export AWS_CLOUDFRONT_DIST_ID=E3SE8P2WZP6BAD
 export AWS_REGION=us-east-1
 export NEXT_PUBLIC_SITE_URL=https://fazezero.com
 ```
@@ -51,6 +35,8 @@ export NEXT_PUBLIC_SITE_URL=https://fazezero.com
 - High performance with CloudFront
 - Pre-generated static files
 - Automatic sitemap generation
+- Automatic CloudFront cache invalidation
+- Optional Cloudflare cache purge
 
 **Limitations:**
 - No server-side rendering
@@ -59,82 +45,25 @@ export NEXT_PUBLIC_SITE_URL=https://fazezero.com
 
 ---
 
-### 3. S3 + CloudFront (Server Build)
-
-**Best for**: Static assets only (requires separate server for SSR)
-
-```bash
-npm run deploy:aws:s3
-```
-
-**Note**: This only uploads static assets. You'll need a separate server (ECS, Lambda, etc.) for SSR.
-
----
-
-### 4. ECS/Fargate (Docker)
-
-**Best for**: Full control, containerized deployments
-
-```bash
-npm run deploy:aws:ecs
-```
-
-**Prerequisites:**
-- AWS CLI configured
-- Docker installed and running
-- ECR repository created
-- ECS cluster and service configured
-
-**Environment Variables:**
-```bash
-export AWS_ECR_REPO=fazezero-website
-export AWS_ECS_CLUSTER=fazezero-cluster
-export AWS_ECS_SERVICE=fazezero-service
-export AWS_REGION=us-east-1
-```
-
-**Features:**
-- Full Next.js SSR support
-- Scalable containerized deployment
-- Custom infrastructure control
-
----
-
 ## 📋 Quick Start
-
-### Option 1: Static Export to S3 (Easiest)
 
 1. **Set environment variables:**
    ```bash
-   export AWS_S3_BUCKET=fazezero-website
-   export AWS_CLOUDFRONT_DIST_ID=your-distribution-id
+   export AWS_S3_BUCKET=fazezero.com
+   export AWS_CLOUDFRONT_DIST_ID=E3SE8P2WZP6BAD
    export NEXT_PUBLIC_SITE_URL=https://fazezero.com
    ```
 
 2. **Deploy:**
    ```bash
-   npm run deploy:aws:s3:static
+   npm run deploy
    ```
 
-3. **Configure CloudFront:**
-   - Set S3 bucket as origin
-   - Configure custom domain (optional)
-   - Set up SSL certificate
-
-### Option 2: AWS Amplify (Full SSR)
-
-1. **Install Amplify CLI:**
-   ```bash
-   npm install -g @aws-amplify/cli
-   amplify configure
-   ```
-
-2. **Deploy:**
-   ```bash
-   npm run deploy:aws:amplify
-   ```
-
-3. **Follow prompts** to set up your Amplify app
+3. **The script will:**
+   - Build static export
+   - Upload to S3
+   - Invalidate CloudFront cache
+   - Optionally purge Cloudflare cache
 
 ---
 
@@ -213,17 +142,14 @@ NEXT_PUBLIC_TWITTER_HANDLE=@fazezero
 
 ---
 
-## 💡 Recommendations
+## 💡 Notes
 
-**For Production:**
-- Use **AWS Amplify** for full Next.js features
-- Or use **ECS/Fargate** for maximum control
+**Current Setup:**
+- Static export to S3 + CloudFront
+- Automated via GitHub Actions
+- CloudFront cache invalidation on deploy
+- Cloudflare cache purge (optional)
 
-**For Static Sites:**
-- Use **S3 + CloudFront** static export
-- Pre-generate all routes
-- Use CloudFront for CDN and caching
-
-**For Development/Staging:**
-- Use **AWS Amplify** preview deployments
-- Or use **S3** for quick static deployments
+**For Development:**
+- Run `npm run dev` for local development
+- Run `npm run verify-seo` to verify SEO setup

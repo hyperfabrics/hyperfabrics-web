@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui";
-import { X, Check, Clock, DollarSign, Users, Shield, ArrowRight } from "lucide-react";
+import { X, Check, Clock, DollarSign, Users, Shield, ArrowRight, TrendingDown } from "lucide-react";
 import { Button } from "@/components/ui";
 
 const metrics = [
@@ -10,31 +10,35 @@ const metrics = [
     label: "Time to Production",
     without: "12-18 months",
     with: "4-6 weeks",
+    improvement: "92% faster",
   },
   {
     icon: DollarSign,
     label: "Development Cost",
     without: "$2M+",
     with: "90% less",
+    improvement: "$1.8M saved",
   },
   {
     icon: Users,
     label: "Team Required",
     without: "Specialized engineers",
     with: "Your existing team",
+    improvement: "No hiring needed",
   },
   {
     icon: Shield,
     label: "Compliance",
     without: "Navigate alone",
     with: "Built-in",
+    improvement: "ISO 27001, SOC 2",
   },
 ];
 
 export function ProblemSolution() {
   return (
     <Section id="see-how" className="py-24 sm:py-32 lg:py-40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,100 +56,69 @@ export function ProblemSolution() {
           </h2>
         </motion.div>
 
-        {/* Comparison Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {/* Without fazezero */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative isolate p-10 rounded-3xl bg-white/[0.01] backdrop-blur-sm border border-red-500/10"
-            style={{ boxShadow: "0 0 0 1px rgba(239, 68, 68, 0.1)" }}
-          >
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
-                <X className="w-7 h-7 text-red-400" />
+        {/* Modern Comparison Table */}
+        <div className="relative">
+          {/* Table Header */}
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="text-sm font-medium text-white/40 uppercase tracking-wider"></div>
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/20">
+                <X className="w-4 h-4 text-red-400" />
+                <span className="text-sm font-semibold text-red-300">Without fazezero</span>
               </div>
-              <h3 className="text-2xl font-semibold text-red-300">Without fazezero</h3>
             </div>
-
-            <div className="space-y-8">
-              {metrics.map((metric, index) => {
-                const Icon = metric.icon;
-                return (
-                  <motion.div
-                    key={metric.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-center gap-5"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-red-500/5 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-red-400/60" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2 font-medium">
-                        {metric.label}
-                      </div>
-                      <div className="text-2xl font-bold text-white/50 leading-tight">
-                        {metric.without}
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-
-          {/* With fazezero */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative isolate p-10 rounded-3xl border border-green-500/20"
-            style={{
-              background: "linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.05) 50%, rgba(34, 197, 94, 0.1) 100%)",
-              boxShadow: "0 0 0 1px rgba(34, 197, 94, 0.2)",
-            }}
-          >
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                <Check className="w-7 h-7 text-green-400" />
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-500/20 border border-green-500/30">
+                <Check className="w-4 h-4 text-green-400" />
+                <span className="text-sm font-semibold text-green-300">With fazezero</span>
               </div>
-              <h3 className="text-2xl font-semibold text-green-300">With fazezero</h3>
             </div>
+          </div>
 
-            <div className="space-y-8">
-              {metrics.map((metric, index) => {
-                const Icon = metric.icon;
-                return (
-                  <motion.div
-                    key={metric.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-center gap-5"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-green-400" />
+          {/* Comparison Rows */}
+          <div className="space-y-3">
+            {metrics.map((metric, index) => {
+              const Icon = metric.icon;
+              return (
+                <motion.div
+                  key={metric.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="grid grid-cols-3 gap-4 items-center p-6 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group"
+                >
+                  {/* Label */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors">
+                      <Icon className="w-5 h-5 text-indigo-400" />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2 font-medium">
-                        {metric.label}
-                      </div>
-                      <div className="text-2xl font-bold text-white leading-tight">
-                        {metric.with}
-                      </div>
+                    <div className="text-sm font-medium text-white/60 uppercase tracking-wider">
+                      {metric.label}
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
+                  </div>
+
+                  {/* Without */}
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-white/40 line-through">
+                      {metric.without}
+                    </div>
+                  </div>
+
+                  {/* With */}
+                  <div className="text-center relative">
+                    <div className="text-2xl font-bold text-white mb-1">
+                      {metric.with}
+                    </div>
+                    <div className="inline-flex items-center gap-1 text-xs text-green-400 font-medium">
+                      <TrendingDown className="w-3 h-3" />
+                      {metric.improvement}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
         {/* CTA */}
@@ -154,7 +127,7 @@ export function ProblemSolution() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center"
+          className="text-center mt-16"
         >
           <Button
             href="/contact"

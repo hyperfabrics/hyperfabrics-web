@@ -39,60 +39,56 @@ export const pageContent = {
   badgeIcon: "Mail" as IconName,
   title: "Get Started with Enterprise Blockchain",
   description:
-    "Ready to transform your institution with blockchain technology? Our team is here to help you navigate digital asset custody, tokenization, and Web3 integration. Whether you're a financial institution, enterprise, or developer, we'll guide you through every step.",
+    "Transform your institution with blockchain technology. We'll guide you through digital asset custody, tokenization, and Web3 integration.",
   quickLinks: [
     {
       icon: "Calendar" as IconName,
       title: "Schedule a Demo",
-      description:
-        "See fazezero in action with a personalized demo tailored to your needs",
-      href: "#demo",
+      description: "See fazezero in action",
+      href: "mailto:sales@fazezero.com",
     },
     {
       icon: "MessageSquare" as IconName,
       title: "Sales Inquiry",
-      description:
-        "Speak with our sales team about enterprise solutions and pricing",
-      href: "#sales",
+      description: "Enterprise solutions & pricing",
+      href: "mailto:sales@fazezero.com",
     },
     {
       icon: "Headphones" as IconName,
       title: "Technical Support",
-      description:
-        "Get help with implementation, integration, and technical questions",
-      href: "#support",
+      description: "Implementation & integration help",
+      href: "mailto:support@fazezero.com",
     },
     {
       icon: "Users" as IconName,
-      title: "Partner With Us",
-      description:
-        "Explore partnership opportunities and collaborative solutions",
-      href: "#partner",
+      title: "Partnerships",
+      description: "Explore collaboration opportunities",
+      href: "mailto:partners@fazezero.com",
     },
   ],
   sections: [
     {
       title: "Enterprise & Institutional",
       description:
-        "Connect with our enterprise team to discuss custom solutions, regulatory requirements, and integration support for financial institutions and large organizations.",
+        "Custom solutions and regulatory support for financial institutions.",
       icon: "Building2" as IconName,
     },
     {
       title: "Developer Relations",
       description:
-        "Join our developer community, get technical documentation, SDK support, and access to our engineering team. Discord, forums, and GitHub are available 24/7.",
+        "Technical docs, SDKs, and 24/7 engineering support.",
       icon: "Code" as IconName,
     },
     {
       title: "Media & Press",
       description:
-        "For press inquiries, partnership announcements, or media kits, reach out to our communications team. We're always happy to share our story and insights.",
+        "Press inquiries, partnerships, and media resources.",
       icon: "Newspaper" as IconName,
     },
     {
       title: "Global Offices",
       description:
-        "We operate in key financial and technology hubs worldwide. Contact us to find your nearest office or schedule an in-person meeting with our regional teams.",
+        "Worldwide presence in key financial and tech hubs.",
       icon: "Globe" as IconName,
     },
   ],

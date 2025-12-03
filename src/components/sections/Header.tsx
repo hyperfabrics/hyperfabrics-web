@@ -119,7 +119,7 @@ export function Header() {
               <div className="relative size-10 transition-all duration-300 hover:scale-110">
                 <Image
                   src="/images/logo.png"
-                  alt="fazezero"
+                  alt="fazeZERO - Enterprise blockchain infrastructure platform"
                   width={32}
                   height={32}
                   className="object-contain"
@@ -181,11 +181,13 @@ export function Header() {
             {/* Desktop Right Side: Search Icon + CTA */}
             <div className="hidden lg:flex items-center gap-6">
               <button
-                className="p-2.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
-                aria-label="Search"
+                className="p-2.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-indigo-500 focus-visible:outline-offset-2"
+                aria-label="Search (coming soon)"
+                disabled
+                title="Search functionality coming soon"
               >
                 <Search
-                  className="size-5"
+                  className="size-5 opacity-50"
                   style={{ color: "var(--text-primary)" }}
                 />
               </button>

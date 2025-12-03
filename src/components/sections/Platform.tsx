@@ -87,7 +87,7 @@ export function Platform() {
               Ready to build on our platform?
             </h3>
             <p className="text-sm sm:text-base text-white/70 mb-6">
-              Get access to our sandbox environment with pre-configured test data, 
+              Get access to our sandbox environment with pre-configured test data,
               comprehensive documentation, and developer support.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

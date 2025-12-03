@@ -28,19 +28,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="space-y-6 sm:space-y-8"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight px-4">
-              <span style={{ color: "var(--text-primary)" }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.15] tracking-[-0.02em] px-4">
+              <span className="text-white/95">
                 Institutional rails for
               </span>
               <br />
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 bg-clip-text text-transparent font-extrabold">
                 tokenized assets
               </span>
             </h1>
 
             <p
-              className="max-w-3xl mx-auto text-xl sm:text-2xl lg:text-3xl leading-relaxed font-light"
-              style={{ color: "var(--text-muted)" }}
+              className="max-w-3xl mx-auto text-lg sm:text-xl lg:text-2xl leading-relaxed font-normal text-white/70 px-4"
             >
               Build, launch, and operate compliant blockchain systems—faster.
             </p>
@@ -62,65 +61,37 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Stats Row - Clean Horizontal Layout */}
+          {/* Stats Row - Modern Card Design */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="pt-20 sm:pt-24 lg:pt-28"
           >
-            <div className="flex items-center justify-center gap-12 sm:gap-16 lg:gap-20 text-center">
-              <div className="flex-shrink-0">
-                <div
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2"
-                  style={{ color: "var(--text-primary)" }}
-                >
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 max-w-4xl mx-auto px-4">
+              <div className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent">
                   500+
                 </div>
-                <div
-                  className="text-sm sm:text-base"
-                  style={{ color: "var(--text-muted)" }}
-                >
+                <div className="text-sm font-medium text-white/50 uppercase tracking-wider">
                   APIs
                 </div>
               </div>
 
-              <div
-                className="h-16 sm:h-20 w-px flex-shrink-0"
-                style={{ backgroundColor: "var(--border)" }}
-              />
-
-              <div className="flex-shrink-0">
-                <div
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2"
-                  style={{ color: "var(--text-primary)" }}
-                >
+              <div className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent">
                   100+
                 </div>
-                <div
-                  className="text-sm sm:text-base"
-                  style={{ color: "var(--text-muted)" }}
-                >
+                <div className="text-sm font-medium text-white/50 uppercase tracking-wider">
                   Blockchains
                 </div>
               </div>
 
-              <div
-                className="h-16 sm:h-20 w-px flex-shrink-0"
-                style={{ backgroundColor: "var(--border)" }}
-              />
-
-              <div className="flex-shrink-0">
-                <div
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-2"
-                  style={{ color: "var(--text-primary)" }}
-                >
+              <div className="group relative p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent">
                   4-6 wks
                 </div>
-                <div
-                  className="text-sm sm:text-base"
-                  style={{ color: "var(--text-muted)" }}
-                >
+                <div className="text-sm font-medium text-white/50 uppercase tracking-wider">
                   To PoC
                 </div>
               </div>

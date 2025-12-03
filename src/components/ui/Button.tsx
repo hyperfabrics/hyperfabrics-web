@@ -29,7 +29,7 @@ export function Button({
 
   // If className includes custom styles, don't apply default variant/size
   const hasCustomStyles = className?.includes("bg-") || className?.includes("text-") || className?.includes("px-") || className?.includes("py-");
-  
+
   return (
     <Comp
       href={disabled ? undefined : href}

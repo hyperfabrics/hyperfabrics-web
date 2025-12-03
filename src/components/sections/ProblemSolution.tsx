@@ -1,92 +1,100 @@
 "use client";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui";
-import { X, Check, Clock, DollarSign, Users, Shield, Zap, ArrowRight } from "lucide-react";
+import { X, Check, Clock, DollarSign, Users, Shield, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui";
 
-const comparison = [
+const metrics = [
   {
-    metric: "Time to Production",
-    without: { value: "12-18", unit: "months", icon: Clock },
-    with: { value: "4-6", unit: "weeks", icon: Zap, highlight: true },
+    icon: Clock,
+    label: "Time to Production",
+    without: "12-18 months",
+    with: "4-6 weeks",
+    highlight: true,
   },
   {
-    metric: "Development Cost",
-    without: { value: "$2M+", unit: "before first transaction", icon: DollarSign },
-    with: { value: "90%", unit: "cost reduction", icon: DollarSign, highlight: true },
+    icon: DollarSign,
+    label: "Development Cost",
+    without: "$2M+",
+    with: "90% less",
+    highlight: true,
   },
   {
-    metric: "Team Required",
-    without: { value: "Specialized", unit: "blockchain engineers", icon: Users },
-    with: { value: "Your existing", unit: "team + APIs", icon: Users, highlight: true },
+    icon: Users,
+    label: "Team Required",
+    without: "Specialized engineers",
+    with: "Your existing team",
+    highlight: true,
   },
   {
-    metric: "Compliance",
-    without: { value: "Navigate", unit: "requirements alone", icon: Shield },
-    with: { value: "Built-in", unit: "ISO 27001, SOC 2, GDPR", icon: Shield, highlight: true },
+    icon: Shield,
+    label: "Compliance",
+    without: "Navigate alone",
+    with: "Built-in",
+    highlight: true,
   },
 ];
 
 export function ProblemSolution() {
   return (
-    <Section id="see-how" className="py-20 sm:py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Section id="see-how" className="py-24 sm:py-32 lg:py-40">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-            Stop building from scratch
+          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            Ship compliant products
+            <br />
+            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              in weeks, not years
+            </span>
           </h2>
-          <p className="text-xl sm:text-2xl text-white/60 max-w-2xl mx-auto">
-            Ship compliant products in weeks, not years
-          </p>
         </motion.div>
 
-        {/* Visual Comparison - Modern Card Design */}
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        {/* Comparison Cards */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Without fazezero */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative p-8 rounded-2xl bg-white/[0.02] backdrop-blur-sm ring-1 ring-red-500/20 hover:ring-red-500/30 transition-all"
+            transition={{ duration: 0.6 }}
+            className="relative p-10 rounded-3xl bg-white/[0.01] backdrop-blur-sm ring-1 ring-red-500/10"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center">
-                <X className="w-6 h-6 text-red-400" />
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center">
+                <X className="w-7 h-7 text-red-400" />
               </div>
               <h3 className="text-2xl font-semibold text-red-300">Without fazezero</h3>
             </div>
 
-            <div className="space-y-6">
-              {comparison.map((item, index) => {
-                const Icon = item.without.icon;
+            <div className="space-y-8">
+              {metrics.map((metric, index) => {
+                const Icon = metric.icon;
                 return (
                   <motion.div
-                    key={item.metric}
+                    key={metric.label}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                    className="flex items-start gap-4"
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex items-center gap-5"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Icon className="w-5 h-5 text-red-400" />
+                    <div className="w-12 h-12 rounded-xl bg-red-500/5 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-red-400/60" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/40 mb-1">
-                        {item.metric}
+                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2">
+                        {metric.label}
                       </div>
-                      <div className="text-lg font-semibold text-white/90">
-                        {item.without.value}
+                      <div className="text-2xl font-bold text-white/50">
+                        {metric.without}
                       </div>
-                      <div className="text-sm text-white/50">{item.without.unit}</div>
                     </div>
                   </motion.div>
                 );
@@ -96,45 +104,41 @@ export function ProblemSolution() {
 
           {/* With fazezero */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative p-8 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-green-500/10 backdrop-blur-sm ring-1 ring-green-500/30 hover:ring-green-500/40 transition-all"
+            transition={{ duration: 0.6 }}
+            className="relative p-10 rounded-3xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-green-500/10 backdrop-blur-sm ring-1 ring-green-500/20"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
-                <Check className="w-6 h-6 text-green-400" />
+            <div className="flex items-center gap-4 mb-10">
+              <div className="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center">
+                <Check className="w-7 h-7 text-green-400" />
               </div>
               <h3 className="text-2xl font-semibold text-green-300">With fazezero</h3>
             </div>
 
-            <div className="space-y-6">
-              {comparison.map((item, index) => {
-                const Icon = item.with.icon;
+            <div className="space-y-8">
+              {metrics.map((metric, index) => {
+                const Icon = metric.icon;
                 return (
                   <motion.div
-                    key={item.metric}
+                    key={metric.label}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                    className="flex items-start gap-4"
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex items-center gap-5"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Icon className="w-5 h-5 text-green-400" />
+                    <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-green-400" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs uppercase tracking-wider text-white/40 mb-1">
-                        {item.metric}
+                      <div className="text-xs uppercase tracking-wider text-white/30 mb-2">
+                        {metric.label}
                       </div>
-                      <div className="text-lg font-semibold text-white">
-                        {item.with.value}
-                        {item.with.highlight && (
-                          <span className="ml-2 text-green-400">✓</span>
-                        )}
+                      <div className="text-2xl font-bold text-white">
+                        {metric.with}
                       </div>
-                      <div className="text-sm text-white/60">{item.with.unit}</div>
                     </div>
                   </motion.div>
                 );
@@ -155,7 +159,7 @@ export function ProblemSolution() {
             href="/contact"
             variant="primary"
             size="lg"
-            className="group"
+            className="group text-lg px-8 py-6"
           >
             See how we can help
             <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />

@@ -8,10 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "verify-seo": "./scripts/verify-seo.sh",
-    "deploy:aws:amplify": "./scripts/deploy-aws-amplify.sh",
-    "deploy:aws:s3": "./scripts/deploy-aws-s3-cloudfront.sh",
-    "deploy:aws:s3:static": "./scripts/deploy-aws-s3-static.sh",
-    "deploy:aws:ecs": "./scripts/deploy-aws-ecs.sh"
+    "deploy": "./scripts/deploy-aws-s3-static.sh"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",

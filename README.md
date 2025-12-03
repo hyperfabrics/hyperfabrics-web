@@ -69,32 +69,47 @@ curl http://localhost:3000/robots.txt
 
 ```
 fazezero-website/
+├── .github/
+│   └── workflows/              # GitHub Actions CI/CD
+│       ├── deploy.yml          # Automated deployment workflow
+│       └── test.yml            # Testing workflow
 ├── src/
-│   ├── app/                    # App Router pages
+│   ├── app/                    # Next.js App Router pages
 │   │   ├── layout.tsx          # Root layout with SEO
 │   │   ├── page.tsx            # Homepage
 │   │   ├── sitemap.ts          # Dynamic sitemap
 │   │   ├── robots.ts           # Robots.txt config
-│   │   ├── platform/           # Platform page
-│   │   ├── solutions/          # Solutions page
-│   │   ├── industries/         # Industries page
-│   │   ├── developers/         # Developers page
+│   │   ├── platform/           # Platform features pages
+│   │   ├── solutions/          # Solutions pages
+│   │   ├── industries/         # Industry pages
+│   │   ├── developers/         # Developer resources
+│   │   ├── company/            # Company pages
+│   │   │   ├── about/          # About page
+│   │   │   ├── careers/        # Careers page
+│   │   │   ├── press/          # Press page
+│   │   │   └── privacy/        # Privacy Policy
 │   │   ├── compliance/         # Compliance page
-│   │   └── contact/            # Contact page
+│   │   ├── contact/            # Contact page
+│   │   └── resources/          # Resources pages
 │   ├── components/             # React components
-│   │   ├── sections/           # Page sections
-│   │   └── ui/                 # UI components
-│   ├── data/                   # Static data
-│   ├── types/                  # TypeScript types
-│   └── utils/                  # Utilities
+│   │   ├── sections/           # Page sections (Header, Footer, Hero, etc.)
+│   │   └── ui/                 # Reusable UI components
+│   ├── data/                   # Static data and content
+│   ├── types/                  # TypeScript type definitions
+│   └── utils/                  # Utility functions
 │       ├── cn.ts               # Class name utility
-│       ├── schema.ts           # JSON-LD schemas
-│       └── seo.ts              # SEO helpers
+│       └── schema.ts           # JSON-LD structured data schemas
 ├── public/                     # Static assets
+│   ├── icons/                  # Favicons and app icons
+│   ├── og/                     # Open Graph images
 │   └── site.webmanifest       # PWA manifest
-├── scripts/                    # Utility scripts
-│   └── verify-seo.sh          # SEO verification
-└── [config files]
+├── scripts/                    # Deployment and utility scripts
+│   ├── deploy-aws-s3-static.sh # AWS S3 static deployment
+│   └── verify-seo.sh          # SEO verification script
+├── AWS-DEPLOYMENT.md           # AWS deployment guide
+├── Dockerfile                  # Docker configuration (for ECS)
+├── amplify.yml                 # AWS Amplify config
+└── [config files]              # Next.js, TypeScript, ESLint configs
 ```
 
 ## 🌐 Pages

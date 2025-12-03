@@ -480,7 +480,7 @@ header + * {
 
 @keyframes scale-in {
   from {
-    opacity: 0;
+  opacity: 0;
     transform: scale(0.95);
   }
   to {
@@ -602,16 +602,43 @@ textarea {
 }
 
 /* ============================================
-   9. COMPONENT OVERRIDES (Minimal)
+   9. BACKWARD COMPATIBILITY ALIASES
+   ============================================ */
+
+/* Legacy variable names for backward compatibility */
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-foreground);
+  --muted: var(--color-muted);
+  --muted-foreground: var(--color-muted-foreground);
+  --accent: var(--color-accent);
+  --accent-foreground: var(--color-accent-foreground);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+  --border: var(--color-border);
+  --card-bg: var(--color-card);
+  --card-border: var(--color-card-border);
+  --success: var(--color-success);
+  --error: var(--color-error);
+  --warning: var(--color-warning);
+  --header-bg: var(--color-header-bg);
+  --gradient-from: var(--gradient-primary-from);
+  --gradient-to: var(--gradient-primary-to);
+  --background-translucent: var(--color-header-bg);
+}
+
+/* ============================================
+   10. COMPONENT OVERRIDES (Minimal)
    ============================================ */
 
 /* Header */
 header {
   background-color: var(--color-header-bg);
   border-bottom: 1px solid var(--color-header-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -637,3 +664,4 @@ header {
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
 }
+

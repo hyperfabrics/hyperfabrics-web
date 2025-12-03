@@ -324,7 +324,7 @@ See [LICENSE](./LICENSE) file for details.
 
 ### Prerequisites
 
-- Node.js 20+ 
+- Node.js 20+
 - npm or yarn
 - AWS CLI (for deployment)
 - Git

@@ -36,7 +36,7 @@ jobs:
 
       - name: Build project
         env:
-          NEXT_PUBLIC_SITE_URL: https://fazezero.com
+          NEXT_PUBLIC_SITE_URL: https://hyperfabrics.com
         run: npm run build
 
       - name: Check build output

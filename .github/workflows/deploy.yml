@@ -15,7 +15,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  S3_BUCKET: fazezero.com
+  S3_BUCKET: hyperfabrics.com
   CLOUDFRONT_DISTRIBUTION_ID: E3SE8P2WZP6BAD
   NODE_VERSION: '20'
 
@@ -85,17 +85,17 @@ jobs:
 
       - name: Build static export
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://fazezero.com' }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://hyperfabrics.com' }}
         run: npm run build
 
       - name: Generate sitemap and robots.txt
         if: success()
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://fazezero.com' }}
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL || 'https://hyperfabrics.com' }}
         run: |
           # Generate sitemap if not exists
           if [ ! -f "out/sitemap.xml" ]; then
-            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://hyperfabrics.com}"
             cat > out/sitemap.xml << SITEMAP
           <?xml version="1.0" encoding="UTF-8"?>
           <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -118,7 +118,7 @@ jobs:
 
           # Generate robots.txt if not exists
           if [ ! -f "out/robots.txt" ]; then
-            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+            BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://hyperfabrics.com}"
             cat > out/robots.txt << ROBOTS
           User-agent: *
           Allow: /
@@ -239,9 +239,9 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **S3 Bucket**: s3://${{ env.S3_BUCKET }}" >> $GITHUB_STEP_SUMMARY
           echo "- **CloudFront Distribution**: ${{ env.CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Website URL**: https://fazezero.com" >> $GITHUB_STEP_SUMMARY
+          echo "- **Website URL**: https://hyperfabrics.com" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
-          echo "1. Verify deployment at https://fazezero.com" >> $GITHUB_STEP_SUMMARY
-          echo "2. Check sitemap: https://fazezero.com/sitemap.xml" >> $GITHUB_STEP_SUMMARY
+          echo "1. Verify deployment at https://hyperfabrics.com" >> $GITHUB_STEP_SUMMARY
+          echo "2. Check sitemap: https://hyperfabrics.com/sitemap.xml" >> $GITHUB_STEP_SUMMARY
           echo "3. Submit sitemap to Google Search Console" >> $GITHUB_STEP_SUMMARY

@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "SDKs & Libraries | fazeZERO",
+  title: "SDKs & Libraries | HyperFabrics",
   description:
-    "Official SDKs and libraries for JavaScript, Python, Java, Go, and Ruby. Integrate fazeZERO into your applications with type-safe interfaces and comprehensive documentation.",
+    "Official SDKs and libraries for JavaScript, Python, Java, Go, and Ruby. Integrate HyperFabrics into your applications with type-safe interfaces and comprehensive documentation.",
   openGraph: {
-    title: "SDKs & Libraries | fazeZERO",
+    title: "SDKs & Libraries | HyperFabrics",
     description:
       "Official SDKs for your favorite programming language. Build with type-safe interfaces and full IDE support.",
-    url: "https://fazezero.com/developers/sdks",
+    url: "https://HyperFabrics.com/developers/sdks",
   },
 };
 
@@ -18,7 +18,7 @@ export const pageContent = {
   badgeIcon: "Package" as IconName,
   title: "SDKs & Libraries",
   description:
-    "Official SDKs and libraries to integrate fazeZERO into your applications in your favorite programming language.",
+    "Official SDKs and libraries to integrate HyperFabrics into your applications in your favorite programming language.",
   sdks: [
     {
       name: "JavaScript/TypeScript SDK",

@@ -3,11 +3,11 @@ import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title:
-    "Proof-of-Concept Development - Rapid Blockchain Prototyping | fazezero",
+    "Proof-of-Concept Development - Rapid Blockchain Prototyping | HyperFabrics",
   description:
     "Validate blockchain ideas in 4-6 weeks with multi-chain PoC development. Leverage 500+ APIs and smart contract templates. Turn concepts into working demos with 99.99% uptime infrastructure.",
   openGraph: {
-    title: "Proof-of-Concept Development | fazezero",
+    title: "Proof-of-Concept Development | HyperFabrics",
     description:
       "Validate blockchain ideas in 4-6 weeks with multi-chain PoC development. Turn concepts into working demos with enterprise-grade infrastructure.",
     url: "/services/poc",
@@ -20,7 +20,7 @@ export const pageContent = {
   badgeIcon: "Beaker" as IconName,
   title: "Rapid Blockchain Proof-of-Concept Development",
   description:
-    "fazezero's Proof-of-Concept Development Package is a rapid prototyping service that helps organizations validate blockchain or digital asset ideas before committing to full-scale development. In just 4-6 weeks, we turn whiteboard concepts into functioning demos — allowing stakeholders to see real results, not just presentations.",
+    "HyperFabrics's Proof-of-Concept Development Package is a rapid prototyping service that helps organizations validate blockchain or digital asset ideas before committing to full-scale development. In just 4-6 weeks, we turn whiteboard concepts into functioning demos — allowing stakeholders to see real results, not just presentations.",
   quickLinks: [
     {
       icon: "Beaker" as IconName,
@@ -63,7 +63,7 @@ export const pageContent = {
     {
       title: "Enterprise Platform & 500+ APIs",
       description:
-        "Leverage fazezero's enterprise-grade platform including 500+ APIs, pre-built smart contract templates, and real-time event streaming infrastructure. Access production-ready components for identity management, digital asset custody, tokenization, and payment processing. Reusable modules accelerate development and demonstrate enterprise capabilities. ISO-certified infrastructure with 99.99% uptime ensures stability during critical investor or board presentations. Built-in security, compliance, and monitoring tools showcase production-readiness. Prototype runs on same stack used by enterprise customers, demonstrating scalability from day one.",
+        "Leverage HyperFabrics's enterprise-grade platform including 500+ APIs, pre-built smart contract templates, and real-time event streaming infrastructure. Access production-ready components for identity management, digital asset custody, tokenization, and payment processing. Reusable modules accelerate development and demonstrate enterprise capabilities. ISO-certified infrastructure with 99.99% uptime ensures stability during critical investor or board presentations. Built-in security, compliance, and monitoring tools showcase production-readiness. Prototype runs on same stack used by enterprise customers, demonstrating scalability from day one.",
       icon: "Code" as IconName,
     },
     {

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Media & Entertainment - Blockchain for Creators | fazezero",
+  title: "BaaS for Media & Entertainment - Blockchain for Creators | HyperFabrics",
   description:
     "Blockchain platform for media creators, publishers, and platforms. NFT marketplaces, smart contract royalties, fan engagement, and IP protection. Empower creators with ownership, transparency, and new revenue streams.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "content blockchain",
   ],
   openGraph: {
-    title: "BaaS for Media & Entertainment - fazezero",
+    title: "BaaS for Media & Entertainment - HyperFabrics",
     description:
       "Blockchain platform for media creators with NFTs, smart royalties, and fan engagement tools.",
     url: "/solutions/media",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-media.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Media",
+        alt: "HyperFabrics BaaS for Media",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Media & Entertainment - fazezero",
+    title: "BaaS for Media & Entertainment - HyperFabrics",
     description:
       "Blockchain platform empowering creators with ownership and new revenue streams.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Film" as IconName,
   title: "Empower Creators, Engage Fans",
   description:
-    "BaaS for Media and Entertainment is fazezero's blockchain platform built to empower creators, publishers, and platforms in the digital age. As the industry faces ongoing challenges around ownership, monetization, and content control, our solution offers the infrastructure to bring transparency, security, and creative freedom to the forefront.",
+    "BaaS for Media and Entertainment is HyperFabrics's blockchain platform built to empower creators, publishers, and platforms in the digital age. As the industry faces ongoing challenges around ownership, monetization, and content control, our solution offers the infrastructure to bring transparency, security, and creative freedom to the forefront.",
   quickLinks: [
     {
       icon: "Image" as IconName,

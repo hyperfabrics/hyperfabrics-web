@@ -33,11 +33,11 @@ export function CTA() {
           {/* CTA Buttons */}
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Button
-              href="mailto:info@fazezero.com"
+              href="mailto:info@hyperfabrics.com"
               className="group bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 ring-0 text-sm sm:text-base px-6 sm:px-8 py-3 shadow-lg shadow-indigo-500/50"
             >
               <Mail className="size-4 sm:size-5" />
-              info@fazezero.com
+              info@hyperfabrics.com
               <ArrowRight className="size-3 sm:size-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button

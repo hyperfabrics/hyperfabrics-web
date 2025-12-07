@@ -29,7 +29,7 @@ export const developersMegaMenu: MegaMenuColumn[] = [
             label: "Tutorials & Guides",
             href: "/developers/tutorials",
             description:
-              "Follow step-by-step tutorials to build with fazeZERO.",
+              "Follow step-by-step tutorials to build with HyperFabrics.",
             icon: "PlaySquare",
           },
         ],

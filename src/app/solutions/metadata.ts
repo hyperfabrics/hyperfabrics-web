@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "institutional Web3",
   ],
   openGraph: {
-    title: "Solutions - fazezero",
+    title: "Solutions - HyperFabrics",
     description:
       "Discover blockchain solutions for tokenization, payments, identity management, and compliance. Enterprise-grade Web3 infrastructure for regulated institutions.",
     url: "/solutions",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Solutions",
+        alt: "HyperFabrics Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solutions - fazezero",
+    title: "Solutions - HyperFabrics",
     description:
       "Discover blockchain solutions for tokenization, payments, identity management, and compliance. Enterprise-grade Web3 infrastructure for regulated institutions.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Lightbulb" as IconName,
   title: "Industry-Specific Blockchain Infrastructure",
   description:
-    "fazezero delivers specialized Blockchain as a Service (BaaS) solutions tailored to the unique needs of different industries. From central banks issuing digital currencies to enterprises modernizing supply chains — our platform provides the security, compliance, and scalability required for production deployments.",
+    "HyperFabrics delivers specialized Blockchain as a Service (BaaS) solutions tailored to the unique needs of different industries. From central banks issuing digital currencies to enterprises modernizing supply chains — our platform provides the security, compliance, and scalability required for production deployments.",
   quickLinks: [
     {
       icon: "Landmark" as IconName,

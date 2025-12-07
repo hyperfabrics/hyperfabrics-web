@@ -45,38 +45,38 @@ export function ProblemSolution() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16 sm:mb-20 lg:mb-24"
         >
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
             Ship compliant products
             <br />
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               in weeks, not years
             </span>
           </h2>
         </motion.div>
 
         {/* Modern Comparison Table */}
-        <div className="relative overflow-x-auto">
+        <div className="relative">
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-6 min-w-[600px] sm:min-w-0">
-            <div className="text-sm font-medium text-white/40 uppercase tracking-wider"></div>
+          <div className="grid grid-cols-3 gap-6 lg:gap-8 mb-8">
+            <div></div>
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-500/10 border border-red-500/20">
+              <div className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-red-500/10 border border-red-500/20">
                 <X className="w-4 h-4 text-red-400" />
-                <span className="text-sm font-semibold text-red-300">Without fazezero</span>
+                <span className="text-sm font-semibold text-red-300">Without HyperFabrics</span>
               </div>
             </div>
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-green-500/20 border border-green-500/30">
+              <div className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-green-500/20 border border-green-500/30">
                 <Check className="w-4 h-4 text-green-400" />
-                <span className="text-sm font-semibold text-green-300">With fazezero</span>
+                <span className="text-sm font-semibold text-green-300">With HyperFabrics</span>
               </div>
             </div>
           </div>
 
           {/* Comparison Rows */}
-          <div className="space-y-4">
+          <div className="space-y-5 lg:space-y-6">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               return (
@@ -86,31 +86,31 @@ export function ProblemSolution() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="grid grid-cols-3 gap-4 sm:gap-6 items-center p-6 sm:p-8 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all group min-w-[600px] sm:min-w-0"
+                  className="grid grid-cols-3 gap-6 lg:gap-8 items-center p-8 lg:p-10 rounded-2xl bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 transition-all duration-300 group"
                 >
                   {/* Label */}
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors flex-shrink-0">
-                      <Icon className="w-6 h-6 text-indigo-400" />
+                  <div className="flex items-center gap-4 lg:gap-5">
+                    <div className="w-14 h-14 rounded-xl bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors flex-shrink-0">
+                      <Icon className="w-7 h-7 text-indigo-400" />
                     </div>
-                    <div className="text-sm font-medium text-white/60 uppercase tracking-wider break-words min-w-0">
+                    <div className="text-sm font-semibold text-white/70 uppercase tracking-wider break-words min-w-0">
                       {metric.label}
                     </div>
                   </div>
 
                   {/* Without */}
                   <div className="text-center">
-                    <div className="text-xl font-bold text-white/40 line-through">
+                    <div className="text-xl lg:text-2xl font-bold text-white/40 line-through">
                       {metric.without}
                     </div>
                   </div>
 
                   {/* With */}
-                  <div className="text-center relative">
-                    <div className="text-2xl font-bold text-white mb-2">
+                  <div className="text-center">
+                    <div className="text-2xl lg:text-3xl font-bold text-white mb-2.5 leading-tight">
                       {metric.with}
                     </div>
-                    <div className="inline-flex items-center gap-1.5 text-xs text-green-400 font-medium">
+                    <div className="inline-flex items-center gap-1.5 text-xs lg:text-sm text-green-400 font-semibold">
                       <TrendingDown className="w-3.5 h-3.5" />
                       {metric.improvement}
                     </div>
@@ -127,17 +127,17 @@ export function ProblemSolution() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-16 sm:mt-20 lg:mt-24"
         >
-            <Button
-              href="/contact"
-              variant="primary"
-              size="lg"
-              className="group"
-            >
-              Get Started
-              <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+          <Button
+            href="/contact"
+            variant="primary"
+            size="lg"
+            className="group"
+          >
+            Get Started
+            <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </motion.div>
       </div>
     </Section>

@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Blockchain Consulting Services - Strategic Advisory | fazezero",
+  title: "Blockchain Consulting Services - Strategic Advisory | HyperFabrics",
   description:
     "Strategic blockchain consulting from feasibility analysis to implementation roadmap. Expert guidance for enterprises, governments, and startups. Get ROI clarity, protocol benchmarking, and compliance analysis in 2 weeks.",
   openGraph: {
-    title: "Blockchain Consulting Services | fazezero",
+    title: "Blockchain Consulting Services | HyperFabrics",
     description:
       "Strategic blockchain consulting from feasibility analysis to implementation roadmap. Expert guidance for enterprises, governments, and startups.",
     url: "/services/consulting",
@@ -19,7 +19,7 @@ export const pageContent = {
   badgeIcon: "Briefcase" as IconName,
   title: "Strategic Blockchain Consulting & Advisory Services",
   description:
-    "fazezero's Blockchain Consulting Services provide strategic and technical guidance to businesses, governments, nonprofits, and startups seeking to harness the full potential of blockchain technology. Our consulting practice helps clients design, build, and deploy tailored solutions aligned with business goals and compliance needs.",
+    "HyperFabrics's Blockchain Consulting Services provide strategic and technical guidance to businesses, governments, nonprofits, and startups seeking to harness the full potential of blockchain technology. Our consulting practice helps clients design, build, and deploy tailored solutions aligned with business goals and compliance needs.",
   quickLinks: [
     {
       icon: "FileText" as IconName,

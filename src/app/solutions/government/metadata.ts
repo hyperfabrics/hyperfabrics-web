@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Government - Blockchain for Public Sector | fazezero",
+  title: "BaaS for Government - Blockchain for Public Sector | HyperFabrics",
   description:
     "Blockchain platform for government agencies and nonprofits. Increase transparency, reduce fraud, secure records, and improve citizen services. ISO certified with built-in compliance for identity verification and public funding.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "civic blockchain",
   ],
   openGraph: {
-    title: "BaaS for Government - fazezero",
+    title: "BaaS for Government - HyperFabrics",
     description:
       "Blockchain platform for government agencies. Increase transparency, accountability, and efficiency in public services.",
     url: "/solutions/government",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-government.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Government",
+        alt: "HyperFabrics BaaS for Government",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Government - fazezero",
+    title: "BaaS for Government - HyperFabrics",
     description:
       "Blockchain platform for government agencies with transparency and accountability.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Building" as IconName,
   title: "Transparent, Accountable Governance",
   description:
-    "BaaS for Government Agencies is fazezero's blockchain platform tailored to help public institutions increase transparency, accountability, and operational efficiency. Designed for the unique needs of government bodies, the solution provides secure, scalable infrastructure for managing records, transactions, and citizen services.",
+    "BaaS for Government Agencies is HyperFabrics's blockchain platform tailored to help public institutions increase transparency, accountability, and operational efficiency. Designed for the unique needs of government bodies, the solution provides secure, scalable infrastructure for managing records, transactions, and citizen services.",
   quickLinks: [
     {
       icon: "Vote" as IconName,

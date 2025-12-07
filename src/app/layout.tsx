@@ -19,11 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://fazezero.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://hyperfabrics.com"
   ),
   title: {
-    default: "fazezero - Enterprise Blockchain Infrastructure",
-    template: "%s | fazezero",
+    default: "HyperFabrics - Enterprise Blockchain Infrastructure",
+    template: "%s | HyperFabrics",
   },
   description:
     "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "Web3 infrastructure",
     "institutional Web3",
   ],
-  authors: [{ name: "fazezero" }],
-  creator: "fazezero",
-  publisher: "fazezero",
+  authors: [{ name: "HyperFabrics" }],
+  creator: "HyperFabrics",
+  publisher: "HyperFabrics",
   formatDetection: {
     email: false,
     address: false,
@@ -51,26 +51,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "fazezero - Enterprise Blockchain Infrastructure",
+    title: "HyperFabrics - Enterprise Blockchain Infrastructure",
     description:
       "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
-    siteName: "fazezero",
+    siteName: "HyperFabrics",
     images: [
       {
         url: "/og/og-home.png",
         width: 1200,
         height: 630,
-        alt: "fazezero - Enterprise Blockchain Infrastructure",
+        alt: "HyperFabrics - Enterprise Blockchain Infrastructure",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "fazezero - Enterprise Blockchain Infrastructure",
+    title: "HyperFabrics - Enterprise Blockchain Infrastructure",
     description:
       "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
     images: ["/og/og-home.png"],
-    creator: "@fazezero",
+    creator: "@hyperfabrics",
   },
   robots: {
     index: true,

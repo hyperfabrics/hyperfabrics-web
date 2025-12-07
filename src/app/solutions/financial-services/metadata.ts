@@ -3,7 +3,7 @@ import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title:
-    "BaaS for Financial Services - Enterprise Blockchain for Banks | fazezero",
+    "BaaS for Financial Services - Enterprise Blockchain for Banks | HyperFabrics",
   description:
     "Enterprise blockchain platform for banking and finance. Streamline processes, reduce costs, and innovate with asset tokenization, automated transactions, and real-time data exchange. ISO 27001 certified with 99.99% uptime.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "digital banking",
   ],
   openGraph: {
-    title: "BaaS for Financial Services - fazezero",
+    title: "BaaS for Financial Services - HyperFabrics",
     description:
       "Enterprise blockchain platform for banking and finance. Secure, compliant, scalable infrastructure for digital transformation.",
     url: "/solutions/financial-services",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-financial.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Financial Services",
+        alt: "HyperFabrics BaaS for Financial Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Financial Services - fazezero",
+    title: "BaaS for Financial Services - HyperFabrics",
     description:
       "Enterprise blockchain platform for banking and finance with 99.99% uptime.",
   },
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "Building2" as IconName,
   title: "Modernize Financial Operations",
   description:
-    "BaaS for Financial Services is fazezero's enterprise blockchain platform built specifically for the banking and finance industry. It addresses the sector's need for secure, compliant, and scalable infrastructure to support modernization, digital transformation, and operational efficiency while navigating regulatory complexity.",
+    "BaaS for Financial Services is HyperFabrics's enterprise blockchain platform built specifically for the banking and finance industry. It addresses the sector's need for secure, compliant, and scalable infrastructure to support modernization, digital transformation, and operational efficiency while navigating regulatory complexity.",
   quickLinks: [
     {
       icon: "Coins" as IconName,
@@ -74,7 +74,7 @@ export const pageContent = {
     {
       title: "Balancing Innovation & Regulation",
       description:
-        "The banking and finance sector faces unique pressures—balancing security, regulatory compliance, and operational efficiency while navigating digital transformation. fazezero provides solutions that address these challenges with enterprise-grade infrastructure designed for mission-critical financial environments operating under strict regulatory oversight.",
+        "The banking and finance sector faces unique pressures—balancing security, regulatory compliance, and operational efficiency while navigating digital transformation. HyperFabrics provides solutions that address these challenges with enterprise-grade infrastructure designed for mission-critical financial environments operating under strict regulatory oversight.",
       icon: "Scale" as IconName,
     },
     {
@@ -104,7 +104,7 @@ export const pageContent = {
     {
       title: "Seamless System Integration",
       description:
-        "Connect blockchain networks to core banking systems, payment processors, and market data providers through pre-built connectors and APIs. Maintain existing workflows while adding blockchain capabilities incrementally. Support for hybrid architectures enables gradual migration without disrupting critical operations. Whether upgrading interbank processes or launching digital asset platforms, fazezero provides the tools to move quickly and securely.",
+        "Connect blockchain networks to core banking systems, payment processors, and market data providers through pre-built connectors and APIs. Maintain existing workflows while adding blockchain capabilities incrementally. Support for hybrid architectures enables gradual migration without disrupting critical operations. Whether upgrading interbank processes or launching digital asset platforms, HyperFabrics provides the tools to move quickly and securely.",
       icon: "Plug" as IconName,
     },
   ],

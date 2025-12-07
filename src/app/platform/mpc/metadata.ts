@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "MPC Security - Multi-Party Computation for Digital Assets | fazezero",
+  title: "MPC Security - Multi-Party Computation for Digital Assets | HyperFabrics",
   description:
     "Breakthrough Multi-Party Computation (MPC) and patent-pending SGX technology for unbreakable private key protection. Enterprise-grade security for digital asset custody trusted by leading financial institutions.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "secure custody",
   ],
   openGraph: {
-    title: "MPC Security - fazezero",
+    title: "MPC Security - HyperFabrics",
     description:
       "Breakthrough Multi-Party Computation (MPC) and patent-pending SGX technology for unbreakable private key protection. Enterprise-grade security for digital asset custody.",
     url: "/platform/mpc",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-mpc.png",
         width: 1200,
         height: 630,
-        alt: "fazezero MPC Security",
+        alt: "HyperFabrics MPC Security",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "MPC Security - fazezero",
+    title: "MPC Security - HyperFabrics",
     description:
       "Breakthrough Multi-Party Computation (MPC) and patent-pending SGX technology for unbreakable private key protection.",
   },
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "ShieldCheck" as IconName,
   title: "Unbreakable Protection for Digital Assets",
   description:
-    "fazezero utilizes breakthrough Multi-Party Computation (MPC) and patent-pending Software Guard Extensions (SGX) technology to deliver industry-leading protection for private keys and API credentials. This dual-layer cryptographic security ensures that sensitive assets are safeguarded against theft, cyber threats, and unauthorized access — even from insiders.",
+    "HyperFabrics utilizes breakthrough Multi-Party Computation (MPC) and patent-pending Software Guard Extensions (SGX) technology to deliver industry-leading protection for private keys and API credentials. This dual-layer cryptographic security ensures that sensitive assets are safeguarded against theft, cyber threats, and unauthorized access — even from insiders.",
   quickLinks: [
     {
       icon: "Lock" as IconName,

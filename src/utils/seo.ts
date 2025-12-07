@@ -17,7 +17,7 @@ export function generatePageMetadata({
   noindex = false,
   canonical,
 }: SEOProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fazezero.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://hyperfabrics.com";
 
   return {
     title,
@@ -50,7 +50,7 @@ export function generatePageMetadata({
           alt: title,
         },
       ],
-      siteName: "fazezero",
+      siteName: "HyperFabrics",
       locale: "en_US",
     },
     twitter: {
@@ -58,7 +58,7 @@ export function generatePageMetadata({
       title,
       description,
       images: [ogImage],
-      creator: "@fazezero",
+      creator: "@hyperfabrics",
     },
   };
 }

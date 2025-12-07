@@ -2,20 +2,20 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "fazezero",
-    url: "https://fazezero.com",
-    logo: "https://fazezero.com/images/logo.png",
+    name: "HyperFabrics",
+    url: "https://hyperfabrics.com",
+    logo: "https://hyperfabrics.com/images/logo.png",
     description:
       "Enterprise-grade blockchain infrastructure for regulated institutions. From tokenization and payments to identity and compliance.",
     sameAs: [
-      "https://twitter.com/fazezero",
-      "https://linkedin.com/company/fazezero",
-      "https://github.com/fazezero",
+      "https://twitter.com/hyperfabrics",
+      "https://linkedin.com/company/hyperfabrics",
+      "https://github.com/hyperfabrics",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Sales",
-      url: "https://fazezero.com/contact",
+      url: "https://hyperfabrics.com/contact",
     },
   };
 }
@@ -24,13 +24,13 @@ export function generateWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "fazezero",
-    url: "https://fazezero.com",
+    name: "HyperFabrics",
+    url: "https://hyperfabrics.com",
     description:
       "Enterprise-grade blockchain infrastructure for regulated institutions.",
     publisher: {
       "@type": "Organization",
-      name: "fazezero",
+      name: "HyperFabrics",
     },
   };
 }
@@ -54,7 +54,7 @@ export function generateSoftwareProductSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "fazezero Platform",
+    name: "HyperFabrics Platform",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     offers: {

@@ -11,7 +11,7 @@ echo "=================================================="
 echo ""
 
 # Configuration (update these values or set as environment variables)
-S3_BUCKET="${AWS_S3_BUCKET:-fazezero.com}"
+S3_BUCKET="${AWS_S3_BUCKET:-hyperfabrics.com}"
 CLOUDFRONT_DISTRIBUTION_ID="${AWS_CLOUDFRONT_DIST_ID:-E3SE8P2WZP6BAD}"
 CLOUDFLARE_ZONE_ID="${CLOUDFLARE_ZONE_ID:-}"
 CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-}"
@@ -117,7 +117,7 @@ echo "🗺️  Checking sitemap and robots.txt..."
 if [ ! -f "out/sitemap.xml" ]; then
     echo "   Generating sitemap.xml..."
     # Create a basic sitemap from the static export
-    BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+    BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://hyperfabrics.com}"
     cat > out/sitemap.xml << SITEMAP
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -141,7 +141,7 @@ fi
 
 if [ ! -f "out/robots.txt" ]; then
     echo "   Generating robots.txt..."
-    BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://fazezero.com}"
+    BASE_URL="${NEXT_PUBLIC_SITE_URL:-https://hyperfabrics.com}"
     cat > out/robots.txt << ROBOTS
 User-agent: *
 Allow: /

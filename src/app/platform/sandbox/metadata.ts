@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Developer Sandbox - Safe Testing Environment | fazezero",
+  title: "Developer Sandbox - Safe Testing Environment | HyperFabrics",
   description:
     "Test and validate blockchain applications in a production-like environment. Multi-chain testing, smart contract debugging, API validation, and integration testing without risking real assets.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "developer tools",
   ],
   openGraph: {
-    title: "Developer Sandbox - fazezero",
+    title: "Developer Sandbox - HyperFabrics",
     description:
       "Test and validate blockchain applications safely. Multi-chain testing without risking real assets.",
     url: "/platform/sandbox",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-sandbox.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Sandbox",
+        alt: "HyperFabrics Sandbox",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Developer Sandbox - fazezero",
+    title: "Developer Sandbox - HyperFabrics",
     description:
       "Test and validate blockchain applications safely in a production-like environment.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "TestTube" as IconName,
   title: "Build and Test with Confidence",
   description:
-    "fazezero's Developer Sandbox provides a safe, isolated environment for testing blockchain applications before production deployment. Validate smart contracts, test integrations, debug transactions, and run load tests — all in a production-like setting that mirrors mainnet conditions without risking real assets or incurring actual blockchain fees.",
+    "HyperFabrics's Developer Sandbox provides a safe, isolated environment for testing blockchain applications before production deployment. Validate smart contracts, test integrations, debug transactions, and run load tests — all in a production-like setting that mirrors mainnet conditions without risking real assets or incurring actual blockchain fees.",
   quickLinks: [
     {
       icon: "Network" as IconName,

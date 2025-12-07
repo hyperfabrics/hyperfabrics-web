@@ -30,7 +30,7 @@ Keep important content within the center **1200x600px** area. Some platforms cro
 
 1. **Branding**: Include your logo (from `/public/images/logo_blue.png`)
 2. **Text**: Large, bold, readable (minimum 48-72px font size)
-3. **Colors**: Use fazezero brand colors consistently
+3. **Colors**: Use HyperFabrics brand colors consistently
 4. **Contrast**: Ensure text is readable on background
 5. **Template**: Create one template, customize per page
 
@@ -38,7 +38,7 @@ Keep important content within the center **1200x600px** area. Some platforms cro
 
 ```
 ┌─────────────────────────────────────┐
-│  [Logo]                    fazezero │
+│  [Logo]                    HyperFabrics │
 │                                     │
 │        Main Headline Here           │
 │        (Large Bold Text)            │
@@ -46,7 +46,7 @@ Keep important content within the center **1200x600px** area. Some platforms cro
 │        Brief description or         │
 │        key benefit                  │
 │                                     │
-│                    [fazezero.com]   │
+│                    [HyperFabrics.com]   │
 └─────────────────────────────────────┘
 ```
 
@@ -85,7 +85,7 @@ Keep important content within the center **1200x600px** area. Some platforms cro
 ### og-contact.png
 
 **Headline**: "Get Started"
-**Subtext**: "Build the future with fazezero"
+**Subtext**: "Build the future with HyperFabrics"
 
 ## Testing Tools
 

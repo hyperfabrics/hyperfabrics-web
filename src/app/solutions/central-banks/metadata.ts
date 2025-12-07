@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Central Banks - CBDC Infrastructure | fazezero",
+  title: "BaaS for Central Banks - CBDC Infrastructure | HyperFabrics",
   description:
     "Specialized blockchain infrastructure for Central Bank Digital Currencies (CBDCs). Support 100+ countries building digital currencies with scalable, compliant, policy-driven systems for tokenization, identity, and cross-border settlement.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "blockchain for central banks",
   ],
   openGraph: {
-    title: "BaaS for Central Banks - fazezero",
+    title: "BaaS for Central Banks - HyperFabrics",
     description:
       "Specialized blockchain infrastructure for Central Bank Digital Currencies (CBDCs). Scalable, compliant, policy-driven CBDC systems.",
     url: "/solutions/central-banks",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-central-banks.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Central Banks",
+        alt: "HyperFabrics BaaS for Central Banks",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Central Banks - fazezero",
+    title: "BaaS for Central Banks - HyperFabrics",
     description:
       "Specialized blockchain infrastructure for Central Bank Digital Currencies (CBDCs).",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Landmark" as IconName,
   title: "Leading the CBDC Revolution",
   description:
-    "BaaS for Central Banks is fazezero's specialized blockchain solution designed to support the development and deployment of Central Bank Digital Currencies (CBDCs). As more than 100 countries explore or pilot CBDCs to modernize payments, increase financial inclusion, and drive digital economic growth, fazezero provides the infrastructure to move securely and confidently.",
+    "BaaS for Central Banks is HyperFabrics's specialized blockchain solution designed to support the development and deployment of Central Bank Digital Currencies (CBDCs). As more than 100 countries explore or pilot CBDCs to modernize payments, increase financial inclusion, and drive digital economic growth, HyperFabrics provides the infrastructure to move securely and confidently.",
   quickLinks: [
     {
       icon: "Globe" as IconName,
@@ -78,7 +78,7 @@ export const pageContent = {
     {
       title: "Scalable CBDC Infrastructure",
       description:
-        "Build production-ready CBDC systems with integrated tokenization, identity management, and policy enforcement. Our platform supports both pilot testing and full-scale deployment with complete operational control. From early exploration to live issuance, fazezero handles transaction volumes at national scale while maintaining security, compliance, and performance under all conditions.",
+        "Build production-ready CBDC systems with integrated tokenization, identity management, and policy enforcement. Our platform supports both pilot testing and full-scale deployment with complete operational control. From early exploration to live issuance, HyperFabrics handles transaction volumes at national scale while maintaining security, compliance, and performance under all conditions.",
       icon: "Layers" as IconName,
     },
     {

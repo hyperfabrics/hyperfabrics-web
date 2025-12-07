@@ -13,12 +13,12 @@ export default function CareersPage() {
     >
       <h2>Get in Touch</h2>
       <p>
-        Interested in joining fazeZERO? Send your resume to{" "}
+        Interested in joining HyperFabrics? Send your resume to{" "}
         <a
-          href="mailto:careers@fazezero.com"
+          href="mailto:careers@hyperfabrics.com"
           className="text-indigo-400 hover:text-indigo-300"
         >
-          careers@fazezero.com
+          careers@hyperfabrics.com
         </a>
       </p>
     </ContentPage>

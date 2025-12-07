@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Whitepapers | fazeZERO",
+  title: "Whitepapers | HyperFabrics",
   description:
-    "Download in-depth whitepapers on blockchain technology, digital assets, CBDCs, and financial innovation. Research and insights from fazeZERO experts.",
+    "Download in-depth whitepapers on blockchain technology, digital assets, CBDCs, and financial innovation. Research and insights from HyperFabrics experts.",
   openGraph: {
-    title: "Whitepapers | fazeZERO",
+    title: "Whitepapers | HyperFabrics",
     description:
       "In-depth research and analysis on blockchain and digital assets.",
-    url: "https://fazezero.com/resources/whitepapers",
+    url: "https://HyperFabrics.com/resources/whitepapers",
   },
 };
 

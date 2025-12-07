@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "API Reference | fazeZERO",
+  title: "API Reference | HyperFabrics",
   description:
     "Detailed API reference for REST and GraphQL endpoints. Access 500+ APIs covering wallet management, tokenization, payments, compliance, and blockchain interactions across 100+ chains.",
   openGraph: {
-    title: "API Reference | fazeZERO",
+    title: "API Reference | HyperFabrics",
     description:
       "Detailed API reference for REST and GraphQL endpoints. Build powerful digital asset integrations.",
-    url: "https://fazezero.com/developers/api",
+    url: "https://HyperFabrics.com/developers/api",
   },
 };
 

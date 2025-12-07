@@ -58,7 +58,7 @@ export function ContactForm() {
 
     try {
       // In a real implementation, this would send to an API
-      const mailtoLink = `mailto:sales@fazezero.com?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(
+      const mailtoLink = `mailto:sales@hyperfabrics.com?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
       )}`;
 
@@ -247,8 +247,8 @@ export function ContactForm() {
               <p className="font-medium text-red-300">Failed to send message</p>
               <p className="text-sm text-red-400/80 mt-1">
                 Please try again or email us directly at{" "}
-                <a href="mailto:sales@fazezero.com" className="underline">
-                  sales@fazezero.com
+                <a href="mailto:sales@hyperfabrics.com" className="underline">
+                  sales@hyperfabrics.com
                 </a>
               </p>
             </div>

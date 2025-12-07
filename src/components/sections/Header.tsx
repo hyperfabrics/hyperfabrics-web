@@ -117,7 +117,7 @@ export function Header() {
               <div className="relative size-10 transition-all duration-300 hover:scale-110">
                 <Image
                   src="/images/logo.png"
-                  alt="fazeZERO - Enterprise blockchain infrastructure platform"
+                  alt="HyperFabrics - Enterprise blockchain infrastructure platform"
                   width={32}
                   height={32}
                   className="object-contain"
@@ -127,7 +127,7 @@ export function Header() {
                 className="text-xl font-bold tracking-tight transition-all duration-300 hover:text-[#375bd2] nav-break:hidden"
                 style={{ color: "var(--text-primary)" }}
               >
-                fazeZERO
+                HyperFabrics
               </span>
             </Link>
           </div>

@@ -4,7 +4,7 @@ import { IconName } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Compliance - Regulatory-Ready Blockchain Infrastructure",
   description:
-    "fazezero provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
+    "HyperFabrics provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
   keywords: [
     "blockchain compliance",
     "regulatory blockchain",
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "GDPR blockchain",
   ],
   openGraph: {
-    title: "Compliance - fazezero",
+    title: "Compliance - HyperFabrics",
     description:
-      "fazezero provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
+      "HyperFabrics provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
     url: "/compliance",
     type: "website",
     images: [
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
         url: "/og/og-compliance.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Compliance",
+        alt: "HyperFabrics Compliance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compliance - fazezero",
+    title: "Compliance - HyperFabrics",
     description:
-      "fazezero provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
+      "HyperFabrics provides compliance-ready blockchain infrastructure with built-in KYC/AML, regulatory reporting, audit trails, and data privacy controls for regulated institutions.",
   },
 };
 
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "Shield" as IconName,
   title: "Built for Regulated Institutions",
   description:
-    "fazezero delivers enterprise-grade compliance infrastructure that meets the stringent requirements of financial institutions, regulated enterprises, and government organizations. Our platform is designed with regulatory frameworks, security certifications, and audit capabilities at its core.",
+    "HyperFabrics delivers enterprise-grade compliance infrastructure that meets the stringent requirements of financial institutions, regulated enterprises, and government organizations. Our platform is designed with regulatory frameworks, security certifications, and audit capabilities at its core.",
   quickLinks: [
     {
       icon: "FileCheck" as IconName,

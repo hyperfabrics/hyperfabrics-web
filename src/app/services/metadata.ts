@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Professional Services - Enterprise Blockchain Consulting | fazezero",
+  title: "Professional Services - Enterprise Blockchain Consulting | HyperFabrics",
   description:
-    "Expert blockchain consulting and implementation services. From feasibility analysis to architecture design, migration, PoC development, and regulatory compliance. Transform your business with fazezero's professional services team.",
+    "Expert blockchain consulting and implementation services. From feasibility analysis to architecture design, migration, PoC development, and regulatory compliance. Transform your business with HyperFabrics's professional services team.",
   keywords: [
     "blockchain consulting",
     "blockchain implementation",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Professional Services - Enterprise Blockchain Consulting | fazezero",
+      "Professional Services - Enterprise Blockchain Consulting | HyperFabrics",
     description:
       "Expert blockchain consulting and implementation services. From feasibility analysis to architecture design, migration, and PoC development.",
     url: "/services",
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
         url: "/og/og-services.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Professional Services",
+        alt: "HyperFabrics Professional Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Professional Services - Enterprise Blockchain Consulting | fazezero",
+      "Professional Services - Enterprise Blockchain Consulting | HyperFabrics",
     description:
       "Expert blockchain consulting and implementation services. From feasibility analysis to architecture design, migration, and PoC development.",
   },
@@ -45,7 +45,7 @@ export const pageContent = {
   badgeIcon: "Briefcase" as IconName,
   title: "Transform Your Business with Expert Blockchain Consulting",
   description:
-    "fazezero's Professional Services team delivers end-to-end support for blockchain adoption — from strategic planning and feasibility analysis to architecture design, implementation, and ongoing optimization. Our consultants combine deep technical expertise with industry knowledge to help enterprises, governments, and startups successfully navigate digital transformation.",
+    "HyperFabrics's Professional Services team delivers end-to-end support for blockchain adoption — from strategic planning and feasibility analysis to architecture design, implementation, and ongoing optimization. Our consultants combine deep technical expertise with industry knowledge to help enterprises, governments, and startups successfully navigate digital transformation.",
   quickLinks: [
     {
       icon: "FileText" as IconName,

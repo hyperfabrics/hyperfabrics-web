@@ -13,7 +13,7 @@ export function Developers() {
             days—not quarters.
           </p>
           <div className="mt-6 rounded-2xl border border-white/10 bg-black p-5 font-mono text-sm">
-            <pre className="whitespace-pre-wrap leading-7 text-white/80">{`import { Studio, Verify } from "@fazezero/sdk";
+            <pre className="whitespace-pre-wrap leading-7 text-white/80">{`import { Studio, Verify } from "@hyperfabrics/sdk";
 
 // Create an RWA class and enforce transfer rules
 const studio = new Studio({ apiKey: process.env.FZ_API_KEY });
@@ -29,7 +29,7 @@ await verify.kyc.bindWallet({ wallet: "0xabc...", investorId: "INV-2219" });
           </div>
         </div>
         <Card>
-          <h3 className="text-xl font-semibold">Why engineers pick fazezero</h3>
+          <h3 className="text-xl font-semibold">Why engineers pick HyperFabrics</h3>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <LI>Typesafe SDKs and granular webhooks</LI>
             <LI>First‑class examples for tokenization, treasury, identity</LI>

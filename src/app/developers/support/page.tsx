@@ -16,10 +16,10 @@ export default function SupportPage() {
       <p>
         For urgent technical issues, email us at{" "}
         <a
-          href="mailto:support@fazezero.com"
+          href="mailto:support@hyperfabrics.com"
           className="text-indigo-400 hover:text-indigo-300"
         >
-          support@fazezero.com
+          support@hyperfabrics.com
         </a>
       </p>
     </ContentPage>

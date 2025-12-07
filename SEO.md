@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the SEO enhancements implemented for the fazezero website.
+This document outlines the SEO enhancements implemented for the HyperFabrics website.
 
 ## Implemented Features
 
@@ -75,9 +75,9 @@ Each metadata file includes:
 Create a `.env.local` file based on `.env.example`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://fazezero.com
-NEXT_PUBLIC_SITE_NAME=fazezero
-NEXT_PUBLIC_TWITTER_HANDLE=@fazezero
+NEXT_PUBLIC_SITE_URL=https://HyperFabrics.com
+NEXT_PUBLIC_SITE_NAME=HyperFabrics
+NEXT_PUBLIC_TWITTER_HANDLE=@HyperFabrics
 ```
 
 ### Required Assets
@@ -116,7 +116,7 @@ To complete the SEO setup, you'll need to add these files to the `public` direct
 curl http://localhost:3000/sitemap.xml
 
 # Production
-curl https://fazezero.com/sitemap.xml
+curl https://HyperFabrics.com/sitemap.xml
 ```
 
 ### Test Robots.txt
@@ -126,7 +126,7 @@ curl https://fazezero.com/sitemap.xml
 curl http://localhost:3000/robots.txt
 
 # Production
-curl https://fazezero.com/robots.txt
+curl https://HyperFabrics.com/robots.txt
 ```
 
 ### Test Metadata

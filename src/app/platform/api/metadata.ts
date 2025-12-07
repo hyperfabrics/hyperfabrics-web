@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "500+ APIs - Comprehensive Blockchain API Suite | fazezero",
+  title: "500+ APIs - Comprehensive Blockchain API Suite | HyperFabrics",
   description:
-    "Access fazezero's complete blockchain infrastructure through 500+ ready-to-use APIs. Multi-chain support, smart contracts, custody, payments, identity management, and real-time event streaming for rapid Web3 development.",
+    "Access HyperFabrics's complete blockchain infrastructure through 500+ ready-to-use APIs. Multi-chain support, smart contracts, custody, payments, identity management, and real-time event streaming for rapid Web3 development.",
   keywords: [
     "blockchain API",
     "Web3 API",
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "developer platform",
   ],
   openGraph: {
-    title: "500+ APIs - fazezero",
+    title: "500+ APIs - HyperFabrics",
     description:
-      "Access fazezero's complete blockchain infrastructure through 500+ ready-to-use APIs. Multi-chain support for rapid Web3 development.",
+      "Access HyperFabrics's complete blockchain infrastructure through 500+ ready-to-use APIs. Multi-chain support for rapid Web3 development.",
     url: "/platform/api",
     type: "website",
     images: [
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
         url: "/og/og-platform-api.png",
         width: 1200,
         height: 630,
-        alt: "fazezero API Platform",
+        alt: "HyperFabrics API Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "500+ APIs - fazezero",
+    title: "500+ APIs - HyperFabrics",
     description:
-      "Access fazezero's complete blockchain infrastructure through 500+ ready-to-use APIs.",
+      "Access HyperFabrics's complete blockchain infrastructure through 500+ ready-to-use APIs.",
   },
 };
 
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "Code" as IconName,
   title: "Build Faster with 500+ Ready-to-Use APIs",
   description:
-    "fazezero provides a comprehensive API suite that gives developers programmatic access to enterprise-grade blockchain infrastructure. From smart contract deployment to digital asset custody, payments, and identity management — our APIs abstract away complexity while maintaining full control and security.",
+    "HyperFabrics provides a comprehensive API suite that gives developers programmatic access to enterprise-grade blockchain infrastructure. From smart contract deployment to digital asset custody, payments, and identity management — our APIs abstract away complexity while maintaining full control and security.",
   quickLinks: [
     {
       icon: "Layers" as IconName,

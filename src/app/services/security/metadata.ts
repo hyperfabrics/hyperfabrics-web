@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Blockchain Security & Compliance Services | fazezero",
+  title: "Blockchain Security & Compliance Services | HyperFabrics",
   description:
     "Comprehensive blockchain security and regulatory compliance services. Navigate GDPR, SOC 2, ISO 27001, and DIFC regulations with embedded compliance architecture and zero-trust security.",
   openGraph: {
-    title: "Blockchain Security & Compliance Services | fazezero",
+    title: "Blockchain Security & Compliance Services | HyperFabrics",
     description:
       "Comprehensive blockchain security and regulatory compliance services. Expert guidance for global regulatory frameworks.",
     url: "/services/security",
@@ -19,7 +19,7 @@ export const pageContent = {
   badgeIcon: "ShieldCheck" as IconName,
   title: "Regulatory Compliance & Security Services",
   description:
-    "fazezero's Security & Compliance Services help organizations navigate global regulatory frameworks with confidence through end-to-end support for building, enhancing, or managing compliance programs aligned with evolving laws and risk standards.",
+    "HyperFabrics's Security & Compliance Services help organizations navigate global regulatory frameworks with confidence through end-to-end support for building, enhancing, or managing compliance programs aligned with evolving laws and risk standards.",
   quickLinks: [
     {
       icon: "ShieldCheck" as IconName,

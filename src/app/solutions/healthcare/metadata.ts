@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Healthcare - Blockchain for Health Data | fazezero",
+  title: "BaaS for Healthcare - Blockchain for Health Data | HyperFabrics",
   description:
     "Blockchain platform for healthcare organizations. Secure data sharing, interoperability, reduced fraud, and improved patient outcomes. ISO 27001 certified with HIPAA-ready infrastructure for hospitals, insurers, and healthtech.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "healthtech platform",
   ],
   openGraph: {
-    title: "BaaS for Healthcare - fazezero",
+    title: "BaaS for Healthcare - HyperFabrics",
     description:
       "Blockchain platform for healthcare with secure data sharing and interoperability across organizations.",
     url: "/solutions/healthcare",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-healthcare.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Healthcare",
+        alt: "HyperFabrics BaaS for Healthcare",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Healthcare - fazezero",
+    title: "BaaS for Healthcare - HyperFabrics",
     description:
       "Blockchain platform for healthcare with secure, interoperable health data.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Activity" as IconName,
   title: "Better Data, Better Outcomes",
   description:
-    "BaaS for Healthcare Sector is fazezero's blockchain platform built to modernize how healthcare organizations manage data, streamline operations, and improve trust across the care ecosystem. Designed for hospitals, insurers, and healthtech providers, the solution offers secure, real-time data sharing across multiple systems and stakeholders.",
+    "BaaS for Healthcare Sector is HyperFabrics's blockchain platform built to modernize how healthcare organizations manage data, streamline operations, and improve trust across the care ecosystem. Designed for hospitals, insurers, and healthtech providers, the solution offers secure, real-time data sharing across multiple systems and stakeholders.",
   quickLinks: [
     {
       icon: "FileText" as IconName,

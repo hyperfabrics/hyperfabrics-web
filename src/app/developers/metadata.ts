@@ -3,9 +3,9 @@ import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title:
-    "Developers - Build on Enterprise Blockchain Infrastructure | fazezero",
+    "Developers - Build on Enterprise Blockchain Infrastructure | HyperFabrics",
   description:
-    "Access 500+ APIs, comprehensive SDKs, and enterprise-grade developer tools to build blockchain applications. Multi-chain support for Ethereum, Hyperledger, and 100+ protocols. Get started with fazezero's developer platform today.",
+    "Access 500+ APIs, comprehensive SDKs, and enterprise-grade developer tools to build blockchain applications. Multi-chain support for Ethereum, Hyperledger, and 100+ protocols. Get started with HyperFabrics's developer platform today.",
   keywords: [
     "blockchain API",
     "blockchain SDK",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "multi-chain development",
   ],
   openGraph: {
-    title: "Developers - Build on Enterprise Blockchain | fazezero",
+    title: "Developers - Build on Enterprise Blockchain | HyperFabrics",
     description:
       "Access 500+ APIs, comprehensive SDKs, and enterprise-grade developer tools. Multi-chain support for Ethereum, Hyperledger, and 100+ protocols.",
     url: "/developers",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
         url: "/og/og-developers.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Developers",
+        alt: "HyperFabrics Developers",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Developers - Build on Enterprise Blockchain | fazezero",
+    title: "Developers - Build on Enterprise Blockchain | HyperFabrics",
     description:
       "Access 500+ APIs, comprehensive SDKs, and enterprise-grade developer tools. Multi-chain support for Ethereum, Hyperledger, and 100+ protocols.",
   },
@@ -44,7 +44,7 @@ export const pageContent = {
   badgeIcon: "Code" as IconName,
   title: "Build the Future with Enterprise-Grade Blockchain Tools",
   description:
-    "fazezero provides developers with everything needed to build, test, and deploy blockchain applications at scale. Access 500+ APIs, comprehensive SDKs, and production-ready infrastructure supporting 100+ blockchains including Ethereum, Hyperledger Fabric, Polygon, Solana, and emerging protocols.",
+    "HyperFabrics provides developers with everything needed to build, test, and deploy blockchain applications at scale. Access 500+ APIs, comprehensive SDKs, and production-ready infrastructure supporting 100+ blockchains including Ethereum, Hyperledger Fabric, Polygon, Solana, and emerging protocols.",
   quickLinks: [
     {
       icon: "BookOpen" as IconName,
@@ -105,7 +105,7 @@ export const pageContent = {
     {
       title: "Community & Support",
       description:
-        "Join thousands of developers building on fazezero. Access community forums, Discord channel, and GitHub discussions for peer support. Regular office hours, webinars, and workshops with engineering team. Comprehensive knowledge base with troubleshooting guides, best practices, and architecture patterns. Priority support available for enterprise customers with dedicated Slack channels and direct access to solution architects. Contribute to open-source projects and earn community recognition. Bug bounty program for security researchers.",
+        "Join thousands of developers building on HyperFabrics. Access community forums, Discord channel, and GitHub discussions for peer support. Regular office hours, webinars, and workshops with engineering team. Comprehensive knowledge base with troubleshooting guides, best practices, and architecture patterns. Priority support available for enterprise customers with dedicated Slack channels and direct access to solution architects. Contribute to open-source projects and earn community recognition. Bug bounty program for security researchers.",
       icon: "Users" as IconName,
     },
   ],

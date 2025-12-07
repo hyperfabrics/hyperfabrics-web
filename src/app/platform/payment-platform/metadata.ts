@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Stablecoin Payment Rails - Real-Time Digital Asset Settlement | fazezero",
+  title: "Stablecoin Payment Rails - Real-Time Digital Asset Settlement | HyperFabrics",
   description:
     "Enterprise-grade stablecoin payment infrastructure for instant cross-border settlement. Transactions settle in seconds at minimal cost across 100+ blockchains for remittances, payroll, ecommerce, and institutional payments.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "crypto payments",
   ],
   openGraph: {
-    title: "Stablecoin Payment Rails - fazezero",
+    title: "Stablecoin Payment Rails - HyperFabrics",
     description:
       "Enterprise-grade stablecoin payment infrastructure for instant cross-border settlement. Transactions settle in seconds at minimal cost.",
     url: "/platform/payments",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-payments.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Payment Rails",
+        alt: "HyperFabrics Payment Rails",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stablecoin Payment Rails - fazezero",
+    title: "Stablecoin Payment Rails - HyperFabrics",
     description:
       "Enterprise-grade stablecoin payment infrastructure for instant cross-border settlement.",
   },
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "ArrowRightLeft" as IconName,
   title: "Instant Settlement, Global Reach",
   description:
-    "fazezero's Stablecoin Payment Platform delivers enterprise-grade infrastructure for moving, issuing, and storing digital assets at scale. Leveraging Intel SGX and Multi-Party Computation (MPC), our Payments Engine enables seamless settlement across multiple blockchains and regions — making it ideal for merchant services, institutional payments, and global money movement.",
+    "HyperFabrics's Stablecoin Payment Platform delivers enterprise-grade infrastructure for moving, issuing, and storing digital assets at scale. Leveraging Intel SGX and Multi-Party Computation (MPC), our Payments Engine enables seamless settlement across multiple blockchains and regions — making it ideal for merchant services, institutional payments, and global money movement.",
   quickLinks: [
     {
       icon: "Zap" as IconName,

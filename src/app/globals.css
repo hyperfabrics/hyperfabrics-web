@@ -1,5 +1,5 @@
 /* ============================================
-   FAZEZERO DESIGN SYSTEM - CSS REFACTOR
+   HYPERFABRICS DESIGN SYSTEM - CSS REFACTOR
    ============================================ */
 
 @import "tailwindcss";
@@ -668,5 +668,3 @@ header {
   background-color: var(--color-primary);
   color: var(--color-primary-foreground);
 }
-
-

@@ -4,7 +4,7 @@ import { IconName } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Platform - Enterprise Blockchain Infrastructure",
   description:
-    "Explore fazezero's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
+    "Explore HyperFabrics's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
   keywords: [
     "blockchain platform",
     "enterprise infrastructure",
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
     "digital asset infrastructure",
   ],
   openGraph: {
-    title: "Platform - fazezero",
+    title: "Platform - HyperFabrics",
     description:
-      "Explore fazezero's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
+      "Explore HyperFabrics's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
     url: "/platform",
     type: "website",
     images: [
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
         url: "/og/og-platform.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Platform",
+        alt: "HyperFabrics Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Platform - fazezero",
+    title: "Platform - HyperFabrics",
     description:
-      "Explore fazezero's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
+      "Explore HyperFabrics's enterprise blockchain platform. Secure, scalable, and compliant infrastructure for tokenization, payments, and digital asset management.",
   },
 };
 
@@ -40,7 +40,7 @@ export const pageContent = {
   badgeIcon: "Layers" as IconName,
   title: "Secure, Scalable Infrastructure for Digital Assets",
   description:
-    "fazezero delivers an ISO 27001 & SOC 2 Type 2-certified Web3 platform that empowers enterprises to launch secure, multi-cloud blockchain networks. With 500+ ready-to-use APIs, support for Ethereum, Hyperledger Fabric, Corda, Polygon, and more, we provide the complete infrastructure for digital asset custody, tokenization, and payments.",
+    "HyperFabrics delivers an ISO 27001 & SOC 2 Type 2-certified Web3 platform that empowers enterprises to launch secure, multi-cloud blockchain networks. With 500+ ready-to-use APIs, support for Ethereum, Hyperledger Fabric, Corda, Polygon, and more, we provide the complete infrastructure for digital asset custody, tokenization, and payments.",
   quickLinks: [
     {
       icon: "Shield" as IconName,
@@ -75,7 +75,7 @@ export const pageContent = {
     {
       title: "Digital Assets Platform",
       description:
-        "Enterprise-grade infrastructure for moving, storing, and issuing digital assets. Utilizing breakthrough Multi-Party Computation (MPC) and patent-pending Software Guard Extensions (SGX), fazezero delivers industry-leading protection for private keys and API credentials. Support for direct custody with hot, warm, and cold wallets, governance policies, exchange connectivity, and access to DeFi applications across 100+ blockchains. Trusted by leading financial institutions, exchanges, and custodians worldwide.",
+        "Enterprise-grade infrastructure for moving, storing, and issuing digital assets. Utilizing breakthrough Multi-Party Computation (MPC) and patent-pending Software Guard Extensions (SGX), HyperFabrics delivers industry-leading protection for private keys and API credentials. Support for direct custody with hot, warm, and cold wallets, governance policies, exchange connectivity, and access to DeFi applications across 100+ blockchains. Trusted by leading financial institutions, exchanges, and custodians worldwide.",
       icon: "Wallet" as IconName,
     },
     {

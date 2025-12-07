@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Blockchain Implementation & Architecture Services | fazezero",
+  title: "Blockchain Implementation & Architecture Services | HyperFabrics",
   description:
     "End-to-end blockchain implementation and architecture design services. From protocol selection to deployment, we guide enterprises through secure, scalable blockchain adoption with proven frameworks.",
   openGraph: {
-    title: "Blockchain Implementation & Architecture Services | fazezero",
+    title: "Blockchain Implementation & Architecture Services | HyperFabrics",
     description:
       "End-to-end blockchain implementation and architecture design services. Expert guidance from strategy to deployment.",
     url: "/services/implementation",
@@ -19,7 +19,7 @@ export const pageContent = {
   badgeIcon: "Server" as IconName,
   title: "Blockchain Implementation & Architecture Design",
   description:
-    "fazezero's Implementation & Architecture Services deliver end-to-end support for blockchain adoption with comprehensive solutions from strategy to deployment. We assess your business needs and technical environment to identify the right blockchain model, protocol, and architecture for your specific use case.",
+    "HyperFabrics's Implementation & Architecture Services deliver end-to-end support for blockchain adoption with comprehensive solutions from strategy to deployment. We assess your business needs and technical environment to identify the right blockchain model, protocol, and architecture for your specific use case.",
   quickLinks: [
     {
       icon: "Server" as IconName,

@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Developer Documentation | fazeZERO",
+  title: "Developer Documentation | HyperFabrics",
   description:
-    "Comprehensive guides and API references to help you integrate fazeZERO platform into your applications. Access 500+ APIs, multi-chain support, and enterprise-grade security.",
+    "Comprehensive guides and API references to help you integrate HyperFabrics platform into your applications. Access 500+ APIs, multi-chain support, and enterprise-grade security.",
   openGraph: {
-    title: "Developer Documentation | fazeZERO",
+    title: "Developer Documentation | HyperFabrics",
     description:
-      "Comprehensive guides and API references to help you integrate fazeZERO platform into your applications.",
-    url: "https://fazezero.com/developers/docs",
+      "Comprehensive guides and API references to help you integrate HyperFabrics platform into your applications.",
+    url: "https://HyperFabrics.com/developers/docs",
   },
 };
 
@@ -17,13 +17,13 @@ export const pageContent = {
   badge: "Documentation",
   title: "Developer Documentation",
   description:
-    "Comprehensive guides and API references to help you integrate fazeZERO's platform into your applications.",
+    "Comprehensive guides and API references to help you integrate HyperFabrics's platform into your applications.",
   quickLinks: [
     {
       icon: "Code" as IconName,
       title: "Getting Started",
       description:
-        "Learn the basics of integrating with fazeZERO's APIs and SDKs.",
+        "Learn the basics of integrating with HyperFabrics's APIs and SDKs.",
       href: "#getting-started",
     },
     {
@@ -49,7 +49,7 @@ export const pageContent = {
     {
       title: "Overview",
       description:
-        "fazeZERO provides a comprehensive suite of APIs and tools to help you build secure, scalable digital asset applications. Our platform offers over 500 APIs supporting multiple blockchain protocols, with enterprise-grade security powered by Multi-Party Computation (MPC) and Intel SGX technology.",
+        "HyperFabrics provides a comprehensive suite of APIs and tools to help you build secure, scalable digital asset applications. Our platform offers over 500 APIs supporting multiple blockchain protocols, with enterprise-grade security powered by Multi-Party Computation (MPC) and Intel SGX technology.",
       icon: "BookOpen" as IconName,
     },
     {

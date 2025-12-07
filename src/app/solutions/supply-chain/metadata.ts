@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Supply Chain - Blockchain Traceability | fazezero",
+  title: "BaaS for Supply Chain - Blockchain Traceability | HyperFabrics",
   description:
     "Blockchain platform for supply chain transparency and efficiency. Real-time tracking, fraud reduction, compliance automation, and trusted multi-party coordination. Ethereum and Hyperledger support with 500+ APIs.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "supply chain management",
   ],
   openGraph: {
-    title: "BaaS for Supply Chain - fazezero",
+    title: "BaaS for Supply Chain - HyperFabrics",
     description:
       "Blockchain platform for supply chain with real-time tracking, transparency, and multi-party trust.",
     url: "/solutions/supply-chain",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-supply-chain.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Supply Chain",
+        alt: "HyperFabrics BaaS for Supply Chain",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Supply Chain - fazezero",
+    title: "BaaS for Supply Chain - HyperFabrics",
     description:
       "Blockchain platform for supply chain transparency and efficiency.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Package" as IconName,
   title: "End-to-End Visibility, Total Trust",
   description:
-    "BaaS for Supply Chain is fazezero's blockchain platform designed to bring transparency, security, and operational efficiency to global supply chains. Built for industries that rely on complex logistics and multi-party coordination, the solution helps organizations track goods, verify transactions, and reduce risk with real-time visibility.",
+    "BaaS for Supply Chain is HyperFabrics's blockchain platform designed to bring transparency, security, and operational efficiency to global supply chains. Built for industries that rely on complex logistics and multi-party coordination, the solution helps organizations track goods, verify transactions, and reduce risk with real-time visibility.",
   quickLinks: [
     {
       icon: "MapPin" as IconName,

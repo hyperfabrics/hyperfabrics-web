@@ -14,7 +14,7 @@ import {
 } from "@/components/sections";
 
 /*
-  fazezero — Institutional Web3 Website (Homepage)
+  HyperFabrics — Institutional Web3 Website (Homepage)
   Framework: Next.js App Router + TailwindCSS + shadcn/ui style system
 
   Journey-focused flow:

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Gaming - Web3 Gaming Infrastructure | fazezero",
+  title: "BaaS for Gaming - Web3 Gaming Infrastructure | HyperFabrics",
   description:
     "Build next-level gaming experiences with Web3. Blockchain platform for tokenized assets, NFT characters, player-owned economies, and decentralized marketplaces. 500+ APIs with enterprise security and 99.99% uptime.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "metaverse infrastructure",
   ],
   openGraph: {
-    title: "BaaS for Gaming - fazezero",
+    title: "BaaS for Gaming - HyperFabrics",
     description:
       "Build Web3 gaming experiences with tokenized assets, NFT characters, and player-owned economies.",
     url: "/solutions/gaming",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-gaming.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Gaming",
+        alt: "HyperFabrics BaaS for Gaming",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Gaming - fazezero",
+    title: "BaaS for Gaming - HyperFabrics",
     description:
       "Build Web3 gaming experiences with blockchain-powered player ownership.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Gamepad2" as IconName,
   title: "Unleash Web3 Gaming Potential",
   description:
-    "BaaS for Gaming is fazezero's blockchain platform built for game studios, developers, and publishers who want to deliver next-level gaming experiences powered by Web3. As digital ownership and player engagement evolve, our solution offers the tools to create secure, immersive, and monetizable gaming ecosystems.",
+    "BaaS for Gaming is HyperFabrics's blockchain platform built for game studios, developers, and publishers who want to deliver next-level gaming experiences powered by Web3. As digital ownership and player engagement evolve, our solution offers the tools to create secure, immersive, and monetizable gaming ecosystems.",
   quickLinks: [
     {
       icon: "Image" as IconName,
@@ -102,7 +102,7 @@ export const pageContent = {
     {
       title: "Scale to Millions of Players",
       description:
-        "Infrastructure built for AAA gaming with support for millions of concurrent users and transactions. Multi-chain architecture enables cost optimization by routing transactions to the most efficient network. Layer 2 solutions reduce gas fees while maintaining security. Whether building blockchain-native games or adding Web3 layers to existing titles, fazezero provides everything needed to scale player-driven experiences.",
+        "Infrastructure built for AAA gaming with support for millions of concurrent users and transactions. Multi-chain architecture enables cost optimization by routing transactions to the most efficient network. Layer 2 solutions reduce gas fees while maintaining security. Whether building blockchain-native games or adding Web3 layers to existing titles, HyperFabrics provides everything needed to scale player-driven experiences.",
       icon: "Users" as IconName,
     },
   ],

@@ -1,6 +1,6 @@
 # Icons Folder
 
-This folder contains all favicon and app icon files for the fazezero website.
+This folder contains all favicon and app icon files for the HyperFabrics website.
 
 ## Required Files
 

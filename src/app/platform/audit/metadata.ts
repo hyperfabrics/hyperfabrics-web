@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Audit & Compliance - Immutable Audit Trails | fazezero",
+  title: "Audit & Compliance - Immutable Audit Trails | HyperFabrics",
   description:
     "Complete audit trails for all blockchain transactions and system actions. Immutable blockchain records, automated regulatory reporting, real-time monitoring, and compliance dashboards for internal and external auditors.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "transaction monitoring",
   ],
   openGraph: {
-    title: "Audit & Compliance - fazezero",
+    title: "Audit & Compliance - HyperFabrics",
     description:
       "Complete audit trails with immutable blockchain records, automated regulatory reporting, and real-time compliance monitoring.",
     url: "/platform/audit",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-audit.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Audit Platform",
+        alt: "HyperFabrics Audit Platform",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Audit & Compliance - fazezero",
+    title: "Audit & Compliance - HyperFabrics",
     description:
       "Complete audit trails with immutable blockchain records and automated regulatory reporting.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "ClipboardCheck" as IconName,
   title: "Transparent, Tamper-Proof Records",
   description:
-    "fazezero's Audit Platform provides comprehensive, immutable audit trails for every transaction, system action, and configuration change. Built on blockchain's inherent transparency, our solution ensures complete accountability with automated compliance reporting, real-time monitoring, and customizable dashboards designed for internal auditors, external examiners, and regulatory bodies.",
+    "HyperFabrics's Audit Platform provides comprehensive, immutable audit trails for every transaction, system action, and configuration change. Built on blockchain's inherent transparency, our solution ensures complete accountability with automated compliance reporting, real-time monitoring, and customizable dashboards designed for internal auditors, external examiners, and regulatory bodies.",
   quickLinks: [
     {
       icon: "FileText" as IconName,

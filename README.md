@@ -1,6 +1,6 @@
-# fazezero Website
+# HyperFabrics Website
 
-Enterprise blockchain infrastructure website for fazeZERO - providing secure, scalable, and compliant blockchain infrastructure for financial institutions, governments, and enterprises worldwide.
+Enterprise blockchain infrastructure website for HyperFabrics - providing secure, scalable, and compliant blockchain infrastructure for financial institutions, governments, and enterprises worldwide.
 
 Built with Next.js 15, React 19, TailwindCSS 4, and deployed to AWS S3 + CloudFront.
 
@@ -68,7 +68,7 @@ curl http://localhost:3000/robots.txt
 ## 📁 Project Structure
 
 ```
-fazezero-website/
+HyperFabrics-website/
 ├── .github/
 │   └── workflows/              # GitHub Actions CI/CD
 │       ├── deploy.yml          # Automated deployment workflow
@@ -128,7 +128,7 @@ fazezero-website/
 ### Company Pages
 | Route                | Description                          |
 | -------------------- | ------------------------------------ |
-| `/company/about`     | About fazeZERO and company mission   |
+| `/company/about`     | About HyperFabrics and company mission   |
 | `/company/careers`   | Career opportunities                 |
 | `/company/press`     | Press releases and media resources   |
 | `/company/privacy`   | Privacy Policy (GDPR/CCPA compliant) |
@@ -163,9 +163,9 @@ cp .env.example .env.local
 Required variables:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://fazezero.com
-NEXT_PUBLIC_SITE_NAME=fazezero
-NEXT_PUBLIC_TWITTER_HANDLE=@fazezero
+NEXT_PUBLIC_SITE_URL=https://HyperFabrics.com
+NEXT_PUBLIC_SITE_NAME=HyperFabrics
+NEXT_PUBLIC_TWITTER_HANDLE=@HyperFabrics
 ```
 
 ## 🎨 Required Assets
@@ -242,10 +242,10 @@ See [`.github/workflows/README.md`](.github/workflows/README.md) for setup instr
 
 ```bash
 # Set environment variables
-export AWS_S3_BUCKET=fazezero.com
+export AWS_S3_BUCKET=HyperFabrics.com
 export AWS_CLOUDFRONT_DIST_ID=E3SE8P2WZP6BAD
 export AWS_REGION=us-east-1
-export NEXT_PUBLIC_SITE_URL=https://fazezero.com
+export NEXT_PUBLIC_SITE_URL=https://HyperFabrics.com
 
 # Deploy
 npm run deploy
@@ -269,10 +269,10 @@ For detailed deployment information, see [AWS-DEPLOYMENT.md](./AWS-DEPLOYMENT.md
 
 ### Post-Deployment Checklist
 
-1. ✅ Verify site is accessible at https://fazezero.com
+1. ✅ Verify site is accessible at https://HyperFabrics.com
 2. ✅ Test all pages load correctly
-3. ✅ Check sitemap.xml is accessible: https://fazezero.com/sitemap.xml
-4. ✅ Verify robots.txt: https://fazezero.com/robots.txt
+3. ✅ Check sitemap.xml is accessible: https://HyperFabrics.com/sitemap.xml
+4. ✅ Verify robots.txt: https://HyperFabrics.com/robots.txt
 5. ✅ Submit sitemap to [Google Search Console](https://search.google.com/search-console)
 6. ✅ Submit sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 7. ✅ Test OpenGraph with [OG Preview](https://www.opengraph.xyz/)
@@ -333,8 +333,8 @@ See [LICENSE](./LICENSE) file for details.
 
 ```bash
 # Clone repository
-git clone https://github.com/fazezero/fazezero-website.git
-cd fazezero-website
+git clone https://github.com/HyperFabrics/HyperFabrics-website.git
+cd HyperFabrics-website
 
 # Install dependencies
 npm install
@@ -375,6 +375,6 @@ See [LICENSE](./LICENSE) file for details.
 
 ---
 
-**Built with ❤️ by fazezero**
+**Built with ❤️ by HyperFabrics**
 
 Enterprise blockchain infrastructure for the future of digital assets.

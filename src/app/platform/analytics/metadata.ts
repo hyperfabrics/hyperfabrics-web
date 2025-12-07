@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Real-Time Analytics - Blockchain Intelligence & Insights | fazezero",
+  title: "Real-Time Analytics - Blockchain Intelligence & Insights | HyperFabrics",
   description:
     "Comprehensive blockchain analytics with real-time dashboards for liquidity, risk, compliance, and customer insights. Track on-chain activity, monitor performance, and generate custom reports across all networks.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "digital asset reporting",
   ],
   openGraph: {
-    title: "Real-Time Analytics - fazezero",
+    title: "Real-Time Analytics - HyperFabrics",
     description:
       "Comprehensive blockchain analytics with real-time dashboards for liquidity, risk, compliance, and customer insights.",
     url: "/platform/analytics",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-analytics.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Analytics",
+        alt: "HyperFabrics Analytics",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Real-Time Analytics - fazezero",
+    title: "Real-Time Analytics - HyperFabrics",
     description:
       "Comprehensive blockchain analytics with real-time dashboards for liquidity, risk, and compliance.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "BarChart3" as IconName,
   title: "Data-Driven Decision Making",
   description:
-    "fazezero's Analytics Platform transforms blockchain data into actionable business intelligence. Track liquidity, monitor risk exposure, analyze customer behavior, and ensure compliance — all through real-time dashboards and customizable reports. Built on event-driven pipelines with domain-oriented data mesh architecture for near-instant insights across all networks.",
+    "HyperFabrics's Analytics Platform transforms blockchain data into actionable business intelligence. Track liquidity, monitor risk exposure, analyze customer behavior, and ensure compliance — all through real-time dashboards and customizable reports. Built on event-driven pipelines with domain-oriented data mesh architecture for near-instant insights across all networks.",
   quickLinks: [
     {
       icon: "Activity" as IconName,

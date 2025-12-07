@@ -3,7 +3,7 @@
 # SEO Setup Verification Script
 # Run this after implementing SEO to verify everything is working
 
-echo "🔍 fazezero SEO Verification Script"
+echo "🔍 HyperFabrics SEO Verification Script"
 echo "===================================="
 echo ""
 

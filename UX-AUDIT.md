@@ -1,13 +1,13 @@
 # UX Usability Audit Report
 **Date:** December 3, 2024
-**Site:** fazezero.com
+**Site:** HyperFabrics.com
 **Auditor:** AI UX Analysis
 
 ---
 
 ## Executive Summary
 
-This audit evaluates the fazezero website across 10 key UX dimensions. Overall score: **7.5/10** - Good foundation with several critical improvements needed.
+This audit evaluates the HyperFabrics website across 10 key UX dimensions. Overall score: **7.5/10** - Good foundation with several critical improvements needed.
 
 ### Quick Wins (High Impact, Low Effort)
 1. ✅ Add skip-to-content link
@@ -423,7 +423,7 @@ This audit evaluates the fazezero website across 10 key UX dimensions. Overall s
 
 ## Conclusion
 
-The fazezero website has a solid foundation with modern design and good structure. However, several critical UX issues need attention, particularly around accessibility, forms, and mobile experience. Addressing the critical items will significantly improve usability and conversion rates.
+The HyperFabrics website has a solid foundation with modern design and good structure. However, several critical UX issues need attention, particularly around accessibility, forms, and mobile experience. Addressing the critical items will significantly improve usability and conversion rates.
 
 **Estimated Impact:**
 - Accessibility fixes: +15% user reach

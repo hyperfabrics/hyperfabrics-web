@@ -3,7 +3,7 @@ import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
   title:
-    "BaaS for ESG - Blockchain for Environmental, Social & Governance | fazezero",
+    "BaaS for ESG - Blockchain for Environmental, Social & Governance | HyperFabrics",
   description:
     "Blockchain platform for building, managing, and reporting ESG initiatives. Track climate disclosures, carbon footprints, supply chain practices with tamper-proof transparency aligned with TCFD and global standards.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "TCFD compliance",
   ],
   openGraph: {
-    title: "BaaS for ESG - fazezero",
+    title: "BaaS for ESG - HyperFabrics",
     description:
       "Blockchain platform for ESG programs. Track climate data, carbon footprints, and social commitments with tamper-proof transparency.",
     url: "/solutions/esg",
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-esg.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for ESG",
+        alt: "HyperFabrics BaaS for ESG",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for ESG - fazezero",
+    title: "BaaS for ESG - HyperFabrics",
     description:
       "Blockchain platform for ESG programs with tamper-proof transparency.",
   },
@@ -42,7 +42,7 @@ export const pageContent = {
   badgeIcon: "Leaf" as IconName,
   title: "Transparent, Trusted ESG Data",
   description:
-    "BaaS for ESG is fazezero's blockchain platform designed to support organizations in building, managing, and reporting on Environmental, Social, and Governance (ESG) programs. As global standards evolve and stakeholders demand greater transparency, fazezero provides a trusted, tamper-proof foundation for ESG data and accountability.",
+    "BaaS for ESG is HyperFabrics's blockchain platform designed to support organizations in building, managing, and reporting on Environmental, Social, and Governance (ESG) programs. As global standards evolve and stakeholders demand greater transparency, HyperFabrics provides a trusted, tamper-proof foundation for ESG data and accountability.",
   quickLinks: [
     {
       icon: "FileCheck" as IconName,

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Digital Asset Dashboard - Unified Custody Management | fazezero",
+  title: "Digital Asset Dashboard - Unified Custody Management | HyperFabrics",
   description:
     "Centralized dashboard for managing digital asset custody across 100+ blockchains. Monitor wallets, approve transactions, view portfolio analytics, and enforce governance policies in real-time.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "asset monitoring",
   ],
   openGraph: {
-    title: "Digital Asset Dashboard - fazezero",
+    title: "Digital Asset Dashboard - HyperFabrics",
     description:
       "Centralized dashboard for managing digital asset custody across 100+ blockchains. Real-time monitoring and governance.",
     url: "/platform/dashboard",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-dashboard.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Dashboard",
+        alt: "HyperFabrics Dashboard",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Asset Dashboard - fazezero",
+    title: "Digital Asset Dashboard - HyperFabrics",
     description:
       "Centralized dashboard for managing digital asset custody across 100+ blockchains.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "LayoutDashboard" as IconName,
   title: "Complete Visibility and Control",
   description:
-    "fazezero's Digital Asset Dashboard provides institutions with a unified interface for managing custody operations across 100+ blockchains. Monitor wallets, approve transactions, configure governance policies, and access real-time portfolio analytics — all from a single, secure command center built for enterprises, exchanges, and financial institutions.",
+    "HyperFabrics's Digital Asset Dashboard provides institutions with a unified interface for managing custody operations across 100+ blockchains. Monitor wallets, approve transactions, configure governance policies, and access real-time portfolio analytics — all from a single, secure command center built for enterprises, exchanges, and financial institutions.",
   quickLinks: [
     {
       icon: "Wallet" as IconName,

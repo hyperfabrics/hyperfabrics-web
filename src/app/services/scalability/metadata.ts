@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Blockchain Scalability & Performance Optimization | fazezero",
+  title: "Blockchain Scalability & Performance Optimization | HyperFabrics",
   description:
     "Advanced scalability and performance optimization for blockchain networks. Layer 2 solutions, load balancing, and performance tuning delivering up to 8x throughput improvements.",
   openGraph: {
-    title: "Blockchain Scalability & Performance Optimization | fazezero",
+    title: "Blockchain Scalability & Performance Optimization | HyperFabrics",
     description:
       "Advanced scalability and performance optimization for blockchain networks. Proven 8x throughput improvements.",
     url: "/services/scalability",
@@ -19,7 +19,7 @@ export const pageContent = {
   badgeIcon: "Activity" as IconName,
   title: "Scalability & Performance Optimization Services",
   description:
-    "fazezero's Scalability & Performance Optimization Package ensures blockchain networks and software platforms grow seamlessly without compromising speed, reliability, or user experience. We implement advanced performance strategies delivering up to 8x throughput improvements.",
+    "HyperFabrics's Scalability & Performance Optimization Package ensures blockchain networks and software platforms grow seamlessly without compromising speed, reliability, or user experience. We implement advanced performance strategies delivering up to 8x throughput improvements.",
   quickLinks: [
     {
       icon: "Activity" as IconName,

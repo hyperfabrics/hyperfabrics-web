@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | fazeZERO",
+  title: "Privacy Policy | HyperFabrics",
   description:
-    "fazeZERO's Privacy Policy outlines how we collect, use, protect, and handle your personal information. Learn about our commitment to data privacy and security.",
+    "HyperFabrics's Privacy Policy outlines how we collect, use, protect, and handle your personal information. Learn about our commitment to data privacy and security.",
   openGraph: {
-    title: "Privacy Policy | fazeZERO",
-    description: "Learn about fazeZERO's commitment to data privacy and security.",
-    url: "https://fazezero.com/company/privacy",
+    title: "Privacy Policy | HyperFabrics",
+    description: "Learn about HyperFabrics's commitment to data privacy and security.",
+    url: "https://hyperfabrics.com/company/privacy",
   },
 };
 
@@ -17,12 +17,12 @@ export const pageContent = {
   badgeIcon: "ShieldCheck" as IconName,
   title: "Privacy Policy",
   description:
-    "Last Updated: December 3, 2024. At fazeZERO, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data in compliance with GDPR, CCPA, and other applicable data protection laws.",
+    "Last Updated: December 3, 2024. At HyperFabrics, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data in compliance with GDPR, CCPA, and other applicable data protection laws.",
   sections: [
     {
       title: "Introduction and Scope",
       description:
-        "fazeZERO provides enterprise-grade blockchain infrastructure and digital asset custody services to financial institutions, governments, and enterprises worldwide. This Privacy Policy applies to all personal information we collect through our website (fazezero.com), platform services, APIs, developer tools, and any other interactions with fazeZERO. By using our services, you agree to the collection and use of information in accordance with this policy. We are certified with ISO 27001 and SOC 2 Type 2, demonstrating our commitment to information security and data protection.",
+        "HyperFabrics provides enterprise-grade blockchain infrastructure and digital asset custody services to financial institutions, governments, and enterprises worldwide. This Privacy Policy applies to all personal information we collect through our website (hyperfabrics.com), platform services, APIs, developer tools, and any other interactions with HyperFabrics. By using our services, you agree to the collection and use of information in accordance with this policy. We are certified with ISO 27001 and SOC 2 Type 2, demonstrating our commitment to information security and data protection.",
       icon: "Info" as IconName,
     },
     {
@@ -64,7 +64,7 @@ export const pageContent = {
     {
       title: "Your Privacy Rights (GDPR, CCPA, and Other Regulations)",
       description:
-        "Depending on your location, you may have the following rights: (1) Right of Access: Request copies of your personal data and information about how it is processed. (2) Right to Rectification: Correct inaccurate or incomplete personal data. (3) Right to Erasure: Request deletion of your personal data, subject to legal retention requirements. (4) Right to Restrict Processing: Limit how we use your data in certain circumstances. (5) Right to Data Portability: Receive your data in a structured, machine-readable format. (6) Right to Object: Object to processing based on legitimate interests or for direct marketing. (7) Right to Withdraw Consent: Withdraw consent for processing based on consent. (8) CCPA Rights: California residents have additional rights including the right to know what personal information is collected, the right to delete personal information, and the right to opt-out of sale (we do not sell personal information). To exercise these rights, contact privacy@fazezero.com. We will respond within 30 days (or as required by applicable law).",
+        "Depending on your location, you may have the following rights: (1) Right of Access: Request copies of your personal data and information about how it is processed. (2) Right to Rectification: Correct inaccurate or incomplete personal data. (3) Right to Erasure: Request deletion of your personal data, subject to legal retention requirements. (4) Right to Restrict Processing: Limit how we use your data in certain circumstances. (5) Right to Data Portability: Receive your data in a structured, machine-readable format. (6) Right to Object: Object to processing based on legitimate interests or for direct marketing. (7) Right to Withdraw Consent: Withdraw consent for processing based on consent. (8) CCPA Rights: California residents have additional rights including the right to know what personal information is collected, the right to delete personal information, and the right to opt-out of sale (we do not sell personal information). To exercise these rights, contact privacy@hyperfabrics.com. We will respond within 30 days (or as required by applicable law).",
       icon: "Users" as IconName,
     },
     {
@@ -82,7 +82,7 @@ export const pageContent = {
     {
       title: "International Data Transfers and Data Residency",
       description:
-        "Your information may be transferred globally: (1) Transfers: Data may be transferred to and processed in the United States, European Union, and other countries where we operate or use service providers. (2) Safeguards: We use Standard Contractual Clauses (SCCs), adequacy decisions, and other approved mechanisms to ensure adequate protection. (3) Data Residency: Enterprise customers may request data residency in specific regions. We offer multi-region deployment options to meet data sovereignty requirements. (4) Compliance: We comply with GDPR for EEA data, CCPA for California residents, and other applicable regional data protection laws. (5) Cross-Border Transfers: When transferring data across borders, we ensure appropriate legal safeguards are in place. For questions about data transfers, contact privacy@fazezero.com.",
+        "Your information may be transferred globally: (1) Transfers: Data may be transferred to and processed in the United States, European Union, and other countries where we operate or use service providers. (2) Safeguards: We use Standard Contractual Clauses (SCCs), adequacy decisions, and other approved mechanisms to ensure adequate protection. (3) Data Residency: Enterprise customers may request data residency in specific regions. We offer multi-region deployment options to meet data sovereignty requirements. (4) Compliance: We comply with GDPR for EEA data, CCPA for California residents, and other applicable regional data protection laws. (5) Cross-Border Transfers: When transferring data across borders, we ensure appropriate legal safeguards are in place. For questions about data transfers, contact privacy@hyperfabrics.com.",
       icon: "Globe" as IconName,
     },
     {
@@ -94,13 +94,13 @@ export const pageContent = {
     {
       title: "Children's Privacy and Age Restrictions",
       description:
-        "Our services are strictly for business use: (1) Age Requirement: Our services are intended for businesses and individuals 18 years or older. We do not knowingly collect personal information from children under 18. (2) Business Services: fazeZERO provides enterprise blockchain infrastructure services. Our platform is designed for institutional use, not consumer applications. (3) Account Creation: All accounts require business verification and KYC/AML checks, which inherently exclude minors. (4) Reporting: If you believe we have inadvertently collected information from a minor, contact us immediately at privacy@fazezero.com, and we will promptly delete such information. (5) Parental Rights: Parents or guardians who believe their child's information has been collected should contact us for immediate removal.",
+        "Our services are strictly for business use: (1) Age Requirement: Our services are intended for businesses and individuals 18 years or older. We do not knowingly collect personal information from children under 18. (2) Business Services: HyperFabrics provides enterprise blockchain infrastructure services. Our platform is designed for institutional use, not consumer applications. (3) Account Creation: All accounts require business verification and KYC/AML checks, which inherently exclude minors. (4) Reporting: If you believe we have inadvertently collected information from a minor, contact us immediately at privacy@hyperfabrics.com, and we will promptly delete such information. (5) Parental Rights: Parents or guardians who believe their child's information has been collected should contact us for immediate removal.",
       icon: "Shield" as IconName,
     },
     {
       title: "Marketing Communications and Opt-Out",
       description:
-        "Marketing communications: (1) Consent: We only send marketing emails to users who have opted in or have an existing business relationship. (2) Types: Marketing communications may include product updates, industry insights, event invitations, and promotional offers. (3) Opt-Out: You can unsubscribe at any time by clicking the unsubscribe link in emails or contacting us at privacy@fazezero.com. (4) Service Communications: You cannot opt out of essential service communications such as security alerts, account notifications, and legal notices. (5) Preferences: Manage your communication preferences in your account settings or by contacting us. (6) Do Not Sell: We do not sell personal information. California residents can confirm this by contacting privacy@fazezero.com.",
+        "Marketing communications: (1) Consent: We only send marketing emails to users who have opted in or have an existing business relationship. (2) Types: Marketing communications may include product updates, industry insights, event invitations, and promotional offers. (3) Opt-Out: You can unsubscribe at any time by clicking the unsubscribe link in emails or contacting us at privacy@hyperfabrics.com. (4) Service Communications: You cannot opt out of essential service communications such as security alerts, account notifications, and legal notices. (5) Preferences: Manage your communication preferences in your account settings or by contacting us. (6) Do Not Sell: We do not sell personal information. California residents can confirm this by contacting privacy@hyperfabrics.com.",
       icon: "Mail" as IconName,
     },
     {
@@ -112,7 +112,7 @@ export const pageContent = {
     {
       title: "Contact Information and Data Protection Officer",
       description:
-        "For privacy inquiries and requests: (1) Email: privacy@fazezero.com for all privacy-related questions, data subject requests, and concerns. (2) Data Protection Officer: For GDPR-related inquiries, contact our Data Protection Officer at dpo@fazezero.com. (3) Postal Address: fazeZERO, Attn: Privacy Team, [Your Business Address]. (4) Response Time: We respond to privacy requests within 30 days (or as required by applicable law). For complex requests, we may extend this period with notification. (5) Verification: We may require identity verification before processing certain requests to protect your privacy and security. (6) Complaints: If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority (e.g., your country's supervisory authority for GDPR, California Attorney General for CCPA).",
+        "For privacy inquiries and requests: (1) Email: privacy@hyperfabrics.com for all privacy-related questions, data subject requests, and concerns. (2) Data Protection Officer: For GDPR-related inquiries, contact our Data Protection Officer at dpo@hyperfabrics.com. (3) Postal Address: HyperFabrics, Attn: Privacy Team, [Your Business Address]. (4) Response Time: We respond to privacy requests within 30 days (or as required by applicable law). For complex requests, we may extend this period with notification. (5) Verification: We may require identity verification before processing certain requests to protect your privacy and security. (6) Complaints: If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority (e.g., your country's supervisory authority for GDPR, California Attorney General for CCPA).",
       icon: "Mail" as IconName,
     },
   ],

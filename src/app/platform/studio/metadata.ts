@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Tokenization Studio - Design and Launch Digital Assets | fazezero",
+  title: "Tokenization Studio - Design and Launch Digital Assets | HyperFabrics",
   description:
     "No-code platform for designing, launching, and managing tokenized assets. Create security tokens, utility tokens, NFTs, and stablecoins with built-in compliance, governance, and lifecycle management.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "digital securities",
   ],
   openGraph: {
-    title: "Tokenization Studio - fazezero",
+    title: "Tokenization Studio - HyperFabrics",
     description:
       "No-code platform for designing, launching, and managing tokenized assets. Create tokens with built-in compliance and governance.",
     url: "/platform/studio",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-platform-studio.png",
         width: 1200,
         height: 630,
-        alt: "fazezero Tokenization Studio",
+        alt: "HyperFabrics Tokenization Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tokenization Studio - fazezero",
+    title: "Tokenization Studio - HyperFabrics",
     description:
       "No-code platform for designing, launching, and managing tokenized assets.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Coins" as IconName,
   title: "Bring Any Asset On-Chain",
   description:
-    "fazezero's Tokenization Studio empowers institutions to design, launch, and manage tokenized assets without writing code. From real estate and securities to art and commodities — create compliant digital representations with built-in governance, transfer restrictions, and lifecycle management. Our platform handles technical complexity while you focus on your tokenization strategy.",
+    "HyperFabrics's Tokenization Studio empowers institutions to design, launch, and manage tokenized assets without writing code. From real estate and securities to art and commodities — create compliant digital representations with built-in governance, transfer restrictions, and lifecycle management. Our platform handles technical complexity while you focus on your tokenization strategy.",
   quickLinks: [
     {
       icon: "FileText" as IconName,

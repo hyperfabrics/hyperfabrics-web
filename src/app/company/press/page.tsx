@@ -15,10 +15,10 @@ export default function PressPage() {
       <p>
         For press inquiries, please contact{" "}
         <a
-          href="mailto:press@fazezero.com"
+          href="mailto:press@hyperfabrics.com"
           className="text-indigo-400 hover:text-indigo-300"
         >
-          press@fazezero.com
+          press@hyperfabrics.com
         </a>
       </p>
     </ContentPage>

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "BaaS for Insurance - Blockchain for Claims & Policies | fazezero",
+  title: "BaaS for Insurance - Blockchain for Claims & Policies | HyperFabrics",
   description:
     "Blockchain solution for insurance companies to simplify claims, reduce fraud, and increase transparency. Automated payouts, reduced paperwork, and improved customer experience through smart contracts and immutable records.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "blockchain policies",
   ],
   openGraph: {
-    title: "BaaS for Insurance - fazezero",
+    title: "BaaS for Insurance - HyperFabrics",
     description:
       "Blockchain solution for insurance with automated claims, reduced fraud, and transparent policy management.",
     url: "/solutions/insurance",
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/og/og-solutions-insurance.png",
         width: 1200,
         height: 630,
-        alt: "fazezero BaaS for Insurance",
+        alt: "HyperFabrics BaaS for Insurance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BaaS for Insurance - fazezero",
+    title: "BaaS for Insurance - HyperFabrics",
     description:
       "Blockchain solution for insurance with automated claims and fraud reduction.",
   },
@@ -41,7 +41,7 @@ export const pageContent = {
   badgeIcon: "Shield" as IconName,
   title: "Smarter, Faster Insurance",
   description:
-    "BaaS for Insurance Companies is fazezero's blockchain solution tailored to simplify claims management, reduce fraud, and increase transparency across the insurance lifecycle. Built for insurers, brokers, and insurtech providers, it enables faster, more accurate policy and claims processing using secure, shared infrastructure.",
+    "BaaS for Insurance Companies is HyperFabrics's blockchain solution tailored to simplify claims management, reduce fraud, and increase transparency across the insurance lifecycle. Built for insurers, brokers, and insurtech providers, it enables faster, more accurate policy and claims processing using secure, shared infrastructure.",
   quickLinks: [
     {
       icon: "Zap" as IconName,

@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Careers | fazeZERO",
+  title: "Careers | HyperFabrics",
   description:
-    "Join the fazeZERO team and help build the future of digital assets. Explore open positions in engineering, product, sales, and more.",
+    "Join the HyperFabrics team and help build the future of digital assets. Explore open positions in engineering, product, sales, and more.",
   openGraph: {
-    title: "Careers | fazeZERO",
+    title: "Careers | HyperFabrics",
     description: "Join our team and build the future of digital assets.",
-    url: "https://fazezero.com/company/careers",
+    url: "https://hyperfabrics.com/company/careers",
   },
 };
 
@@ -20,7 +20,7 @@ export const pageContent = {
     "Help us build the enterprise infrastructure powering the future of digital assets. We're looking for talented individuals passionate about blockchain, security, and innovation.",
   sections: [
     {
-      title: "Why fazeZERO?",
+      title: "Why HyperFabrics?",
       description:
         "Impact: Work on infrastructure used by leading global organizations. Innovation: Solve challenging problems at the forefront of blockchain. Growth: Continuous learning and career development opportunities. Culture: Collaborative, mission-driven team environment.",
       icon: "Users" as IconName,

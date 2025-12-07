@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { IconName } from "@/components/ui/Icon";
 
 export const metadata: Metadata = {
-  title: "Developer Support | fazeZERO",
+  title: "Developer Support | HyperFabrics",
   description:
     "Get expert help from our developer support team. Access documentation, submit tickets, and get answers to your technical questions.",
   openGraph: {
-    title: "Developer Support | fazeZERO",
+    title: "Developer Support | HyperFabrics",
     description: "Expert technical support for developers.",
-    url: "https://fazezero.com/developers/support",
+    url: "https://HyperFabrics.com/developers/support",
   },
 };
 
@@ -17,7 +17,7 @@ export const pageContent = {
   badgeIcon: "LifeBuoy" as IconName,
   title: "Developer Support",
   description:
-    "Get expert help from our technical support team. We're here to help you succeed with fazeZERO.",
+    "Get expert help from our technical support team. We're here to help you succeed with HyperFabrics.",
   quickLinks: [
     {
       icon: "BookOpen" as IconName,

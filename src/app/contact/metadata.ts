@@ -4,7 +4,7 @@ import { IconName } from "@/components/ui/Icon";
 export const metadata: Metadata = {
   title: "Contact Us - Get Started with Enterprise Blockchain",
   description:
-    "Contact fazezero to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
+    "Contact HyperFabrics to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
   keywords: [
     "blockchain contact",
     "enterprise blockchain demo",
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
     "tokenization consultation",
   ],
   openGraph: {
-    title: "Contact Us - fazezero",
+    title: "Contact Us - HyperFabrics",
     description:
-      "Contact fazezero to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
+      "Contact HyperFabrics to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
     url: "/contact",
     type: "website",
     images: [
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
         url: "/og/og-contact.png",
         width: 1200,
         height: 630,
-        alt: "Contact fazezero",
+        alt: "Contact HyperFabrics",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - fazezero",
+    title: "Contact Us - HyperFabrics",
     description:
-      "Contact fazezero to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
+      "Contact HyperFabrics to discuss your enterprise blockchain needs. Schedule a demo, speak with our team, or learn how we can help transform your institution with blockchain technology.",
   },
 };
 
@@ -44,26 +44,26 @@ export const pageContent = {
     {
       icon: "Calendar" as IconName,
       title: "Schedule a Demo",
-      description: "See fazezero in action",
-      href: "mailto:sales@fazezero.com",
+      description: "See HyperFabrics in action",
+      href: "mailto:sales@hyperfabrics.com",
     },
     {
       icon: "MessageSquare" as IconName,
       title: "Sales Inquiry",
       description: "Enterprise solutions & pricing",
-      href: "mailto:sales@fazezero.com",
+      href: "mailto:sales@hyperfabrics.com",
     },
     {
       icon: "Headphones" as IconName,
       title: "Technical Support",
       description: "Implementation & integration help",
-      href: "mailto:support@fazezero.com",
+      href: "mailto:support@hyperfabrics.com",
     },
     {
       icon: "Users" as IconName,
       title: "Partnerships",
       description: "Explore collaboration opportunities",
-      href: "mailto:partners@fazezero.com",
+      href: "mailto:partners@hyperfabrics.com",
     },
   ],
   sections: [

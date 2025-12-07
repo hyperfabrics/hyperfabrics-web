@@ -21,7 +21,7 @@ This directory contains GitHub Actions workflows for automated CI/CD.
 **Required Secrets:**
 - `AWS_ACCESS_KEY_ID` - AWS access key
 - `AWS_SECRET_ACCESS_KEY` - AWS secret key
-- `NEXT_PUBLIC_SITE_URL` (optional) - Site URL, defaults to https://fazezero.com
+- `NEXT_PUBLIC_SITE_URL` (optional) - Site URL, defaults to https://HyperFabrics.com
 - `CLOUDFLARE_ZONE_ID` (optional) - Cloudflare zone ID for cache purging
 - `CLOUDFLARE_API_TOKEN` (optional) - Cloudflare API token
 
@@ -50,7 +50,7 @@ Add these secrets:
 ```
 AWS_ACCESS_KEY_ID=your-aws-access-key
 AWS_SECRET_ACCESS_KEY=your-aws-secret-key
-NEXT_PUBLIC_SITE_URL=https://fazezero.com
+NEXT_PUBLIC_SITE_URL=https://HyperFabrics.com
 CLOUDFLARE_ZONE_ID=your-cloudflare-zone-id (optional)
 CLOUDFLARE_API_TOKEN=your-cloudflare-api-token (optional)
 ```
@@ -73,8 +73,8 @@ Your AWS user needs these permissions:
         "s3:PutBucketPolicy"
       ],
       "Resource": [
-        "arn:aws:s3:::fazezero.com",
-        "arn:aws:s3:::fazezero.com/*"
+        "arn:aws:s3:::HyperFabrics.com",
+        "arn:aws:s3:::HyperFabrics.com/*"
       ]
     },
     {
